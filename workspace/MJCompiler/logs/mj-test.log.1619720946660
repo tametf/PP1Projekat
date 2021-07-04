@@ -1,0 +1,68 @@
+INFO  20:25:29,859 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  20:25:29,897 - #2 program
+INFO  20:25:29,897 - #28 test301
+INFO  20:25:29,897 - #3 {
+INFO  20:25:29,898 - #14 void
+INFO  20:25:29,899 - #28 main
+INFO  20:25:29,899 - #12 (
+INFO  20:25:29,900 - #13 )
+INFO  20:25:29,901 - #3 {
+INFO  20:25:29,901 - #27 print
+INFO  20:25:29,902 - #12 (
+INFO  20:25:29,902 - #29 11
+INFO  20:25:29,903 - #13 )
+INFO  20:25:29,904 - #6 ;
+INFO  20:25:29,904 - #4 }
+INFO  20:25:29,905 - #4 }
+INFO  20:25:29,912 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      StatementsList(
+        NoStatementsList(
+        ) [NoStatementsList]
+        PrintStatement(
+          Expression(
+            Expr1AddopTerm(
+              OptMinusNo(
+              ) [OptMinusNo]
+              AddopTermListOne(
+                TermFactorMulop(
+                  MulopFactorListOne(
+                    FactorNumConst(
+                     11
+                    ) [FactorNumConst]
+                  ) [MulopFactorListOne]
+                ) [TermFactorMulop]
+              ) [AddopTermListOne]
+            ) [Expr1AddopTerm]
+          ) [Expression]
+          OptNumConstNo(
+          ) [OptNumConstNo]
+        ) [PrintStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  20:25:29,913 - ===================================
+INFO  20:25:29,916 - Obradjuje se funkcija main tip funkcije: VOID
+INFO  20:25:29,917 -  Print count calls = 0
+INFO  20:25:29,917 -  Deklarisanih promenljivih ima = 0
+INFO  20:25:29,917 - ===================================

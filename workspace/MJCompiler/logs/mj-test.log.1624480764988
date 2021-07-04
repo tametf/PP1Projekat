@@ -1,0 +1,141 @@
+INFO  22:38:52,068 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  22:38:52,070 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  22:38:52,142 - #2 program
+INFO  22:38:52,142 - #31 a
+INFO  22:38:52,142 - #3 {
+INFO  22:38:52,144 - #14 void
+INFO  22:38:52,145 - #31 main
+INFO  22:38:52,145 - #12 (
+INFO  22:38:52,146 - #13 )
+INFO  22:38:52,146 - #31 char
+INFO  22:38:52,147 - #31 slovo
+INFO  22:38:52,148 - #6 ;
+INFO  22:38:52,150 - #31 char
+INFO  22:38:52,151 - #31 t
+INFO  22:38:52,151 - #6 ;
+INFO  22:38:52,152 - #3 {
+INFO  22:38:52,152 - #26 read
+INFO  22:38:52,152 - #12 (
+INFO  22:38:52,153 - #31 t
+INFO  22:38:52,153 - #13 )
+INFO  22:38:52,155 - #6 ;
+INFO  22:38:52,155 - #27 print
+INFO  22:38:52,156 - #12 (
+INFO  22:38:52,157 - #31 t
+INFO  22:38:52,158 - #13 )
+INFO  22:38:52,161 - #6 ;
+INFO  22:38:52,161 - #4 }
+INFO  22:38:52,161 - #4 }
+INFO  22:38:52,180 - Program(
+  ProgName(
+   a
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  Lbrace(
+  ) [Lbrace]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDeclaration(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        VarDeclListMore(
+          NoVarDeclList(
+          ) [NoVarDeclList]
+          VarDeclLocal(
+            Type(
+             char
+            ) [Type]
+            VarDeclarationListLocalOne(
+              VarDeclListLocalOne(
+                VarIdentLocal(
+                 slovo
+                  OptBracketsNo(
+                  ) [OptBracketsNo]
+                ) [VarIdentLocal]
+              ) [VarDeclListLocalOne]
+            ) [VarDeclarationListLocalOne]
+          ) [VarDeclLocal]
+        ) [VarDeclListMore]
+        VarDeclLocal(
+          Type(
+           char
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               t
+                OptBracketsNo(
+                ) [OptBracketsNo]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      Lbrace(
+      ) [Lbrace]
+      StatementsList(
+        StatementsList(
+          NoStatementsList(
+          ) [NoStatementsList]
+          ReadStatement(
+            Read(
+            ) [Read]
+            Designator(
+             t
+              OptExprNo(
+              ) [OptExprNo]
+            ) [Designator]
+          ) [ReadStatement]
+        ) [StatementsList]
+        PrintStatement(
+          Print(
+          ) [Print]
+          Expression(
+            Expr1AddopTerm(
+              OptMinusNo(
+              ) [OptMinusNo]
+              AddopTermListOne(
+                TermFactorMulop(
+                  MulopFactorListOne(
+                    FactorDesignator(
+                      Designator(
+                       t
+                        OptExprNo(
+                        ) [OptExprNo]
+                      ) [Designator]
+                      OptParsNo(
+                      ) [OptParsNo]
+                    ) [FactorDesignator]
+                  ) [MulopFactorListOne]
+                ) [TermFactorMulop]
+              ) [AddopTermListOne]
+            ) [Expr1AddopTerm]
+          ) [Expression]
+          OptNumConstNo(
+          ) [OptNumConstNo]
+        ) [PrintStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDeclaration]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  22:38:52,180 - ===================================
+INFO  22:38:52,185 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  22:38:52,186 - Deklarisana lokalna promenljiva slovona liniji 4 : Var slovo: char, 0, 1 
+INFO  22:38:52,186 - Deklarisana lokalna promenljiva tna liniji 5 : Var t: char, 1, 1 
+INFO  22:38:52,186 - Pristup lokalnoj promenljivoj: t na liniji 7[ Var t: char, 1, 1  ]
+INFO  22:38:52,186 - Pristup lokalnoj promenljivoj: t na liniji 8[ Var t: char, 1, 1  ]
+INFO  22:38:52,187 -  Print count calls = 1
+INFO  22:38:52,187 -  Deklarisanih promenljivih ima = 20
+INFO  22:38:52,187 - ===================================
+INFO  22:38:52,195 - Parsiranje uspesno zavrseno!

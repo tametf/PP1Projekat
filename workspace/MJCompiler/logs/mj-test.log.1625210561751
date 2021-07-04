@@ -1,0 +1,109 @@
+INFO  09:22:35,471 - Compiling source file: C:\Users\pavle\Desktop\New folder (3)\poslednjaVerzija\tamarajevdjevic20150492\workspace\MJCompiler\test\javniTest.mj
+INFO  09:22:35,471 - Compiling source file: C:\Users\pavle\Desktop\New folder (3)\poslednjaVerzija\tamarajevdjevic20150492\workspace\MJCompiler\test\javniTest.mj
+INFO  09:22:35,519 - #2 program
+INFO  09:22:35,519 - #31 test301
+INFO  09:22:35,519 - #5 const
+INFO  09:22:35,520 - #31 int
+INFO  09:22:35,520 - #31 pet
+INFO  09:22:35,520 - #8 =
+INFO  09:22:35,520 - #32 5
+INFO  09:22:35,520 - #6 ;
+INFO  09:22:35,521 - #31 int
+INFO  09:22:35,522 - #31 niz
+INFO  09:22:35,522 - #10 [
+INFO  09:22:35,522 - #11 ]
+INFO  09:22:35,522 - #6 ;
+INFO  09:22:35,523 - #3 {
+INFO  09:22:35,525 - #14 void
+INFO  09:22:35,526 - #31 main
+INFO  09:22:35,526 - #12 (
+INFO  09:22:35,526 - #13 )
+INFO  09:22:35,526 - #31 int
+INFO  09:22:35,527 - #31 bodovi
+INFO  09:22:35,527 - #6 ;
+INFO  09:22:35,528 - #3 {
+INFO  09:22:35,528 - #4 }
+INFO  09:22:35,529 - #4 }
+INFO  09:22:35,535 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  VariableDeclList(
+    ConstDeclList(
+      NoDeclList(
+      ) [NoDeclList]
+      ConstDecl(
+        Type(
+         int
+        ) [Type]
+        ConstDeclarationListOne(
+          ConstDeclOne(
+           pet
+            NumConstant(
+             5
+            ) [NumConstant]
+          ) [ConstDeclOne]
+        ) [ConstDeclarationListOne]
+      ) [ConstDecl]
+    ) [ConstDeclList]
+    VarDecl(
+      Type(
+       int
+      ) [Type]
+      VarDeclarationListOne(
+        VarIdentGlobal(
+         niz
+          OptBracketsYes(
+          ) [OptBracketsYes]
+        ) [VarIdentGlobal]
+      ) [VarDeclarationListOne]
+    ) [VarDecl]
+  ) [VariableDeclList]
+  Lbrace(
+  ) [Lbrace]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDeclaration(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        NoVarDeclList(
+        ) [NoVarDeclList]
+        VarDeclLocal(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               bodovi
+                OptBracketsNo(
+                ) [OptBracketsNo]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      Lbrace(
+      ) [Lbrace]
+      NoStatementsList(
+      ) [NoStatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDeclaration]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  09:22:35,535 - ===================================
+INFO  09:22:35,538 - Definisana je konstanta pet na liniji 6
+INFO  09:22:35,539 - Deklarisan globalni niz niz na liniji 8:Var niz: Arr of int, 0, 0 
+INFO  09:22:35,539 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  09:22:35,539 - Deklarisana lokalna promenljiva bodovina liniji 13 : Var bodovi: int, 0, 1 
+INFO  09:22:35,539 - ===================================
+INFO  09:22:35,544 - Parsiranje uspesno zavrseno!

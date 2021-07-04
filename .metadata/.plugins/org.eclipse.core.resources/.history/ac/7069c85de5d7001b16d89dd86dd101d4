@@ -1,0 +1,1210 @@
+package rs.ac.bg.etf.pp1;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+import org.apache.log4j.Logger;
+
+import rs.ac.bg.etf.pp1.ast.*;
+import rs.ac.bg.etf.pp1.test.CompilerError;
+import rs.ac.bg.etf.pp1.test.CompilerError.CompilerErrorType;
+import rs.etf.pp1.mj.runtime.Code;
+import rs.etf.pp1.symboltable.Tab;
+import rs.etf.pp1.symboltable.concepts.Obj;
+import rs.etf.pp1.symboltable.concepts.Struct;
+
+public class SemanticAnalyzer extends VisitorAdaptor {
+
+	int printCallCount = 0;
+
+	public List<CompilerError> ce = new ArrayList<CompilerError>();
+	boolean erretected = false;
+	int nVars = 0;
+
+	Struct currentType = null;
+	Struct boolType = MySymbolTable.find("bool").getType();
+
+	int localVarsCount = 0;
+	int localArraysCount = 0;
+	int globalVarsCount = 0;
+	int globalArraysCount = 0;
+	int constCount = 0;
+	int currentConstValue = 0;
+
+	Struct currentTypeConst = MySymbolTable.noType;
+
+	int methodsCount = 0;
+	boolean inClass = false;
+	Obj currentMethod = null;
+
+	boolean factorNewType = false;
+	boolean nullValue = false;
+	boolean errorDetected = false;
+	boolean newArray = false;
+	boolean mainFormParams = false;
+
+	MyDumpTable dstv = null;
+
+	Logger log = Logger.getLogger(getClass());
+
+	public void report_error(String message, SyntaxNode info) {
+		errorDetected = true;
+		StringBuilder msg = new StringBuilder(message);
+		int line = (info == null) ? 0 : info.getLine();
+		if (line != 0)
+			msg.append(" na liniji ").append(line);
+		log.error(msg.toString());
+	}
+
+	public void report_info(String message, SyntaxNode info) {
+		StringBuilder msg = new StringBuilder(message);
+		int line = (info == null) ? 0 : info.getLine();
+		if (line != 0)
+			msg.append(" na liniji ").append(line);
+		log.info(msg.toString());
+	}
+
+	public List<CompilerError> returnErrors() {
+		return ce;
+	}
+
+	public boolean passed() {
+		return !errorDetected;
+	}
+
+	public void visit(ProgName ProgName) {
+		// on se odmah obilazi, jer nema potomke, a prvi je od dece programa
+		/* ProgName.obj = */MySymbolTable.insert(Obj.Prog, ProgName.getProgName(), MySymbolTable.noType);
+		MySymbolTable.openScope();
+	}
+
+	public void visit(Program program) {
+		nVars = MySymbolTable.currentScope().getnVars();
+		// ovo na kraju
+		Obj mainMethod = MySymbolTable.find("main");
+		if (mainMethod == MySymbolTable.noObj) {
+			report_error("Program nema MAIN funkciju! Greska na liniji" + program.getLine() + " ", null);
+			CompilerError newError = new CompilerError(program.getLine(), "Program nema MAIN funkciju!",
+					CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+			return;
+		}
+
+		// jer je trenutni scope od programName, i sve lokalne prom. su zapravo u tom
+		// scope-u, tj programu
+		// MySymbolTable.chainLocalSymbols(program.getProgName().obj);
+		MySymbolTable.chainLocalSymbols(MySymbolTable.find(program.getProgName().getProgName()));
+
+		MySymbolTable.closeScope();
+	}
+
+	public void visit(Type type) {
+
+		currentType = MySymbolTable.noType;
+		Obj typeNode = MySymbolTable.find(type.getNameOfType());
+
+		if (typeNode == MySymbolTable.noObj) {
+			report_error("Greska na liniji " + type.getLine() + ", nije pronadjen tip " + type.getNameOfType()
+					+ " u tabeli simbola! ", null);
+			CompilerError newError = new CompilerError(type.getLine(),
+					"Nije pronadjen tip " + type.getNameOfType() + " u tabeli simbola! ",
+					CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+			currentType = MySymbolTable.noType;
+			type.struct = MySymbolTable.noType;
+		} else {
+			if (Obj.Type == typeNode.getKind()) {
+				currentType = typeNode.getType();
+				type.struct = typeNode.getType();
+			} else {
+				report_error("Greska na liniji " + type.getLine() + ", naziv " + type.getNameOfType()
+						+ " ne predstavlja tip!", type);
+				CompilerError newError = new CompilerError(type.getLine(),
+						"Greska: Ime " + type.getNameOfType() + " ne predstavlja tip!",
+						CompilerErrorType.SEMANTIC_ERROR);
+				ce.add(newError);
+				currentType = MySymbolTable.noType;
+				type.struct = MySymbolTable.noType;
+			}
+		}
+	}
+
+//SIMBOLICKE KONSTANTE:
+
+	public void visit(NumConstant numConstant) {
+		currentConstValue = numConstant.getNumValue();
+		currentTypeConst = MySymbolTable.intType;
+		numConstant.struct = MySymbolTable.intType;
+	}
+
+	public void visit(CharConstant charConstant) {
+		currentConstValue = charConstant.getCharValue().charAt(1);
+		currentTypeConst = MySymbolTable.charType;
+		charConstant.struct = MySymbolTable.charType;
+	}
+
+	public void visit(BoolConstant boolConstant) {
+		currentConstValue = boolConstant.getBoolValue();
+		currentTypeConst = MySymbolTable.boolType;
+		boolConstant.struct = MySymbolTable.boolType;
+	}
+
+	// konstante:
+
+	public void visit(ConstDeclOne ConstDeclOne) {
+		Obj varNode = MySymbolTable.find(ConstDeclOne.getNameOfConstant());
+		if (varNode != MySymbolTable.noObj) {
+			report_error("Greska! Konstanta " + ConstDeclOne.getNameOfConstant() + " na liniji "
+					+ ConstDeclOne.getLine() + " je vec definisana!", null);
+			CompilerError newError = new CompilerError(ConstDeclOne.getLine(),
+					"Konstanta " + ConstDeclOne.getNameOfConstant() + " je vec definisana!",
+					CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+		} else {
+			if (currentTypeConst == currentType) {
+				varNode = MySymbolTable.insert(Obj.Con, ConstDeclOne.getNameOfConstant(), currentType);
+				varNode.setAdr(currentConstValue);
+				constCount++;
+				report_info("Definisana je konstanta " + ConstDeclOne.getNameOfConstant() + " na liniji "
+						+ ConstDeclOne.getLine(), null);
+			} else {
+				report_error("Greska! Tip konstante " + ConstDeclOne.getNameOfConstant() + " na liniji "
+						+ ConstDeclOne.getLine() + " se razlikuje od ocekivanog tipa", null);
+				CompilerError newError = new CompilerError(ConstDeclOne.getLine(),
+						"Tip konstante  " + ConstDeclOne.getNameOfConstant() + " se razlikuje od ocekivanog tipa!",
+						CompilerErrorType.SEMANTIC_ERROR);
+				ce.add(newError);
+			}
+		}
+	}
+
+	// GLOBALNE PROMENLJIVE:
+	public void visit(VarIdentGlobal varIdentGlobal) {
+
+		Obj varNode = MySymbolTable.currentScope().findSymbol(varIdentGlobal.getNameOfVar());
+		if (varNode != null) {
+			report_error("Greska! Globalna promenljiva na liniji " + varIdentGlobal.getLine() + " je vec deklarisana",
+					null);
+			CompilerError newError = new CompilerError(varIdentGlobal.getLine(),
+					"Globalna promenljiva  " + varIdentGlobal.getNameOfVar() + " je vec definisana!",
+					CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+
+		} else {
+			if (varIdentGlobal.getOptBrackets() instanceof OptBracketsNo) {
+
+				// u pitanju je promenljiva, ne niz
+
+				varNode = MySymbolTable.insert(Obj.Var, varIdentGlobal.getNameOfVar(), currentType);
+				dstv = new MyDumpTable();
+				dstv.visitObjNode(varNode);
+
+				report_info("Deklarisana globalna promenljiva " + varIdentGlobal.getNameOfVar() + " na liniji "
+						+ varIdentGlobal.getLine() + " : " + dstv.getOutput(), null);
+				globalVarsCount++;
+			} else {
+				// deklarisan niz
+
+				varNode = MySymbolTable.insert(Obj.Var, varIdentGlobal.getNameOfVar(),
+						new Struct(Struct.Array, currentType));
+				dstv = new MyDumpTable();
+				dstv.visitObjNode(varNode);
+
+				report_info("Deklarisan globalni niz " + varIdentGlobal.getNameOfVar() + " na liniji "
+						+ varIdentGlobal.getLine() + ":" + dstv.getOutput(), null);
+				globalArraysCount++;
+
+			}
+
+		}
+
+	}
+
+	// lokalne promenljive:
+
+	public void visit(VarIdentLocal varIdentLocal) {
+		Obj varNode = MySymbolTable.currentScope().findSymbol(varIdentLocal.getNameOfLocalVar());
+		if (varNode != null) {
+			report_error("Greska! Lokalna promenljiva na liniji " + varIdentLocal.getLine() + " je vec deklarisana",
+					null);
+			CompilerError newError = new CompilerError(varIdentLocal.getLine(),
+					"Lokalna promenljiva  " + varIdentLocal.getNameOfLocalVar() + " je vec definisana!",
+					CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+		} else {
+			if (varIdentLocal.getOptBrackets() instanceof OptBracketsNo) {
+				// deklarisana promenljiva, ne niz
+
+				varNode = MySymbolTable.insert(Obj.Var, varIdentLocal.getNameOfLocalVar(), currentType);
+				dstv = new MyDumpTable();
+				dstv.visitObjNode(varNode);
+
+				report_info("Deklarisana lokalna promenljiva " + varIdentLocal.getNameOfLocalVar() + "na liniji "
+						+ varIdentLocal.getLine() + " : " + dstv.getOutput(), null);
+				localVarsCount++;
+
+			} else {
+				// deklarisan niz
+
+				varNode = MySymbolTable.insert(Obj.Var, varIdentLocal.getNameOfLocalVar(),
+						new Struct(Struct.Array, currentType));
+				dstv = new MyDumpTable();
+				dstv.visitObjNode(varNode);
+
+				report_info("Deklarisan lokalni niz sa imenom: " + varIdentLocal.getNameOfLocalVar() + "na liniji "
+						+ varIdentLocal.getLine() + " : " + dstv.getOutput(), null);
+				localArraysCount++;
+
+			}
+		}
+	}
+
+	// deklaracija metode
+
+	// void metoda
+	public void visit(ReturnValueTypeVoid returnValueTypeVoid) {
+		Obj funkc = MySymbolTable.find(returnValueTypeVoid.getNameOfMethod());
+		if (funkc.getName().equals(returnValueTypeVoid.getNameOfMethod())) {
+			report_error("Greska! Metoda je vec definisana ", null);
+			CompilerError newError = new CompilerError(returnValueTypeVoid.getLine(),
+					"Greska! Metoda je vec definisana ", CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+			return;
+		} else {
+			currentMethod = MySymbolTable.insert(Obj.Meth, returnValueTypeVoid.getNameOfMethod(), MySymbolTable.noType);
+			returnValueTypeVoid.obj = currentMethod;
+			MySymbolTable.openScope();
+			dstv = new MyDumpTable();
+			dstv.visitObjNode(currentMethod);
+
+			report_info("Obradjuje se funkcija " + returnValueTypeVoid.getNameOfMethod() + " tip funkcije: VOID :"
+					+ dstv.getOutput(), null);
+			methodsCount++;
+		}
+
+	}
+
+	// ne-void metoda
+	public void visit(ReturnValueTypeOther returnValueTypeOther) {
+		Obj funkc = MySymbolTable.find(returnValueTypeOther.getNameOfMethod());
+		if (funkc.getName().equals(returnValueTypeOther.getNameOfMethod())) {
+			report_error("Greska! Metoda je vec definisana ", null);
+			CompilerError newError = new CompilerError(returnValueTypeOther.getLine(),
+					"Greska! Metoda je vec definisana ", CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+
+		} else {
+			if (returnValueTypeOther.getNameOfMethod().equals("main")) {
+				report_error("Greska! Metoda main ne moze imati povratni tip int", null);
+				CompilerError newError = new CompilerError(returnValueTypeOther.getLine(),
+						"Greska! Metoda main ne moze imati povratni tip int", CompilerErrorType.SEMANTIC_ERROR);
+				ce.add(newError);
+				// return;
+
+			} else {
+				currentMethod = MySymbolTable.insert(Obj.Meth, returnValueTypeOther.getNameOfMethod(),
+						returnValueTypeOther.getType().struct);
+				returnValueTypeOther.obj = currentMethod;
+
+				MySymbolTable.openScope();
+				dstv = new MyDumpTable();
+				dstv.visitObjNode(currentMethod);
+
+				report_info("Obradjuje se funkcija " + returnValueTypeOther.getNameOfMethod() + " tip funkcije: "
+						+ returnValueTypeOther.getType().getNameOfType() + " : " + dstv.getOutput(), null);
+				methodsCount++;
+
+			}
+		}
+	}
+
+	// obradjena metoda
+	public void visit(MethodDeclaration methodDecl) {
+
+		if (currentMethod == null)
+			return;
+
+		boolean greska = false;
+		if ((currentMethod.getName().equals("main")) && (methodDecl.getFormPars() instanceof FormParams)) {
+			report_error("Greska na liniji " + methodDecl.getLine() + ", metoda main ne sme imati formalne parametre.",
+					null);
+			CompilerError newError = new CompilerError(methodDecl.getLine(),
+					"Metoda main ne sme imati formalne parametre.", CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+			greska = true;
+
+		}
+		if ((currentMethod.getName().equals("main"))
+				&& (methodDecl.getReturnValueType() instanceof ReturnValueTypeOther)) {
+			report_error("Greska na liniji " + methodDecl.getLine() + ", povratni tip main metode mora biti void.",
+					null);
+			CompilerError newError = new CompilerError(methodDecl.getLine(), "Povratni tip main metode mora biti void.",
+					CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+			greska = true;
+		}
+		if (!greska) {
+			MySymbolTable.chainLocalSymbols(currentMethod);
+			MySymbolTable.closeScope();
+			currentMethod = null;
+			greska = false;
+		}
+
+	}
+
+	// ako se koristi niz[]
+	public void visit(Designator designator) {
+		designatorObj = MySymbolTable.find(designator.getDesignatorName());
+		Obj designatorName = MySymbolTable.find(designator.getDesignatorName());
+		if (designatorName == MySymbolTable.noObj) {
+			designator.obj = MySymbolTable.noObj;
+			report_error("Greska na liniji " + designator.getLine() + ", promenljiva " + designator.getDesignatorName()
+					+ " nije pronadjena u tabeli simbola!", null);
+			CompilerError newError = new CompilerError(designator.getLine(),
+					"Promenljiva " + designator.getDesignatorName() + " nije pronadjena u tableli simbola!",
+					CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+			return;
+		} else {
+			if (designator.getDesignatorName().equals("null")) {
+				nullValue = true;
+			}
+			// ako je promenljiva (niz ili obicna)
+			if (designatorName.getKind() == Obj.Var) {
+				// ako nije niz nego obicna promenljiva
+				if (designator.getOptExpr() instanceof OptExprNo) {
+					// ako nije niz
+					dstv = new MyDumpTable();
+					dstv.visitObjNode(designatorObj);
+
+					if (designatorName.getLevel() == 0) {
+						report_info("Pristup globalnoj promenljivoj: " + designator.getDesignatorName() + " na liniji "
+								+ designator.getLine() + "[ " + dstv.getOutput() + " ]", null);
+					} else {
+						report_info("Pristup lokalnoj promenljivoj: " + designator.getDesignatorName() + " na liniji "
+								+ designator.getLine() + "[ " + dstv.getOutput() + " ]", null);
+					}
+				} else {
+					// ako je niz
+					if (designatorName.getType().getKind() != Struct.Array) {
+						report_error("Greska na liniji " + designator.getLine() + ", promenljiva "
+								+ designator.getDesignatorName() + "ne predstavlja ime niza.", null);
+						CompilerError newError = new CompilerError(designator.getLine(),
+								designator.getDesignatorName() + " ne predstavlja ime niza!",
+								CompilerErrorType.SEMANTIC_ERROR);
+						ce.add(newError);
+					} else {
+						dstv = new MyDumpTable();
+						dstv.visitObjNode(designatorObj);
+
+						if (designatorName.getLevel() == 0) {
+							report_info("Pristup globalnom nizu: " + designator.getDesignatorName() + " na liniji "
+									+ designator.getLine() + "[ " + dstv.getOutput() + " ]", null);
+						} else {
+							report_info("Pristup lokalnom nizu: " + designator.getDesignatorName() + " na liniji "
+									+ designator.getLine() + "[ " + dstv.getOutput() + " ]", null);
+						}
+
+					}
+
+				}
+			}
+			if (designatorName.getKind() == Obj.Meth) {
+				report_info("Poziv funkcije: " + designator.getDesignatorName() + " na liniji " + designator.getLine(),
+						null);
+			}
+			if (designatorName.getKind() == Obj.Con) {
+				report_info(
+						"Pristup konstanti: " + designator.getDesignatorName() + " na liniji " + designator.getLine(),
+						null);
+			}
+		}
+		designator.obj = designatorName;
+	}
+
+	public void visit(FactorDesignator factorDesignator) {
+		factorDesignator.struct = factorDesignator.getDesignator().obj.getType();
+	}
+
+	public void visit(Cnstant cnst) {
+		cnst.struct = cnst.ge
+	}
+
+	/*
+	 * public void visit(FactorNumConst factorNumConst) { factorNumConst.struct =
+	 * MySymbolTable.intType; }
+	 * 
+	 * public void visit(FactorCharConst factorCharConst) {
+	 * 
+	 * // ako ne koristim nigde, ne treba mi factorCharConst.struct =
+	 * MySymbolTable.charType; }
+	 */
+	public void visit(FactorExpr factorExpr) {
+		factorExpr.struct = factorExpr.getExpr().struct;
+	}
+	/*
+	 * public void visit(FactorBoolConst factorBoolConst) { factorBoolConst.struct =
+	 * boolType; }
+	 */
+
+	public void visit(FactorStandardFunction factorStandardFunction) {
+		factorStandardFunction.struct = factorStandardFunction.getStandardFunction().struct;
+	}
+
+	public void visit(StandardFunctionChr standardFunctionChr) {
+
+		if (standardFunctionChr.getExpr().struct != MySymbolTable.intType) {
+			report_error("Neispravan tip izraza u funkciji CHR na liniji " + standardFunctionChr.getLine()
+					+ ", ocekivan tip: INT ", null);
+			CompilerError newError = new CompilerError(standardFunctionChr.getLine(),
+					"Neispravan tip izraza u funkciji CHR", CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+		} else {
+			report_info("CHR funkcija na liniji " + standardFunctionChr.getLine(), null);
+		}
+		standardFunctionChr.struct = MySymbolTable.find("chr").getType();
+	}
+
+	public void visit(StandardFunctionOrd standardFunctionOrd) {
+		if (standardFunctionOrd.getExpr().struct != MySymbolTable.charType) {
+			report_error("Neispravan tip izraza u funkciji ORD na liniji " + standardFunctionOrd.getLine()
+					+ ", ocekivan tip: CHAR", null);
+			CompilerError newError = new CompilerError(standardFunctionOrd.getLine(),
+					"Neispravan tip izraza u funkciji ORD", CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+		} else {
+			report_info("ORD funkcija na liniji " + standardFunctionOrd.getLine(), null);
+		}
+		standardFunctionOrd.struct = MySymbolTable.find("ord").getType();
+		if (MySymbolTable.find("ord").getType() == Tab.intType) {
+			System.out.print("NASLA");
+		} else {
+			System.out.print("NASLANISAM");
+		}
+	}
+
+	public void visit(StandardFunctionLen standardFunctionLen) {
+		if (newArray == false) {
+			report_error("Neispravan tip izraza u funkciji LEN na liniji " + standardFunctionLen.getLine()
+					+ ", niz prethodno mora biti napravljen!", null);
+			CompilerError newError = new CompilerError(standardFunctionLen.getLine(),
+					"Neispravan tip izraza u funkciji LEN, niz prethodno mora biti napravljen!",
+					CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+		} else {
+			newArray = false;
+		}
+		if (standardFunctionLen.getExpr().struct.getKind() != Struct.Array) {
+			report_error("Neispravan tip izraza u funkciji LEN na liniji " + standardFunctionLen.getLine()
+					+ ", ocekivan tip: ARRAY", null);
+			CompilerError newError = new CompilerError(standardFunctionLen.getLine(),
+					"Neispravan tip izraza u funkciji LEN", CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+		} else {
+			report_info("LEN funkcija na liniji " + standardFunctionLen.getLine(), null);
+		}
+		standardFunctionLen.struct = MySymbolTable.find("len").getType();
+	}
+
+//====================================================================================================================
+	public void visit(FactorNewTypeExpr factorNewTypeExpr) {
+		if (factorNewTypeExpr.getExpr().struct != MySymbolTable.intType) {
+			report_error("Tip izraza na liniji " + factorNewTypeExpr.getLine() + " mora biti int", null);
+			factorNewTypeExpr.struct = MySymbolTable.noType;
+			CompilerError newError = new CompilerError(factorNewTypeExpr.getLine(),
+					"Velicina niza koji se pravi mora biti tipa int!", CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+		}
+		factorNewTypeExpr.struct = new Struct(Struct.Array, factorNewTypeExpr.getType().struct);
+		factorNewType = true;
+		newArray = true;
+	}
+
+	/*
+	 * public void visit(FactorStandardFunction factorStandardFunction) {
+	 * factorStandardFunction.struct =
+	 * factorStandardFunction.getStandardFunction().struct; }
+	 */
+
+	// public void visit()
+
+	public void visit(MulopFactorListOne mulopFactorListOne) {
+		mulopFactorListOne.struct = mulopFactorListOne.getFactor().struct;
+	}
+
+	public void visit(MulopFactorListMore mulopFactorListMore) {
+
+		Struct s1 = mulopFactorListMore.getMulopFactorList().struct;
+		Struct s2 = mulopFactorListMore.getFactor().struct;
+
+		if (mulopFactorListMore.getMulopFactorList().struct.getKind() == Struct.Array) {
+			s1 = mulopFactorListMore.getMulopFactorList().struct.getElemType();
+		}
+		if (mulopFactorListMore.getFactor().struct.getKind() == Struct.Array) {
+			s2 = mulopFactorListMore.getFactor().struct.getElemType();
+		}
+
+		if (!s1.equals(s2) || s1 != MySymbolTable.intType) {
+			report_error(
+					"Neodgovarajuci tip na liniji " + mulopFactorListMore.getLine() + ", tip MNOZENJE mora biti INT!",
+					null);
+			CompilerError newError = new CompilerError(mulopFactorListMore.getLine(),
+					"Neodgovarajuci tip uz operaciju mnozenja, mora biti INT!", CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+			mulopFactorListMore.struct = MySymbolTable.noType;
+		} else {
+			mulopFactorListMore.struct = mulopFactorListMore.getMulopFactorList().struct;
+		}
+
+	}
+
+	public void visit(TermFactorMulop termFactorMulop) {
+
+		termFactorMulop.struct = termFactorMulop.getMulopFactorList().struct;
+	}
+
+	boolean minus = false;
+
+	public void visit(AddopTermListOne addopTermListOne) {
+
+		Struct str = addopTermListOne.getTerm().struct;
+
+		if (addopTermListOne.getTerm().struct.getKind() == Struct.Array)
+			str = addopTermListOne.getTerm().struct.getElemType();
+
+		if (minus && str != MySymbolTable.intType) {
+
+			report_error("Greska na liniji " + addopTermListOne.getLine()
+					+ ", ne moze vrednost biti negativna, jer nije tipa INT!", null);
+			CompilerError newError = new CompilerError(addopTermListOne.getLine(),
+					"Vrednost ne moze biti negativna, jer nije tipa INT!", CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+		}
+
+		addopTermListOne.struct = addopTermListOne.getTerm().struct;
+		minus = false;
+	}
+
+	public void visit(OptMinusYes OptMinusYes) {
+		minus = true;
+	}
+
+	public void visit(AddopTermListMore addopTermListMore) {
+
+		Struct str1 = addopTermListMore.getAddopTermList().struct;
+		Struct str2 = addopTermListMore.getTerm().struct;
+
+		if (str1.getKind() == Struct.Array)
+			str1 = addopTermListMore.getAddopTermList().struct.getElemType();
+		if (str2.getKind() == Struct.Array)
+			str2 = addopTermListMore.getTerm().struct.getElemType();
+
+		if (!str1.equals(str2) || str2 != MySymbolTable.intType) {
+
+			report_error("Neodgovarajuci tip na liniji " + addopTermListMore.getLine() + ", tip mora biti INT!", null);
+			CompilerError newError = new CompilerError(addopTermListMore.getLine(),
+					"Neodgovarajuci tip uz operaciju sabiranja, mora biti INT!", CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+			addopTermListMore.struct = MySymbolTable.noType;
+		} else {
+			addopTermListMore.struct = MySymbolTable.intType;
+		}
+
+		addopTermListMore.struct = addopTermListMore.getTerm().struct;
+	}
+
+	public void visit(Expr1AddopTerm expr1AddopTerm) {
+		expr1AddopTerm.struct = expr1AddopTerm.getAddopTermList().struct;
+		// Struct str = expr1AddopTerm.getAddopTermList().struct;
+		/*
+		 * if (expr1AddopTerm.getAddopTermList().struct.getKind() == Struct.Array) str =
+		 * expr1AddopTerm.getAddopTermList().struct.getElemType();
+		 * 
+		 * if (minus==true && str != MySymbolTable.intType) {
+		 * report_error("Greska na liniji " + expr1AddopTerm.getLine() +
+		 * ", ne moze vrednost biti negativna, jer nije tipa INT!", null); CompilerError
+		 * newError = new CompilerError(expr1AddopTerm.getLine(),
+		 * "Vrednost ne moze biti negativna, jer nije tipa INT!",
+		 * CompilerErrorType.SEMANTIC_ERROR); ce.add(newError); } else {
+		 * //expr1AddopTerm.struct = str; } //minus = false;
+		 */
+		// expr1AddopTerm.struct = str;
+	}
+
+	public void visit(Expression expression) {
+		expression.struct = expression.getExpr1().struct;
+	}
+
+	/*
+	 * public void visit(ExpressionCond expressionCond) {
+	 * 
+	 * Struct expr1 = expressionCond.getExpr11().struct; Struct expr2 =
+	 * expressionCond.getExpr12().struct; Struct expr =
+	 * expressionCond.getExpr1().struct;
+	 * 
+	 * if(expr != boolType) {
+	 * report_error("Prvi operator u ternarnom operatoru mora biti BOOL tipa",
+	 * null); }
+	 * 
+	 * if(expressionCond.getExpr1().struct.getKind() == Struct.Array) { expr1 =
+	 * expressionCond.getExpr11().struct.getElemType(); }
+	 * if(expressionCond.getExpr12().struct.getKind() == Struct.Array) { expr2 =
+	 * expressionCond.getExpr12().struct.getElemType(); }
+	 * 
+	 * if(expr1.equals(expr2)) { expressionCond.struct = expr1; } else {
+	 * report_error("Nekompatibilni tipovi izraza na liniji " +
+	 * expressionCond.getLine(), null); expressionCond.struct =
+	 * MySymbolTable.noType; } }
+	 * 
+	 */
+	public void visit(ExprTernar expressionCond) {
+
+		Struct expr1 = expressionCond.getExpr11().struct;
+		Struct expr2 = expressionCond.getExpr12().struct;
+		Struct expr = expressionCond.getExpr1().struct;
+
+		if (expr != MySymbolTable.boolType) {
+			report_error("Prvi operator u ternarnom operatoru mora biti BOOL tipa", null);
+		}
+
+		if (expressionCond.getExpr1().struct.getKind() == Struct.Array) {
+			expr1 = expressionCond.getExpr11().struct.getElemType();
+		}
+		if (expressionCond.getExpr12().struct.getKind() == Struct.Array) {
+			expr2 = expressionCond.getExpr12().struct.getElemType();
+		}
+
+		if (expr1.equals(expr2)) {
+			expressionCond.struct = expr1;
+		} else {
+			report_error("Nekompatibilni tipovi izraza na liniji " + expressionCond.getLine(), null);
+			expressionCond.struct = MySymbolTable.noType;
+		}
+	}
+
+	public void visit(DesignatorAssign designatorAssign) {
+
+		Struct struct1 = designatorAssign.getDesignator().obj.getType();
+		Struct struct2 = designatorAssign.getExpr().struct;
+		/*
+		 * if(struct1.getKind() == struct2.getKind() && struct1 == boolType) { return; }
+		 */
+		if (struct1.getKind() == Struct.Array) {
+			struct1 = struct1.getElemType();
+		}
+		if (struct2.getKind() == Struct.Array) {
+			struct2 = struct2.getElemType();
+		}
+
+		// ako je niz=null; to je korektna situacija
+		if (designatorAssign.getDesignator().obj.getType().getKind() == Struct.Array
+				&& ((designatorAssign.getDesignator().getOptExpr() instanceof OptExprNo) && !factorNewType)) {
+			if (nullValue == true) {
+				nullValue = false;
+
+				// DA LI SME
+				return;
+			} else {
+				report_error(
+						"Greska na liniji " + designatorAssign.getLine() + ", leva strana dodele ne moze biti ime niza",
+						null);
+				CompilerError newError = new CompilerError(designatorAssign.getLine(),
+						"Leva strana dodele ne moze biti ime niza!", CompilerErrorType.SEMANTIC_ERROR);
+				ce.add(newError);
+			}
+		}
+
+		if ((designatorAssign.getDesignator().obj.getType().getKind() != Struct.Array
+				|| (designatorAssign.getDesignator().obj.getType().getKind() == Struct.Array
+						&& (designatorAssign.getDesignator().getOptExpr() instanceof OptExprYes)))
+				&& factorNewType) {
+			report_error("Greska na liniji " + designatorAssign.getLine()
+					+ ", leva strana dodele vrednosti moze biti samo ime niza", null);
+			CompilerError newError = new CompilerError(designatorAssign.getLine(),
+					"Leva strana dodele moze biti samo ime niza!", CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+		}
+
+		Obj simb = MySymbolTable.find(designatorAssign.getDesignator().getDesignatorName());
+		if ((designatorAssign.getDesignator().obj.getKind() != Obj.Var
+				&& designatorAssign.getDesignator().obj.getKind() != Obj.Elem)
+				&& (MySymbolTable.find(designatorAssign.getDesignator().getDesignatorName()) != MySymbolTable.noObj)) {
+			report_error(" Greska na liniji " + designatorAssign.getLine()
+					+ ", leva strana dodele mora biti promenljiva ili element niza!", null);
+			CompilerError newError = new CompilerError(designatorAssign.getLine(),
+					"Leva strana dodele mora biti promenljiva ili element niza!", CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+
+		} /*
+			 * else if (simb == MySymbolTable.noObj) {
+			 * 
+			 * report_error(" Greska na liniji " + designatorAssign.getLine() +
+			 * ", leva strana dodele mora biti promenljiva ili element niza!", null);
+			 * CompilerError newError = new CompilerError(designatorAssign.getLine(),
+			 * "Leva strana dodele mora biti promenljiva ili element niza!",
+			 * CompilerErrorType.SEMANTIC_ERROR); ce.add(newError);
+			 * 
+			 * }
+			 */else if (!struct2.assignableTo(struct1)
+				&& (MySymbolTable.find(designatorAssign.getDesignator().getDesignatorName()) != MySymbolTable.noObj)) {
+			/*
+			 * if (struct1 == MySymbolTable.noType) { report_error("Greska na liniji " +
+			 * designatorAssign.getLine() +
+			 * ", designatoru se ne moze dodati taj tip izraza", null); CompilerError
+			 * newError = new CompilerError(designatorAssign.getLine(), "Promenljiva " +
+			 * designatorAssign.getDesignator().getDesignatorName() +
+			 * " ne postoji u tabeli simbola, pa joj se ne moze dodeliti vrednost!",
+			 * CompilerErrorType.SEMANTIC_ERROR); ce.add(newError);
+			 * 
+			 * } else {
+			 */
+			if ((designatorAssign.getDesignator().obj.getType().getKind() == Struct.Array
+					&& (designatorAssign.getDesignator().getOptExpr() instanceof OptExprYes))) {
+				report_error("Greska na liniji " + designatorAssign.getLine()
+						+ ", sa leve srane dodele ne moze biti element niza", null);
+				CompilerError newError = new CompilerError(designatorAssign.getLine(), "Elementu niza "
+						+ designatorAssign.getDesignator().getDesignatorName() + " se ne moze dodeliti taj tip izraza!",
+						CompilerErrorType.SEMANTIC_ERROR);
+				ce.add(newError);
+
+			} else {
+				report_error("Greska na liniji " + designatorAssign.getLine()
+						+ ", designatoru se ne moze dodeliti taj tip izraza", null);
+				CompilerError newError = new CompilerError(designatorAssign.getLine(), "Promenljivoj "
+						+ designatorAssign.getDesignator().getDesignatorName() + " se ne moze dodeliti taj tip izraza!",
+						CompilerErrorType.SEMANTIC_ERROR);
+				ce.add(newError);
+
+			}
+
+			// }
+		}
+		factorNewType = false;
+	}
+
+	public void visit(DesignatorIncrement designatorIncrement) {
+		Struct incStruct = designatorIncrement.getDesignator().obj.getType();
+		if (incStruct.getKind() == Struct.Array) {
+			incStruct = designatorIncrement.getDesignator().obj.getType().getElemType();
+		}
+		if (incStruct != MySymbolTable.intType) {
+			report_error("Greska na liniji " + designatorIncrement.getLine() + ", promenljiva mora biti tipa int",
+					null);
+			CompilerError newError = new CompilerError(designatorIncrement.getLine(), "Promenljiva mora biti tipa INT!",
+					CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+		}
+		if (designatorIncrement.getDesignator().obj.getKind() != Obj.Var
+				|| (designatorIncrement.getDesignator().obj.getType().getKind() == Struct.Array
+						&& (designatorIncrement.getDesignator().getOptExpr() instanceof OptExprNo))) {
+			report_error("Greska na liniji " + designatorIncrement.getLine()
+					+ ", simbol koji se inkrementira mora biti promenljiva ili element niza", null);
+			CompilerError newError = new CompilerError(designatorIncrement.getLine(),
+					"Simbol koji se inkrementira mora biti promenljiva ili element niza!",
+					CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+		}
+	}
+
+	public void visit(DesignatorDecrement designatorDecrement) {
+		Struct decStruct = designatorDecrement.getDesignator().obj.getType();
+		if (decStruct.getKind() == Struct.Array) {
+			decStruct = designatorDecrement.getDesignator().obj.getType().getElemType();
+		}
+		if (decStruct != MySymbolTable.intType) {
+			report_error("Greska na liniji " + designatorDecrement.getLine() + ", designator mora biti tipa int", null);
+			CompilerError newError = new CompilerError(designatorDecrement.getLine(), "Designator mora biti INT!",
+					CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+		}
+		if (designatorDecrement.getDesignator().obj.getKind() != Obj.Var
+				|| (designatorDecrement.getDesignator().obj.getType().getKind() == Struct.Array
+						&& (designatorDecrement.getDesignator().getOptExpr() instanceof OptExprNo))) {
+			report_error("Greska na liniji " + designatorDecrement.getLine()
+					+ ", desigSimbol koji se dekrementira mora biti promenljiva ili element niza", null);
+			CompilerError newError = new CompilerError(designatorDecrement.getLine(),
+					"Simbol koji se dekrementira mora biti promenljiva ili element niza!",
+					CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+		}
+	}
+
+	public void visit(DesignatorStmt designatorStmt) {
+		designatorStmt.struct = designatorStmt.getDesignatorStatement().struct;
+	}
+
+	public void visit(ReadStatement readStatement) {
+		if (readStatement.getDesignator().obj.getKind() == Obj.Var
+				&& (readStatement.getDesignator().obj.getType().equals(MySymbolTable.intType)
+						|| readStatement.getDesignator().obj.getType().equals(MySymbolTable.charType)
+						|| readStatement.getDesignator().obj.getType().equals(MySymbolTable.boolType))) {
+
+			readStatement.struct = readStatement.getDesignator().obj.getType();
+		} else if ((readStatement.getDesignator().obj.getType().getKind() == Struct.Array
+				&& (readStatement.getDesignator().getOptExpr() instanceof OptExprYes))
+				&& ((readStatement.getDesignator().obj.getType().getElemType() == MySymbolTable.intType)
+						|| (readStatement.getDesignator().obj.getType().getElemType() == MySymbolTable.charType)
+						|| (readStatement.getDesignator().obj.getType().getElemType() == MySymbolTable.boolType))) {
+			readStatement.struct = readStatement.getDesignator().obj.getType();
+
+		} else {
+
+			report_error("Problem, neispravna read funkcija na liniji " + readStatement.getLine(), null);
+			CompilerError newError = new CompilerError(readStatement.getLine(), "Neispravna read funkcija!",
+					CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+		}
+	}
+
+	public void visit(PrintStatement printStatement) {
+
+		/*
+		 * if (printStatement.getExpr().struct.getKind() == Struct.Array) {
+		 * report_error("Problem, neispravna print funkcija na liniji " +
+		 * printStatement.getLine(), null); CompilerError newError = new
+		 * CompilerError(printStatement.getLine(), "Neispravna print funkcija!",
+		 * CompilerErrorType.SEMANTIC_ERROR); ce.add(newError); return; }
+		 */
+		if ((printStatement.getExpr().struct.getKind() == Struct.Array)
+				&& (printStatement.getExpr().struct.getElemType() != MySymbolTable.intType
+						&& printStatement.getExpr().struct.getElemType() != MySymbolTable.charType
+						&& printStatement.getExpr().struct.getElemType() != MySymbolTable.boolType)) {
+			report_error("Problem, neispravna print funkcija na liniji " + printStatement.getLine(), null);
+			CompilerError newError = new CompilerError(printStatement.getLine(), "Neispravna print funkcija!",
+					CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+		} else if ((printStatement.getExpr().struct.getKind() != Struct.Array
+		/* && printStatement.getExpr().struct.getKind() != Obj.Meth */)
+				&& ((printStatement.getExpr().struct != MySymbolTable.intType)
+						&& (printStatement.getExpr().struct != MySymbolTable.charType)
+						&& (printStatement.getExpr().struct != MySymbolTable.boolType))) {
+			report_error("Problem, neispravna print funkcija na liniji " + printStatement.getLine(), null);
+			CompilerError newError = new CompilerError(printStatement.getLine(), "Neispravna print funkcija!",
+					CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+		} else {
+			printStatement.struct = printStatement.getExpr().struct;
+			printCallCount++;
+		}
+	}
+
+	public void visit(StatementsList statementsList) {
+		statementsList.struct = statementsList.getStatement().struct;
+	}
+
+	// Prepoznavanje kraja programa
+
+	public void visit(EndOfProgram endOfProgram) {
+		// nVars = globalVarsCount + globalArraysCount;
+
+		System.out.println("");
+		System.out.println("---Informacije o programu---");
+		System.out.println("Lokalnih promenljivih ima: " + localVarsCount);
+		System.out.println("Globalnih promenljivih ima: " + globalVarsCount);
+		System.out.println("Konstanti ima: " + constCount);
+
+		if (localVarsCount > 256) {
+			report_error("Broj lokalnih promenljivih u programu ne sme biti veci od 256! ", null);
+			CompilerError newError = new CompilerError(endOfProgram.getLine(), "Broj lokalnih promenljivih u programu ne sme biti veci od 256! ",
+					CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+		
+		}
+		if (globalVarsCount > 65536) {
+			report_error("Broj globalnih promenljivih u programu ne sme biti veci od 65536! ", null);
+			CompilerError newError = new CompilerError(endOfProgram.getLine(), "Broj globalnih promenljivih u programu ne sme biti veci od 65536! ",
+					CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+		}
+	}
+
+	public void visit(MulopMul mulopMul) {
+		mulopMul.struct = new Struct(Code.mul);
+	}
+
+	public void visit(MulopDiv mulopDiv) {
+		mulopDiv.struct = new Struct(Code.div);
+	}
+
+	public void visit(MulopMod mulopMod) {
+		mulopMod.struct = new Struct(Code.rem);
+	}
+
+	public void visit(AddopPlus addopPlus) {
+		addopPlus.struct = new Struct(Code.add);
+	}
+
+	public void visit(AddopMinus addopMinus) {
+		addopMinus.struct = new Struct(Code.sub);
+	}
+
+	public void visit(ConditionOne conditionOne) {
+		conditionOne.struct = conditionOne.getCondTerm().struct;
+	}
+
+	public void visit(ConditionList conditionList) {
+
+		/*
+		 * Struct s1 = conditionList.getCondition().struct; Struct s2 =
+		 * conditionList.getCondTerm().struct;
+		 * 
+		 * if(conditionList.getCondition().struct.getKind() == Struct.Array) { s1 =
+		 * conditionList.getCondition().struct; }
+		 * if(conditionList.getCondTerm().struct.getKind() == Struct.Array) { s2 =
+		 * conditionList.getCondTerm().struct; } if(!s1.equals(s2)) { report_error(
+		 * "Neodgovarajuci tip na liniji " + conditionList.getLine() +
+		 * ", tip MNOZENJE mora biti INT!", null); }
+		 * 
+		 * conditionList.struct = boolType;
+		 */ }
+
+	public void visit(CondFactExprRelopExpr condFactExprRelopExpr) {
+		boolean greska = false;
+		if (elemOfArray.size() == 1) {
+			report_error("Ne moze se porediti ceo niz sa elementom niza na liniji "
+					+ condFactExprRelopExpr.getParent().getParent().getParent().getLine()
+					+ ",  uz nizove mogu stajati samo != ili ==", null);
+			CompilerError newError = new CompilerError(
+					condFactExprRelopExpr.getParent().getParent().getParent().getLine(),
+					"Ne moze se porediti ceo niz sa elementom niza!", CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+			greska = true;
+		}
+
+		boolean arrayRelop = false;
+		if (!(condFactExprRelopExpr.getRelop() instanceof RelopEqual
+				|| condFactExprRelopExpr.getRelop() instanceof RelopNotEqual)
+				&& condFactExprRelopExpr.getExpr().struct.getKind() == Struct.Array && (elemOfArray.size() == 0)) {
+			arrayRelop = true;
+		}
+
+		if (condFactExprRelopExpr.getExpr().struct.getKind() == Struct.Array && arrayRelop) {
+			report_error("Neodgovarajuci relacioni operator na liniji "
+					+ condFactExprRelopExpr.getParent().getParent().getParent().getLine()
+					+ ",  uz nizove mogu stajati samo != ili ==", null);
+			CompilerError newError = new CompilerError(
+					condFactExprRelopExpr.getParent().getParent().getParent().getLine(),
+					"Neodgovarajuci relacioni operator! Uz nizove mogu stajati samo != ili ==",
+					CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+
+			arrayRelop = false;
+		} else {
+
+			Struct s1 = condFactExprRelopExpr.getExpr1().struct;
+			Struct s2 = condFactExprRelopExpr.getExpr().struct;
+
+			if (elemOfArray.size() == 2 && condFactExprRelopExpr.getExpr().struct.getKind() == Struct.Array) {
+				s1 = condFactExprRelopExpr.getExpr1().struct.getElemType();
+
+				s2 = condFactExprRelopExpr.getExpr().struct.getElemType();
+			}
+
+			// if(s1.getKind() == Struct.Array) s1 =
+			// condFactExprRelopExpr.getExpr1().struct.getElemType();
+			// if(s2.getKind() == Struct.Array) s2 =
+			// condFactExprRelopExpr.getExpr().struct.getElemType();
+
+			if (!s1.equals(s2) && !greska) {
+				report_error("Neodgovarajuci tip na liniji "
+						+ condFactExprRelopExpr.getParent().getParent().getParent().getLine()
+						+ ", mogu se porediti samo izrazi istog tipa!", null);
+				CompilerError newError = new CompilerError(
+						condFactExprRelopExpr.getParent().getParent().getParent().getLine(),
+						"Neodgovarajuci tip! Mogu se porediti samo izrazi istog tipa!",
+						CompilerErrorType.SEMANTIC_ERROR);
+				ce.add(newError);
+			}
+		}
+		elemOfArray.clear();
+		greska = false;
+		condFactExprRelopExpr.struct = MySymbolTable.boolType;
+
+	}
+
+	public void visit(IfCondition ifCond) {
+		if (ifCond.getCondition().struct != MySymbolTable.boolType) {
+			report_error("Problem, neispravan tip u IF naredbi na liniji " + ifCond.getLine() + "STR"
+					+ ifCond.getCondition().struct, null);
+			CompilerError newError = new CompilerError(ifCond.getLine(), "Neispravan tip u IF naredbi!",
+					CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+		}
+
+	}
+
+	public void visit(CondTermOne condTermOne) {
+		condTermOne.struct = condTermOne.getCondFact().struct;
+	}
+
+	public void visit(CondFactExprOnly condFactExprOnly) {
+		condFactExprOnly.struct = condFactExprOnly.getExpr().struct;
+	}
+
+	// ====================
+
+	boolean parametersOfFunctionFound = false;
+
+	Obj designatorObj = null;
+
+	public void visit(MethodCall methodCall) {
+		if (designatorObj.getKind() != Obj.Meth) {
+			report_error("Greska na liniji " + methodCall.getLine() + ", ocekuje se poziv metode!", null);
+			CompilerError newError = new CompilerError(methodCall.getLine(), "Ocekuje se poziv metode!",
+					CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+		} else {
+			methodCall.struct = designatorObj.getType();
+			if (methodCall.getActPars() instanceof ActParams)
+				parametersOfFunctionFound = true;
+		}
+	}
+
+	public void visit(FormParsOneParam formParsOneParam) {
+		Obj varNode = MySymbolTable.currentScope().findSymbol(formParsOneParam.getParamName());
+		if (varNode != null) {
+			report_error("Greska! Naziv parametra na liniji " + formParsOneParam.getLine() + " se vec koristi", null);
+			CompilerError newError = new CompilerError(formParsOneParam.getLine(), "Naziv parametra se vec koristi!",
+					CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+		} else {
+			MySymbolTable.insert(Obj.Var, formParsOneParam.getParamName(), formParsOneParam.getType().struct);
+			report_info("Parametar funkcije " + formParsOneParam.getParamName() + " na liniji "
+					+ formParsOneParam.getLine() + " je ubacen u MySymbolTableelu simbola", null);
+
+		}
+	}
+
+	Struct typeOfExpression = null;
+
+	boolean returnWord = false;
+
+	public void visit(ReturnStatement returnStatement) {
+		if (currentMethod == null) {
+			report_error("Greska na liniji " + returnStatement.getLine() + ", return ne sme da stoji van metode", null);
+			CompilerError newError = new CompilerError(returnStatement.getLine(), "Return ne sme stajati van metode!",
+					CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+		} else {
+			returnWord = true;
+			Struct s = returnStatement.getExpr().struct;
+			if (!s.assignableTo(currentMethod.getType())) {
+				report_error("Greska na liniji " + returnStatement.getLine()
+						+ ", povratni tip ne odgovaraaaaaaa tipu metode", null);
+				CompilerError newError = new CompilerError(returnStatement.getLine(),
+						"Povratni tip ne odgovara tipu metode!", CompilerErrorType.SEMANTIC_ERROR);
+				ce.add(newError);
+			}
+		}
+	}
+
+	public void visit(ReturnNoExprStatement returnNoExprStatement) {
+		if (currentMethod == null) {
+			report_error("Greska na liniji " + returnNoExprStatement.getLine() + ", return ne sme da stoji van metode",
+					null);
+			CompilerError newError = new CompilerError(returnNoExprStatement.getLine(),
+					"Return ne sme stajati van metode!", CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+		} else {
+			if (currentMethod.getType().getKind() != Struct.None) {
+				report_error("Greska na liniji " + returnNoExprStatement.getLine()
+						+ ", void metoda ne moze imati rec return u sebi", null);
+				CompilerError newError = new CompilerError(returnNoExprStatement.getLine(),
+						"Void metoda ne sme imati rec return u sebi!", CompilerErrorType.SEMANTIC_ERROR);
+				ce.add(newError);
+			}
+		}
+	}
+
+	public List<Boolean> elemOfArray = new ArrayList<Boolean>();
+
+	public void visit(OptExprYes optExprYes) {
+
+
+		/*
+		 * if(optExprYes.getExpr().struct.getElemType() != Tab.intType) {
+		 * report_error("Greska na liniji " + optExprYes.getLine() +
+		 * ", expr mora biti tipa int", null); CompilerError newError = new
+		 * CompilerError(optExprYes.getLine(), "Izraz mora biti tipa int!",
+		 * CompilerErrorType.SEMANTIC_ERROR); ce.add(newError);
+		 * 
+		 * }
+		 */
+		if (optExprYes.getParent().getParent().getParent().getParent().getParent().getParent().getParent()
+				.getParent() instanceof CondFactExprRelopExpr) {
+			elemOfArray.add(true);
+		}
+		
+		if (optExprYes.getExpr().struct.getKind() != Struct.Array && optExprYes.getExpr().struct.getKind() != Struct.Int) {
+			report_error("Greska na liniji " + optExprYes.getLine() + ", expr mora biti tipa int", null);
+			CompilerError newError = new CompilerError(optExprYes.getLine(), "Izraz mora biti tipa int!",
+					CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+
+		}
+		typeOfExpression = optExprYes.getExpr().struct;
+		// optExprYes.s = optExprYes.getExpr().struct;
+	}
+
+	boolean switchStatement = false;
+	boolean doWhile = false;
+
+	public void visit(DoWhileStatement doWhileStatement) {
+		doWhile = false;
+	}
+
+	public void visit(BreakStatement breakStatement) {
+		if (!switchStatement && !doWhile) {
+			report_error("Break naredba nije dozvoljena van switch ili do-while naredbe, greska na liniji "
+					+ breakStatement.getLine(), null);
+			CompilerError newError = new CompilerError(breakStatement.getLine(),
+					"Break naredba nije dozvoljena van switch ili do-while naredbe!", CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+		}
+	}
+
+	public void visit(SwitchExpr switchExpr) {
+		switchStatement = false;
+		listOfNumberSwitch.clear();
+		if (switchExpr.getExpr().struct != MySymbolTable.intType) {
+			report_error("Expr u switch naredbi mora biti tipa int! Greska na liniji " + switchExpr.getLine(), null);
+			CompilerError newError = new CompilerError(switchExpr.getLine(),
+					"Expr u switch naredbi mora biti tipa int!", CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+		}
+	}
+
+	public void visit(Switch switch_) {
+		switchStatement = true;
+	}
+
+	public void visit(Do do_) {
+		doWhile = true;
+	}
+
+	public void visit(ContinueStatement continueStatement) {
+		if (!doWhile) {
+			report_error("Continue naredba nije dozvoljena van do-while naredbe, greska na liniji "
+					+ continueStatement.getLine(), null);
+			CompilerError newError = new CompilerError(continueStatement.getLine(),
+					"Continue naredba nije dozvoljena van do-while naredbe!", CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+		}
+	}
+
+	LinkedList<Integer> listOfNumberSwitch = new LinkedList<Integer>();
+
+	public void visit(NumConst numConst) {
+
+		if (listOfNumberSwitch.contains(numConst.getNumConstSwitch())) {
+			report_error("Ponovljen broj u switch naredbi, greska na liniji " + numConst.getLine(), null);
+			CompilerError newError = new CompilerError(numConst.getLine(), "Ponovljen broj u switch naredbi!",
+					CompilerErrorType.SEMANTIC_ERROR);
+			ce.add(newError);
+		} else {
+			listOfNumberSwitch.add(numConst.getNumConstSwitch());
+		}
+	}
+
+}

@@ -1,0 +1,69 @@
+INFO  21:14:53,554 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  21:14:53,596 - #2 program
+INFO  21:14:53,596 - #28 test301
+INFO  21:14:53,596 - #3 {
+INFO  21:14:53,597 - #14 void
+INFO  21:14:53,598 - #28 main
+INFO  21:14:53,598 - #12 (
+INFO  21:14:53,600 - #13 )
+INFO  21:14:53,601 - #3 {
+INFO  21:14:53,602 - #27 print
+INFO  21:14:53,603 - #12 (
+INFO  21:14:53,603 - #29 11
+INFO  21:14:53,604 - #13 )
+INFO  21:14:53,605 - #6 ;
+INFO  21:14:53,606 - #4 }
+INFO  21:14:53,606 - #4 }
+INFO  21:14:53,613 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      StatementsList(
+        NoStatementsList(
+        ) [NoStatementsList]
+        PrintStatement(
+          Expression(
+            Expr1AddopTerm(
+              OptMinusNo(
+              ) [OptMinusNo]
+              AddopTermListOne(
+                TermFactorMulop(
+                  MulopFactorListOne(
+                    FactorNumConst(
+                     11
+                    ) [FactorNumConst]
+                  ) [MulopFactorListOne]
+                ) [TermFactorMulop]
+              ) [AddopTermListOne]
+            ) [Expr1AddopTerm]
+          ) [Expression]
+          OptNumConstNo(
+          ) [OptNumConstNo]
+        ) [PrintStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  21:14:53,614 - ===================================
+INFO  21:14:53,617 - Obradjuje se funkcija main tip funkcije: VOID
+INFO  21:14:53,618 -  Print count calls = 0
+INFO  21:14:53,618 -  Deklarisanih promenljivih ima = 0
+INFO  21:14:53,619 - ===================================
+INFO  21:14:53,624 - Parsiranje uspesno zavrseno!

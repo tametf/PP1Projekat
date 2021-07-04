@@ -1,0 +1,126 @@
+INFO  22:11:22,247 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  22:11:22,247 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  22:11:22,289 - #2 program
+INFO  22:11:22,289 - #31 a
+INFO  22:11:22,289 - #3 {
+INFO  22:11:22,290 - #14 void
+INFO  22:11:22,291 - #31 main
+INFO  22:11:22,291 - #12 (
+INFO  22:11:22,291 - #13 )
+INFO  22:11:22,291 - #31 bool
+INFO  22:11:22,292 - #31 a
+INFO  22:11:22,292 - #6 ;
+INFO  22:11:22,293 - #31 int
+INFO  22:11:22,293 - #31 b
+INFO  22:11:22,293 - #6 ;
+INFO  22:11:22,294 - #31 char
+INFO  22:11:22,294 - #31 c
+INFO  22:11:22,294 - #6 ;
+INFO  22:11:22,294 - #3 {
+INFO  22:11:22,294 - #26 read
+INFO  22:11:22,294 - #12 (
+INFO  22:11:22,294 - #31 c
+INFO  22:11:22,296 - #13 )
+INFO  22:11:22,296 - #6 ;
+INFO  22:11:22,296 - #4 }
+INFO  22:11:22,296 - #4 }
+INFO  22:11:22,308 - Program(
+  ProgName(
+   a
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  Lbrace(
+  ) [Lbrace]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDeclaration(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        VarDeclListMore(
+          VarDeclListMore(
+            NoVarDeclList(
+            ) [NoVarDeclList]
+            VarDeclLocal(
+              Type(
+               bool
+              ) [Type]
+              VarDeclarationListLocalOne(
+                VarDeclListLocalOne(
+                  VarIdentLocal(
+                   a
+                    OptBracketsNo(
+                    ) [OptBracketsNo]
+                  ) [VarIdentLocal]
+                ) [VarDeclListLocalOne]
+              ) [VarDeclarationListLocalOne]
+            ) [VarDeclLocal]
+          ) [VarDeclListMore]
+          VarDeclLocal(
+            Type(
+             int
+            ) [Type]
+            VarDeclarationListLocalOne(
+              VarDeclListLocalOne(
+                VarIdentLocal(
+                 b
+                  OptBracketsNo(
+                  ) [OptBracketsNo]
+                ) [VarIdentLocal]
+              ) [VarDeclListLocalOne]
+            ) [VarDeclarationListLocalOne]
+          ) [VarDeclLocal]
+        ) [VarDeclListMore]
+        VarDeclLocal(
+          Type(
+           char
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               c
+                OptBracketsNo(
+                ) [OptBracketsNo]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      Lbrace(
+      ) [Lbrace]
+      StatementsList(
+        NoStatementsList(
+        ) [NoStatementsList]
+        ReadStatement(
+          Read(
+          ) [Read]
+          Designator(
+           c
+            OptExprNo(
+            ) [OptExprNo]
+          ) [Designator]
+        ) [ReadStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDeclaration]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  22:11:22,309 - ===================================
+INFO  22:11:22,312 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  22:11:22,312 - Deklarisana lokalna promenljiva ana liniji 4 : Var a: , 0, 1 
+INFO  22:11:22,312 - Deklarisana lokalna promenljiva bna liniji 5 : Var b: int, 1, 1 
+INFO  22:11:22,312 - Deklarisana lokalna promenljiva cna liniji 6 : Var c: char, 2, 1 
+INFO  22:11:22,312 - Pristup lokalnoj promenljivoj: c na liniji 9[ Var c: char, 2, 1  ]
+INFO  22:11:22,314 -  Print count calls = 0
+INFO  22:11:22,314 -  Deklarisanih promenljivih ima = 30
+INFO  22:11:22,314 - ===================================
+INFO  22:11:22,317 - Parsiranje uspesno zavrseno!

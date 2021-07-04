@@ -1,0 +1,296 @@
+INFO  13:46:20,405 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  13:46:20,439 - #2 program
+INFO  13:46:20,439 - #28 MJProgram
+INFO  13:46:20,439 - #9 class
+INFO  13:46:20,440 - #28 tamarajevdjevic
+INFO  13:46:20,440 - #24 extends
+INFO  13:46:20,440 - #28 tamara
+INFO  13:46:20,440 - #3 {
+INFO  13:46:20,441 - #28 int
+INFO  13:46:20,441 - #28 pera
+INFO  13:46:20,441 - #7 ,
+INFO  13:46:20,443 - #28 mika
+INFO  13:46:20,443 - #10 [
+INFO  13:46:20,443 - #11 ]
+INFO  13:46:20,443 - #7 ,
+INFO  13:46:20,443 - #28 zika
+INFO  13:46:20,443 - #6 ;
+INFO  13:46:20,444 - #3 {
+INFO  13:46:20,444 - #28 int
+INFO  13:46:20,445 - #28 sabiranje
+INFO  13:46:20,445 - #12 (
+INFO  13:46:20,445 - #28 int
+INFO  13:46:20,446 - #28 broj
+INFO  13:46:20,446 - #7 ,
+INFO  13:46:20,447 - #28 string
+INFO  13:46:20,447 - #28 perinibrojevi
+INFO  13:46:20,447 - #10 [
+INFO  13:46:20,447 - #11 ]
+INFO  13:46:20,447 - #13 )
+INFO  13:46:20,447 - #28 int
+INFO  13:46:20,447 - #28 povratnavrednost
+INFO  13:46:20,447 - #7 ,
+INFO  13:46:20,447 - #28 povvr1
+INFO  13:46:20,447 - #10 [
+INFO  13:46:20,448 - #11 ]
+INFO  13:46:20,448 - #7 ,
+INFO  13:46:20,448 - #28 caca
+INFO  13:46:20,448 - #6 ;
+INFO  13:46:20,448 - #3 {
+INFO  13:46:20,448 - #27 print
+INFO  13:46:20,448 - #12 (
+INFO  13:46:20,449 - #17 -
+INFO  13:46:20,449 - #29 2
+INFO  13:46:20,450 - #18 +
+INFO  13:46:20,450 - #29 5
+INFO  13:46:20,451 - #21 *
+INFO  13:46:20,451 - #29 8
+INFO  13:46:20,451 - #18 +
+INFO  13:46:20,453 - #29 9
+INFO  13:46:20,453 - #22 /
+INFO  13:46:20,454 - #29 4
+INFO  13:46:20,455 - #23 %
+INFO  13:46:20,455 - #29 5
+INFO  13:46:20,456 - #15 ?
+INFO  13:46:20,456 - #29 1
+INFO  13:46:20,457 - #16 :
+INFO  13:46:20,457 - #29 5
+INFO  13:46:20,457 - #17 -
+INFO  13:46:20,457 - #29 3
+INFO  13:46:20,458 - #21 *
+INFO  13:46:20,458 - #29 6
+INFO  13:46:20,458 - #7 ,
+INFO  13:46:20,459 - #29 2
+INFO  13:46:20,459 - #13 )
+INFO  13:46:20,461 - #6 ;
+INFO  13:46:20,461 - #4 }
+INFO  13:46:20,461 - #4 }
+INFO  13:46:20,462 - #4 }
+INFO  13:46:20,462 - #3 {
+INFO  13:46:20,463 - #4 }
+INFO  13:46:20,465 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  ClassDeclList(
+    NoDeclList(
+    ) [NoDeclList]
+    ClassDecl(
+     tamarajevdjevic
+      OptionalExtendsType(
+        Type(
+         tamara
+        ) [Type]
+      ) [OptionalExtendsType]
+      VarDeclListMore(
+        NoVarDeclList(
+        ) [NoVarDeclList]
+        VarDecl(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListMore(
+            VarDeclarationListMore(
+              VarDeclarationListOne(
+                VarDeclListOne(
+                 pera
+                  OptBracketsNo(
+                  ) [OptBracketsNo]
+                ) [VarDeclListOne]
+              ) [VarDeclarationListOne]
+              VarDeclListOne(
+               mika
+                OptBracketsYes(
+                ) [OptBracketsYes]
+              ) [VarDeclListOne]
+            ) [VarDeclarationListMore]
+            VarDeclListOne(
+             zika
+              OptBracketsNo(
+              ) [OptBracketsNo]
+            ) [VarDeclListOne]
+          ) [VarDeclarationListMore]
+        ) [VarDecl]
+      ) [VarDeclListMore]
+      OptionalMethodDeclList(
+        MethodDeclListMore(
+          NoMethodDeclList(
+          ) [NoMethodDeclList]
+          MethodDecl(
+            ReturnValueTypeOther(
+              Type(
+               int
+              ) [Type]
+            ) [ReturnValueTypeOther]
+           sabiranje
+            FormParams(
+              FormParamsList(
+                FormParam(
+                  FormParsOne(
+                    Type(
+                     int
+                    ) [Type]
+                   broj
+                    OptBracketsNo(
+                    ) [OptBracketsNo]
+                  ) [FormParsOne]
+                ) [FormParam]
+                FormParsOne(
+                  Type(
+                   string
+                  ) [Type]
+                 perinibrojevi
+                  OptBracketsYes(
+                  ) [OptBracketsYes]
+                ) [FormParsOne]
+              ) [FormParamsList]
+            ) [FormParams]
+            VarDeclListMore(
+              NoVarDeclList(
+              ) [NoVarDeclList]
+              VarDecl(
+                Type(
+                 int
+                ) [Type]
+                VarDeclarationListMore(
+                  VarDeclarationListMore(
+                    VarDeclarationListOne(
+                      VarDeclListOne(
+                       povratnavrednost
+                        OptBracketsNo(
+                        ) [OptBracketsNo]
+                      ) [VarDeclListOne]
+                    ) [VarDeclarationListOne]
+                    VarDeclListOne(
+                     povvr1
+                      OptBracketsYes(
+                      ) [OptBracketsYes]
+                    ) [VarDeclListOne]
+                  ) [VarDeclarationListMore]
+                  VarDeclListOne(
+                   caca
+                    OptBracketsNo(
+                    ) [OptBracketsNo]
+                  ) [VarDeclListOne]
+                ) [VarDeclarationListMore]
+              ) [VarDecl]
+            ) [VarDeclListMore]
+            StatementsList(
+              NoStatementsList(
+              ) [NoStatementsList]
+              PrintStatement(
+                ExpressionCond(
+                  Expr1AddopTerm(
+                    OptMinusYes(
+                    ) [OptMinusYes]
+                    TermFactor(
+                      FactorNumConst(
+                       2
+                      ) [FactorNumConst]
+                    ) [TermFactor]
+                    AddopTermListMore(
+                      AddopTermListOne(
+                        AddopTermOne(
+                          AddopPlus(
+                          ) [AddopPlus]
+                          TermFactorMulop(
+                            FactorNumConst(
+                             5
+                            ) [FactorNumConst]
+                            MulopFactorListOne(
+                              MulopFactorOne(
+                                MulopMul(
+                                ) [MulopMul]
+                                FactorNumConst(
+                                 8
+                                ) [FactorNumConst]
+                              ) [MulopFactorOne]
+                            ) [MulopFactorListOne]
+                          ) [TermFactorMulop]
+                        ) [AddopTermOne]
+                      ) [AddopTermListOne]
+                      AddopTermOne(
+                        AddopPlus(
+                        ) [AddopPlus]
+                        TermFactorMulop(
+                          FactorNumConst(
+                           9
+                          ) [FactorNumConst]
+                          MulopFactorListMore(
+                            MulopFactorListOne(
+                              MulopFactorOne(
+                                MulopDiv(
+                                ) [MulopDiv]
+                                FactorNumConst(
+                                 4
+                                ) [FactorNumConst]
+                              ) [MulopFactorOne]
+                            ) [MulopFactorListOne]
+                            MulopFactorOne(
+                              MulopMod(
+                              ) [MulopMod]
+                              FactorNumConst(
+                               5
+                              ) [FactorNumConst]
+                            ) [MulopFactorOne]
+                          ) [MulopFactorListMore]
+                        ) [TermFactorMulop]
+                      ) [AddopTermOne]
+                    ) [AddopTermListMore]
+                  ) [Expr1AddopTerm]
+                  Expr1Term(
+                    OptMinusNo(
+                    ) [OptMinusNo]
+                    TermFactor(
+                      FactorNumConst(
+                       1
+                      ) [FactorNumConst]
+                    ) [TermFactor]
+                  ) [Expr1Term]
+                  Expr1AddopTerm(
+                    OptMinusNo(
+                    ) [OptMinusNo]
+                    TermFactor(
+                      FactorNumConst(
+                       5
+                      ) [FactorNumConst]
+                    ) [TermFactor]
+                    AddopTermListOne(
+                      AddopTermOne(
+                        AddopMinus(
+                        ) [AddopMinus]
+                        TermFactorMulop(
+                          FactorNumConst(
+                           3
+                          ) [FactorNumConst]
+                          MulopFactorListOne(
+                            MulopFactorOne(
+                              MulopMul(
+                              ) [MulopMul]
+                              FactorNumConst(
+                               6
+                              ) [FactorNumConst]
+                            ) [MulopFactorOne]
+                          ) [MulopFactorListOne]
+                        ) [TermFactorMulop]
+                      ) [AddopTermOne]
+                    ) [AddopTermListOne]
+                  ) [Expr1AddopTerm]
+                ) [ExpressionCond]
+                OptNumConstYes(
+                 2
+                ) [OptNumConstYes]
+              ) [PrintStatement]
+            ) [StatementsList]
+          ) [MethodDecl]
+        ) [MethodDeclListMore]
+      ) [OptionalMethodDeclList]
+    ) [ClassDecl]
+  ) [ClassDeclList]
+  NoMethodDeclList(
+  ) [NoMethodDeclList]
+) [Program]
+INFO  13:46:20,465 - ===================================
+INFO  13:46:20,467 -  Print count calls = 1
+INFO  13:46:20,467 -  Deklarisanih promenljivih ima = 7
+INFO  13:46:20,467 - Read count calls = 0

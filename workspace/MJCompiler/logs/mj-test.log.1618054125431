@@ -1,0 +1,152 @@
+INFO  13:25:54,809 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  13:25:54,841 - #2 program
+INFO  13:25:54,841 - #28 MJProgram
+INFO  13:25:54,841 - #9 class
+INFO  13:25:54,842 - #28 tamarajevdjevic
+INFO  13:25:54,842 - #24 extends
+INFO  13:25:54,842 - #28 tamara
+INFO  13:25:54,842 - #3 {
+INFO  13:25:54,843 - #28 int
+INFO  13:25:54,844 - #28 pera
+INFO  13:25:54,844 - #7 ,
+INFO  13:25:54,845 - #28 mika
+INFO  13:25:54,845 - #10 [
+INFO  13:25:54,845 - #11 ]
+INFO  13:25:54,845 - #7 ,
+INFO  13:25:54,846 - #28 zika
+INFO  13:25:54,846 - #6 ;
+INFO  13:25:54,846 - #3 {
+INFO  13:25:54,847 - #14 void
+INFO  13:25:54,847 - #28 sabiranje
+INFO  13:25:54,847 - #12 (
+INFO  13:25:54,847 - #28 int
+INFO  13:25:54,848 - #28 broj
+INFO  13:25:54,848 - #13 )
+INFO  13:25:54,849 - #28 int
+INFO  13:25:54,849 - #28 povratnavrednost
+INFO  13:25:54,849 - #7 ,
+INFO  13:25:54,849 - #28 povvr1
+INFO  13:25:54,849 - #10 [
+INFO  13:25:54,849 - #11 ]
+INFO  13:25:54,849 - #6 ;
+INFO  13:25:54,849 - #3 {
+INFO  13:25:54,849 - #28 pozitivno
+INFO  13:25:54,850 - #20 --
+INFO  13:25:54,851 - #6 ;
+INFO  13:25:54,851 - #4 }
+INFO  13:25:54,851 - #4 }
+INFO  13:25:54,852 - #4 }
+INFO  13:25:54,852 - #3 {
+INFO  13:25:54,853 - #4 }
+INFO  13:25:54,854 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  ClassDeclList(
+    NoDeclList(
+    ) [NoDeclList]
+    ClassDecl(
+     tamarajevdjevic
+      OptionalExtendsType(
+        Type(
+         tamara
+        ) [Type]
+      ) [OptionalExtendsType]
+      VarDeclListMore(
+        NoVarDeclList(
+        ) [NoVarDeclList]
+        VarDecl(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListMore(
+            VarDeclarationListMore(
+              VarDeclarationListOne(
+                VarDeclListOne(
+                 pera
+                  OptBracketsNo(
+                  ) [OptBracketsNo]
+                ) [VarDeclListOne]
+              ) [VarDeclarationListOne]
+              VarDeclListOne(
+               mika
+                OptBracketsYes(
+                ) [OptBracketsYes]
+              ) [VarDeclListOne]
+            ) [VarDeclarationListMore]
+            VarDeclListOne(
+             zika
+              OptBracketsNo(
+              ) [OptBracketsNo]
+            ) [VarDeclListOne]
+          ) [VarDeclarationListMore]
+        ) [VarDecl]
+      ) [VarDeclListMore]
+      OptionalMethodDeclList(
+        MethodDeclListMore(
+          NoMethodDeclList(
+          ) [NoMethodDeclList]
+          MethodDecl(
+            ReturnValueTypeVoid(
+            ) [ReturnValueTypeVoid]
+           sabiranje
+            FormParams(
+              FormParam(
+                FormParsOne(
+                  Type(
+                   int
+                  ) [Type]
+                 broj
+                  OptBracketsNo(
+                  ) [OptBracketsNo]
+                ) [FormParsOne]
+              ) [FormParam]
+            ) [FormParams]
+            VarDeclListMore(
+              NoVarDeclList(
+              ) [NoVarDeclList]
+              VarDecl(
+                Type(
+                 int
+                ) [Type]
+                VarDeclarationListMore(
+                  VarDeclarationListOne(
+                    VarDeclListOne(
+                     povratnavrednost
+                      OptBracketsNo(
+                      ) [OptBracketsNo]
+                    ) [VarDeclListOne]
+                  ) [VarDeclarationListOne]
+                  VarDeclListOne(
+                   povvr1
+                    OptBracketsYes(
+                    ) [OptBracketsYes]
+                  ) [VarDeclListOne]
+                ) [VarDeclarationListMore]
+              ) [VarDecl]
+            ) [VarDeclListMore]
+            StatementsList(
+              NoStatementsList(
+              ) [NoStatementsList]
+              DesignatorStmt(
+                DesignatorDecrement(
+                  Designator(
+                   pozitivno
+                    OptExprNo(
+                    ) [OptExprNo]
+                  ) [Designator]
+                ) [DesignatorDecrement]
+              ) [DesignatorStmt]
+            ) [StatementsList]
+          ) [MethodDecl]
+        ) [MethodDeclListMore]
+      ) [OptionalMethodDeclList]
+    ) [ClassDecl]
+  ) [ClassDeclList]
+  NoMethodDeclList(
+  ) [NoMethodDeclList]
+) [Program]
+INFO  13:25:54,854 - ===================================
+INFO  13:25:54,855 -  Print count calls = 0
+INFO  13:25:54,856 -  Deklarisanih promenljivih ima = 6
+INFO  13:25:54,856 - Read count calls = 0

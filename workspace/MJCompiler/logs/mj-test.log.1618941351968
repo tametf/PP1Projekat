@@ -1,0 +1,107 @@
+INFO  19:50:35,907 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  19:50:35,950 - #2 program
+INFO  19:50:35,950 - #28 test301
+INFO  19:50:35,950 - #5 const
+INFO  19:50:35,951 - #28 int
+INFO  19:50:35,951 - #28 nula
+INFO  19:50:35,952 - #8 =
+INFO  19:50:35,952 - #29 0
+INFO  19:50:35,952 - #6 ;
+INFO  19:50:35,953 - #3 {
+INFO  19:50:35,954 - #14 void
+INFO  19:50:35,954 - #28 main
+INFO  19:50:35,954 - #12 (
+INFO  19:50:35,954 - #13 )
+INFO  19:50:35,955 - #28 int
+INFO  19:50:35,956 - #28 bodovi
+INFO  19:50:35,956 - #6 ;
+INFO  19:50:35,957 - #28 bool
+INFO  19:50:35,958 - #28 bt
+INFO  19:50:35,958 - #6 ;
+INFO  19:50:35,958 - #3 {
+INFO  19:50:35,959 - #4 }
+INFO  19:50:35,961 - #4 }
+INFO  19:50:35,971 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  ConstDeclList(
+    NoDeclList(
+    ) [NoDeclList]
+    ConstDecl(
+      Type(
+       int
+      ) [Type]
+      ConstDeclarationListOne(
+        ConstDeclOne(
+         nula
+          NumConstant(
+           0
+          ) [NumConstant]
+        ) [ConstDeclOne]
+      ) [ConstDeclarationListOne]
+    ) [ConstDecl]
+  ) [ConstDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        VarDeclListMore(
+          NoVarDeclList(
+          ) [NoVarDeclList]
+          VarDeclLocal(
+            Type(
+             int
+            ) [Type]
+            VarDeclarationListLocalOne(
+              VarDeclListLocalOne(
+                VarIdentLocal(
+                 bodovi
+                  OptBracketsNo(
+                  ) [OptBracketsNo]
+                ) [VarIdentLocal]
+              ) [VarDeclListLocalOne]
+            ) [VarDeclarationListLocalOne]
+          ) [VarDeclLocal]
+        ) [VarDeclListMore]
+        VarDeclLocal(
+          Type(
+           bool
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               bt
+                OptBracketsNo(
+                ) [OptBracketsNo]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      NoStatementsList(
+      ) [NoStatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  19:50:35,972 - ===================================
+INFO  19:50:35,974 - Definisana je konstanta nula na liniji 4
+INFO  19:50:35,974 - Definisana funkcija programa sa imenom main na liniji 8
+INFO  19:50:35,974 - Deklarisana lokalna promenljiva sa imenom: bodovina liniji 9
+INFO  19:50:35,974 - Deklarisana lokalna promenljiva sa imenom: btna liniji 10
+ERROR 19:50:35,974 - Program nema MAIN funkciju! Greska na liniji2
+INFO  19:50:35,974 -  Print count calls = 0
+INFO  19:50:35,974 -  Deklarisanih promenljivih ima = 0
+INFO  19:50:35,974 - ===================================
+ERROR 19:50:35,975 - GRESKA!
+ERROR 19:50:35,975 - Parsiranje NIJE uspesno zavrseno!

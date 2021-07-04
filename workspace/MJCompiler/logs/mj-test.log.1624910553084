@@ -1,0 +1,101 @@
+INFO  22:02:18,409 - Compiling source file: E:\sredjen\pptam21\workspace\MJCompiler\test\test2.mj
+INFO  22:02:18,410 - Compiling source file: E:\sredjen\pptam21\workspace\MJCompiler\test\test2.mj
+INFO  22:02:18,656 - #2 program
+INFO  22:02:18,656 - #31 test301
+INFO  22:02:18,656 - #31 int
+INFO  22:02:18,659 - #31 kk3
+INFO  22:02:18,660 - #6 ;
+INFO  22:02:18,663 - #6 ;
+ERROR 22:02:18,663 - 
+Sintaksna greska na liniji 5
+INFO  22:02:18,663 - #3 {
+INFO  22:02:18,663 - #14 void
+INFO  22:02:18,663 - #31 main
+ERROR 22:02:18,665 - Greska prilikom deklaracije globalne promenljive 
+INFO  22:02:18,673 - #12 (
+INFO  22:02:18,673 - #13 )
+INFO  22:02:18,674 - #31 int
+INFO  22:02:18,676 - #31 bodovi
+INFO  22:02:18,676 - #6 ;
+INFO  22:02:18,677 - #3 {
+INFO  22:02:18,679 - #31 bodovi
+INFO  22:02:18,680 - #8 =
+INFO  22:02:18,683 - #34 'a'
+INFO  22:02:18,685 - #18 +
+INFO  22:02:18,685 - #6 ;
+ERROR 22:02:18,685 - 
+Sintaksna greska na liniji 13
+INFO  22:02:18,686 - #4 }
+INFO  22:02:18,686 - #4 }
+ERROR 22:02:18,686 - Greska pri dodeli vrednosti 
+INFO  22:02:18,697 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  VariableDeclList(
+    NoDeclList(
+    ) [NoDeclList]
+    VarDecl(
+      Type(
+       int
+      ) [Type]
+      VarDeclarationListOne(
+        ERROR5(
+          null
+        ) [ERROR5]
+      ) [VarDeclarationListOne]
+    ) [VarDecl]
+  ) [VariableDeclList]
+  Lbrace(
+  ) [Lbrace]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDeclaration(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        NoVarDeclList(
+        ) [NoVarDeclList]
+        VarDeclLocal(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               bodovi
+                OptBracketsNo(
+                ) [OptBracketsNo]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      Lbrace(
+      ) [Lbrace]
+      StatementsList(
+        NoStatementsList(
+        ) [NoStatementsList]
+        DesignatorStmt(
+          ERROR222(
+            null
+          ) [ERROR222]
+        ) [DesignatorStmt]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDeclaration]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  22:02:18,697 - ===================================
+INFO  22:02:18,703 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  22:02:18,704 - Deklarisana lokalna promenljiva bodovina liniji 10 : Var bodovi: int, 0, 1 
+INFO  22:02:18,704 - ===================================
+ERROR 22:02:18,704 - Parsiranje NIJE uspesno zavrseno!

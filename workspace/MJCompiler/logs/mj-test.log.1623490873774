@@ -1,0 +1,123 @@
+INFO  11:27:10,583 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  11:27:10,719 - #2 program
+INFO  11:27:10,720 - #31 test301
+INFO  11:27:10,721 - #31 inst
+INFO  11:27:10,722 - #31 niz
+INFO  11:27:10,723 - #10 [
+INFO  11:27:10,723 - #11 ]
+INFO  11:27:10,726 - #6 ;
+INFO  11:27:10,729 - #3 {
+INFO  11:27:10,730 - #14 void
+INFO  11:27:10,731 - #31 main
+INFO  11:27:10,731 - #12 (
+INFO  11:27:10,732 - #13 )
+INFO  11:27:10,733 - #3 {
+INFO  11:27:10,734 - #31 niz
+INFO  11:27:10,736 - #8 =
+INFO  11:27:10,738 - #25 new
+INFO  11:27:10,740 - #31 int
+INFO  11:27:10,741 - #10 [
+INFO  11:27:10,741 - #32 3
+INFO  11:27:10,741 - #11 ]
+INFO  11:27:10,744 - #6 ;
+INFO  11:27:10,744 - #4 }
+INFO  11:27:10,759 - #4 }
+INFO  11:27:10,770 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  VariableDeclList(
+    NoDeclList(
+    ) [NoDeclList]
+    VarDecl(
+      Type(
+       inst
+      ) [Type]
+      VarDeclarationListOne(
+        VarIdentGlobal(
+         niz
+          OptBracketsYes(
+          ) [OptBracketsYes]
+        ) [VarIdentGlobal]
+      ) [VarDeclarationListOne]
+    ) [VarDecl]
+  ) [VariableDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      StatementsList(
+        NoStatementsList(
+        ) [NoStatementsList]
+        DesignatorStmt(
+          DesignatorAssign(
+            Designator(
+             niz
+              OptExprNo(
+              ) [OptExprNo]
+            ) [Designator]
+            Expression(
+              Expr1AddopTerm(
+                OptMinusNo(
+                ) [OptMinusNo]
+                AddopTermListOne(
+                  TermFactorMulop(
+                    MulopFactorListOne(
+                      FactorNewTypeExpr(
+                        Type(
+                         int
+                        ) [Type]
+                        Expression(
+                          Expr1AddopTerm(
+                            OptMinusNo(
+                            ) [OptMinusNo]
+                            AddopTermListOne(
+                              TermFactorMulop(
+                                MulopFactorListOne(
+                                  Cnst(
+                                    NumConstant(
+                                     3
+                                    ) [NumConstant]
+                                  ) [Cnst]
+                                ) [MulopFactorListOne]
+                              ) [TermFactorMulop]
+                            ) [AddopTermListOne]
+                          ) [Expr1AddopTerm]
+                        ) [Expression]
+                      ) [FactorNewTypeExpr]
+                    ) [MulopFactorListOne]
+                  ) [TermFactorMulop]
+                ) [AddopTermListOne]
+              ) [Expr1AddopTerm]
+            ) [Expression]
+          ) [DesignatorAssign]
+        ) [DesignatorStmt]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  11:27:10,772 - ===================================
+INFO  11:27:10,778 - TIP JE: inst
+ERROR 11:27:10,779 - Greska na liniji 5, nije pronadjen tip inst u tabeli simbola! 
+INFO  11:27:10,780 - Deklarisan globalni niz nizna liniji 5:Var niz: Arr of notype, 0, 0 
+INFO  11:27:10,780 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  11:27:10,780 - Pristup globalnoj promenljivoj: niz na liniji 13[ Var niz: Arr of notype, 0, 0  ]
+INFO  11:27:10,781 - TIP JE: int
+ERROR 11:27:10,782 - Greska na liniji 13, designatoru se ne moze dodati taj tip izraza
+INFO  11:27:10,782 -  Print count calls = 0
+INFO  11:27:10,783 -  Deklarisanih promenljivih ima = 00
+INFO  11:27:10,783 - ===================================
+ERROR 11:27:10,783 - GRESKAaaa!
+ERROR 11:27:10,783 - Parsiranje NIJE uspesno zavrseno!

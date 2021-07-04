@@ -1,0 +1,186 @@
+INFO  20:14:44,726 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  20:14:44,726 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  20:14:44,785 - #2 program
+INFO  20:14:44,786 - #31 test301
+INFO  20:14:44,786 - #3 {
+INFO  20:14:44,786 - #14 void
+INFO  20:14:44,787 - #31 main
+INFO  20:14:44,787 - #12 (
+INFO  20:14:44,787 - #13 )
+INFO  20:14:44,787 - #31 char
+INFO  20:14:44,788 - #31 a
+INFO  20:14:44,788 - #6 ;
+INFO  20:14:44,789 - #31 int
+INFO  20:14:44,790 - #31 niz
+INFO  20:14:44,790 - #10 [
+INFO  20:14:44,790 - #11 ]
+INFO  20:14:44,790 - #6 ;
+INFO  20:14:44,790 - #31 int
+INFO  20:14:44,790 - #31 b
+INFO  20:14:44,790 - #6 ;
+INFO  20:14:44,791 - #3 {
+INFO  20:14:44,791 - #31 niz
+INFO  20:14:44,791 - #8 =
+INFO  20:14:44,792 - #25 new
+INFO  20:14:44,793 - #31 int
+INFO  20:14:44,793 - #10 [
+INFO  20:14:44,793 - #32 10
+INFO  20:14:44,793 - #11 ]
+INFO  20:14:44,794 - #6 ;
+INFO  20:14:44,794 - #31 b
+INFO  20:14:44,794 - #8 =
+INFO  20:14:44,795 - #57 |
+INFO  20:14:44,795 - #32 1
+INFO  20:14:44,795 - #16 :
+ERROR 20:14:44,795 - 
+Sintaksna greska na liniji 27
+INFO  20:14:44,795 - #32 2
+INFO  20:14:44,795 - #16 :
+INFO  20:14:44,795 - #32 3
+INFO  20:14:44,796 - #57 |
+INFO  20:14:44,796 - #6 ;
+INFO  20:14:44,796 - #4 }
+INFO  20:14:44,796 - #4 }
+ERROR 20:14:44,798 - Greska pri dodeli vrednosti 
+INFO  20:14:44,804 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        VarDeclListMore(
+          VarDeclListMore(
+            NoVarDeclList(
+            ) [NoVarDeclList]
+            VarDeclLocal(
+              Type(
+               char
+              ) [Type]
+              VarDeclarationListLocalOne(
+                VarDeclListLocalOne(
+                  VarIdentLocal(
+                   a
+                    OptBracketsNo(
+                    ) [OptBracketsNo]
+                  ) [VarIdentLocal]
+                ) [VarDeclListLocalOne]
+              ) [VarDeclarationListLocalOne]
+            ) [VarDeclLocal]
+          ) [VarDeclListMore]
+          VarDeclLocal(
+            Type(
+             int
+            ) [Type]
+            VarDeclarationListLocalOne(
+              VarDeclListLocalOne(
+                VarIdentLocal(
+                 niz
+                  OptBracketsYes(
+                  ) [OptBracketsYes]
+                ) [VarIdentLocal]
+              ) [VarDeclListLocalOne]
+            ) [VarDeclarationListLocalOne]
+          ) [VarDeclLocal]
+        ) [VarDeclListMore]
+        VarDeclLocal(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               b
+                OptBracketsNo(
+                ) [OptBracketsNo]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      StatementsList(
+        StatementsList(
+          NoStatementsList(
+          ) [NoStatementsList]
+          DesignatorStmt(
+            DesignatorAssign(
+              Designator(
+               niz
+                OptExprNo(
+                ) [OptExprNo]
+              ) [Designator]
+              Expression(
+                Expr1AddopTerm(
+                  OptMinusNo(
+                  ) [OptMinusNo]
+                  AddopTermListOne(
+                    TermFactorMulop(
+                      MulopFactorListOne(
+                        FactorNewTypeExpr(
+                          Type(
+                           int
+                          ) [Type]
+                          Expression(
+                            Expr1AddopTerm(
+                              OptMinusNo(
+                              ) [OptMinusNo]
+                              AddopTermListOne(
+                                TermFactorMulop(
+                                  MulopFactorListOne(
+                                    Cnst(
+                                      NumConstant(
+                                       10
+                                      ) [NumConstant]
+                                    ) [Cnst]
+                                  ) [MulopFactorListOne]
+                                ) [TermFactorMulop]
+                              ) [AddopTermListOne]
+                            ) [Expr1AddopTerm]
+                          ) [Expression]
+                        ) [FactorNewTypeExpr]
+                      ) [MulopFactorListOne]
+                    ) [TermFactorMulop]
+                  ) [AddopTermListOne]
+                ) [Expr1AddopTerm]
+              ) [Expression]
+            ) [DesignatorAssign]
+          ) [DesignatorStmt]
+        ) [StatementsList]
+        DesignatorStmt(
+          ERROR2(
+            null
+          ) [ERROR2]
+        ) [DesignatorStmt]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  20:14:44,805 - ===================================
+INFO  20:14:44,808 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  20:14:44,808 - TIP JE: char
+INFO  20:14:44,808 - Deklarisana lokalna promenljiva ana liniji 8 : Var a: char, 0, 1 
+INFO  20:14:44,808 - TIP JE: int
+INFO  20:14:44,809 - Deklarisan lokalni niz sa imenom: nizna liniji 9 : Var niz: Arr of int, 1, 1 
+INFO  20:14:44,809 - TIP JE: int
+INFO  20:14:44,809 - Deklarisana lokalna promenljiva bna liniji 10 : Var b: int, 2, 1 
+INFO  20:14:44,809 - Pristup lokalnoj promenljivoj: niz na liniji 12[ Var niz: Arr of int, 1, 1  ]
+INFO  20:14:44,809 - TIP JE: int
+INFO  20:14:44,813 -  Print count calls = 0
+INFO  20:14:44,813 -  Deklarisanih promenljivih ima = 20
+INFO  20:14:44,813 - ===================================
+ERROR 20:14:44,814 - GRESKA!
+ERROR 20:14:44,814 - Parsiranje NIJE uspesno zavrseno!

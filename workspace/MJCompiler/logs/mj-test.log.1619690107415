@@ -1,0 +1,71 @@
+INFO  23:33:31,652 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  23:33:31,698 - #2 program
+INFO  23:33:31,698 - #28 test301
+INFO  23:33:31,698 - #3 {
+INFO  23:33:31,700 - #14 void
+INFO  23:33:31,701 - #28 main
+INFO  23:33:31,702 - #12 (
+INFO  23:33:31,702 - #13 )
+INFO  23:33:31,703 - #3 {
+INFO  23:33:31,704 - #27 print
+INFO  23:33:31,705 - #12 (
+INFO  23:33:31,705 - #29 1
+INFO  23:33:31,707 - #13 )
+INFO  23:33:31,708 - #6 ;
+INFO  23:33:31,708 - #4 }
+INFO  23:33:31,708 - #4 }
+INFO  23:33:31,717 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+      ) [ReturnValueTypeVoid]
+     main
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      StatementsList(
+        NoStatementsList(
+        ) [NoStatementsList]
+        PrintStatement(
+          Expression(
+            Expr1AddopTerm(
+              OptMinusNo(
+              ) [OptMinusNo]
+              AddopTermListOne(
+                TermFactorMulop(
+                  MulopFactorListOne(
+                    FactorNumConst(
+                     1
+                    ) [FactorNumConst]
+                  ) [MulopFactorListOne]
+                ) [TermFactorMulop]
+              ) [AddopTermListOne]
+            ) [Expr1AddopTerm]
+          ) [Expression]
+          OptNumConstNo(
+          ) [OptNumConstNo]
+        ) [PrintStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  23:33:31,718 - ===================================
+INFO  23:33:31,721 - Obradjuje se funkcija MethodDecl tip funkcije: VOID
+ERROR 23:33:31,723 - Program nema MAIN funkciju! Greska na liniji3
+INFO  23:33:31,723 -  Print count calls = 0
+INFO  23:33:31,723 -  Deklarisanih promenljivih ima = 0
+INFO  23:33:31,723 - ===================================
+ERROR 23:33:31,724 - GRESKAaaa!
+ERROR 23:33:31,724 - Parsiranje NIJE uspesno zavrseno!

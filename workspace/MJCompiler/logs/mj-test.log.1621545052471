@@ -1,0 +1,174 @@
+INFO  23:09:53,384 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  23:09:53,461 - #2 program
+INFO  23:09:53,461 - #31 test301
+INFO  23:09:53,462 - #3 {
+INFO  23:09:53,463 - #14 void
+INFO  23:09:53,464 - #31 main
+INFO  23:09:53,465 - #12 (
+INFO  23:09:53,465 - #13 )
+INFO  23:09:53,466 - #3 {
+INFO  23:09:53,468 - #36 if
+INFO  23:09:53,469 - #12 (
+INFO  23:09:53,469 - #33 1
+INFO  23:09:53,471 - #13 )
+INFO  23:09:53,472 - #36 if
+INFO  23:09:53,473 - #12 (
+INFO  23:09:53,474 - #33 1
+INFO  23:09:53,474 - #13 )
+INFO  23:09:53,474 - #27 print
+INFO  23:09:53,474 - #12 (
+INFO  23:09:53,476 - #32 0
+INFO  23:09:53,476 - #13 )
+INFO  23:09:53,477 - #6 ;
+INFO  23:09:53,477 - #36 if
+INFO  23:09:53,478 - #12 (
+INFO  23:09:53,479 - #33 1
+INFO  23:09:53,479 - #13 )
+INFO  23:09:53,479 - #27 print
+INFO  23:09:53,479 - #12 (
+INFO  23:09:53,479 - #32 4
+INFO  23:09:53,479 - #13 )
+INFO  23:09:53,480 - #6 ;
+INFO  23:09:53,480 - #35 else
+INFO  23:09:53,480 - #27 print
+INFO  23:09:53,481 - #12 (
+INFO  23:09:53,481 - #32 1
+INFO  23:09:53,481 - #13 )
+INFO  23:09:53,481 - #6 ;
+INFO  23:09:53,481 - #35 else
+ERROR 23:09:53,482 - 
+Sintaksna greska na liniji 13
+INFO  23:09:53,482 - #27 print
+INFO  23:09:53,482 - #12 (
+INFO  23:09:53,482 - #32 2
+INFO  23:09:53,483 - #13 )
+INFO  23:09:53,483 - #6 ;
+INFO  23:09:53,483 - #4 }
+INFO  23:09:53,484 - #4 }
+ERROR 23:09:53,484 - Greska2 Izvrsen oporavak do ; u liniji1
+INFO  23:09:53,494 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      StatementsList(
+        StatementsList(
+          NoStatementsList(
+          ) [NoStatementsList]
+          IfStatement(
+            If(
+            ) [If]
+            IfCond(
+              ConditionOne(
+                CondTermOne(
+                  CondFactExprOnly(
+                    Expression(
+                      Expr1AddopTerm(
+                        OptMinusNo(
+                        ) [OptMinusNo]
+                        AddopTermListOne(
+                          TermFactorMulop(
+                            MulopFactorListOne(
+                              Cnst(
+                                BoolConstant(
+                                 1
+                                ) [BoolConstant]
+                              ) [Cnst]
+                            ) [MulopFactorListOne]
+                          ) [TermFactorMulop]
+                        ) [AddopTermListOne]
+                      ) [Expr1AddopTerm]
+                    ) [Expression]
+                  ) [CondFactExprOnly]
+                ) [CondTermOne]
+              ) [ConditionOne]
+            ) [IfCond]
+            Rpar(
+            ) [Rpar]
+            IfStatement(
+              If(
+              ) [If]
+              IfCond(
+                ConditionOne(
+                  CondTermOne(
+                    CondFactExprOnly(
+                      Expression(
+                        Expr1AddopTerm(
+                          OptMinusNo(
+                          ) [OptMinusNo]
+                          AddopTermListOne(
+                            TermFactorMulop(
+                              MulopFactorListOne(
+                                Cnst(
+                                  BoolConstant(
+                                   1
+                                  ) [BoolConstant]
+                                ) [Cnst]
+                              ) [MulopFactorListOne]
+                            ) [TermFactorMulop]
+                          ) [AddopTermListOne]
+                        ) [Expr1AddopTerm]
+                      ) [Expression]
+                    ) [CondFactExprOnly]
+                  ) [CondTermOne]
+                ) [ConditionOne]
+              ) [IfCond]
+              Rpar(
+              ) [Rpar]
+              PrintStatement(
+                Print(
+                ) [Print]
+                Expression(
+                  Expr1AddopTerm(
+                    OptMinusNo(
+                    ) [OptMinusNo]
+                    AddopTermListOne(
+                      TermFactorMulop(
+                        MulopFactorListOne(
+                          Cnst(
+                            NumConstant(
+                             0
+                            ) [NumConstant]
+                          ) [Cnst]
+                        ) [MulopFactorListOne]
+                      ) [TermFactorMulop]
+                    ) [AddopTermListOne]
+                  ) [Expr1AddopTerm]
+                ) [Expression]
+                OptNumConstNo(
+                ) [OptNumConstNo]
+              ) [PrintStatement]
+            ) [IfStatement]
+          ) [IfStatement]
+        ) [StatementsList]
+        DesignatorStmt(
+          ERROR2(
+          ) [ERROR2]
+        ) [DesignatorStmt]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  23:09:53,495 - ===================================
+INFO  23:09:53,498 - Obradjuje se funkcija main tip funkcije: VOID
+INFO  23:09:53,499 -  Print count calls = 1
+INFO  23:09:53,500 -  Deklarisanih promenljivih ima = 00
+INFO  23:09:53,500 - ===================================
+ERROR 23:09:53,500 - GRESKA!
+ERROR 23:09:53,500 - Parsiranje NIJE uspesno zavrseno!

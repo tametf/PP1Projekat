@@ -1,0 +1,83 @@
+INFO  14:51:09,292 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  14:51:09,292 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  14:51:09,371 - #2 program
+INFO  14:51:09,371 - #31 test301
+INFO  14:51:09,371 - #3 {
+INFO  14:51:09,373 - #14 void
+INFO  14:51:09,375 - #31 main
+INFO  14:51:09,375 - #12 (
+INFO  14:51:09,376 - #31 int
+INFO  14:51:09,376 - #31 a
+INFO  14:51:09,377 - #13 )
+INFO  14:51:09,379 - #31 int
+INFO  14:51:09,380 - #31 a
+INFO  14:51:09,381 - #10 [
+INFO  14:51:09,381 - #11 ]
+INFO  14:51:09,381 - #6 ;
+INFO  14:51:09,383 - #3 {
+INFO  14:51:09,384 - #4 }
+INFO  14:51:09,386 - #4 }
+INFO  14:51:09,398 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  Lbrace(
+  ) [Lbrace]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDeclaration(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      FormParams(
+        FormParam(
+          FormParsOneParam(
+            Type(
+             int
+            ) [Type]
+           a
+            OptBracketsNo(
+            ) [OptBracketsNo]
+          ) [FormParsOneParam]
+        ) [FormParam]
+      ) [FormParams]
+      VarDeclListMore(
+        NoVarDeclList(
+        ) [NoVarDeclList]
+        VarDeclLocal(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               a
+                OptBracketsYes(
+                ) [OptBracketsYes]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      Lbrace(
+      ) [Lbrace]
+      NoStatementsList(
+      ) [NoStatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDeclaration]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  14:51:09,399 - ===================================
+INFO  14:51:09,408 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  14:51:09,408 - Parametar funkcije a na liniji 9 je ubacen u MySymbolTableelu simbola
+ERROR 14:51:09,409 - Greska! Lokalna promenljiva na liniji 10 je vec deklarisana
+ERROR 14:51:09,410 - Greska na liniji 9, metoda main ne sme imati formalne parametre.
+INFO  14:51:09,411 - ===================================
+ERROR 14:51:09,412 - Parsiranje NIJE uspesno zavrseno!

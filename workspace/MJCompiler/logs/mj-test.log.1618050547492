@@ -1,0 +1,176 @@
+INFO  12:28:26,870 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  12:28:26,909 - #2 program
+INFO  12:28:26,909 - #28 MJProgram
+INFO  12:28:26,909 - #28 int
+INFO  12:28:26,910 - #28 x
+INFO  12:28:26,911 - #7 ,
+INFO  12:28:26,913 - #28 y
+INFO  12:28:26,913 - #6 ;
+INFO  12:28:26,913 - #28 int
+INFO  12:28:26,914 - #28 z
+INFO  12:28:26,914 - #6 ;
+INFO  12:28:26,914 - #3 {
+INFO  12:28:26,915 - #14 void
+INFO  12:28:26,915 - #28 main
+INFO  12:28:26,916 - #12 (
+INFO  12:28:26,916 - #13 )
+INFO  12:28:26,916 - #3 {
+INFO  12:28:26,917 - #27 print
+INFO  12:28:26,918 - #12 (
+INFO  12:28:26,918 - #29 1
+INFO  12:28:26,919 - #13 )
+INFO  12:28:26,920 - #6 ;
+INFO  12:28:26,921 - #26 read
+INFO  12:28:26,921 - #12 (
+INFO  12:28:26,923 - #28 ana
+INFO  12:28:26,923 - #13 )
+INFO  12:28:26,925 - #6 ;
+INFO  12:28:26,925 - #27 print
+INFO  12:28:26,926 - #12 (
+INFO  12:28:26,926 - #29 2
+INFO  12:28:26,927 - #13 )
+INFO  12:28:26,927 - #6 ;
+INFO  12:28:26,927 - #26 read
+INFO  12:28:26,927 - #12 (
+INFO  12:28:26,927 - #29 3
+ERROR 12:28:26,928 - 
+Sintaksna greska na liniji 10
+INFO  12:28:26,928 - #13 )
+INFO  12:28:26,928 - #6 ;
+INFO  12:28:26,928 - #27 print
+INFO  12:28:26,929 - #12 (
+INFO  12:28:26,929 - #28 a
+ERROR 12:28:26,929 - Izvrsen oporavak do ; u liniji10
+INFO  12:28:26,930 - #13 )
+INFO  12:28:26,930 - #6 ;
+INFO  12:28:26,930 - #4 }
+INFO  12:28:26,930 - #4 }
+INFO  12:28:26,933 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  VariableDeclList(
+    VariableDeclList(
+      NoDeclList(
+      ) [NoDeclList]
+      VarDecl(
+        Type(
+         int
+        ) [Type]
+        VarDeclarationListMore(
+          VarDeclarationListOne(
+            VarDeclListOne(
+             x
+              OptBracketsNo(
+              ) [OptBracketsNo]
+            ) [VarDeclListOne]
+          ) [VarDeclarationListOne]
+          VarDeclListOne(
+           y
+            OptBracketsNo(
+            ) [OptBracketsNo]
+          ) [VarDeclListOne]
+        ) [VarDeclarationListMore]
+      ) [VarDecl]
+    ) [VariableDeclList]
+    VarDecl(
+      Type(
+       int
+      ) [Type]
+      VarDeclarationListOne(
+        VarDeclListOne(
+         z
+          OptBracketsNo(
+          ) [OptBracketsNo]
+        ) [VarDeclListOne]
+      ) [VarDeclarationListOne]
+    ) [VarDecl]
+  ) [VariableDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+      ) [ReturnValueTypeVoid]
+     main
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      StatementsList(
+        StatementsList(
+          StatementsList(
+            StatementsList(
+              StatementsList(
+                NoStatementsList(
+                ) [NoStatementsList]
+                PrintStatement(
+                  Expression(
+                    Expr1Term(
+                      OptMinusNo(
+                      ) [OptMinusNo]
+                      TermFactor(
+                        FactorNumConst(
+                         1
+                        ) [FactorNumConst]
+                      ) [TermFactor]
+                    ) [Expr1Term]
+                  ) [Expression]
+                  OptNumConstNo(
+                  ) [OptNumConstNo]
+                ) [PrintStatement]
+              ) [StatementsList]
+              ReadStatement(
+                Designator(
+                 ana
+                  OptExprNo(
+                  ) [OptExprNo]
+                ) [Designator]
+              ) [ReadStatement]
+            ) [StatementsList]
+            PrintStatement(
+              Expression(
+                Expr1Term(
+                  OptMinusNo(
+                  ) [OptMinusNo]
+                  TermFactor(
+                    FactorNumConst(
+                     2
+                    ) [FactorNumConst]
+                  ) [TermFactor]
+                ) [Expr1Term]
+              ) [Expression]
+              OptNumConstNo(
+              ) [OptNumConstNo]
+            ) [PrintStatement]
+          ) [StatementsList]
+          StatementDerived1(
+          ) [StatementDerived1]
+        ) [StatementsList]
+        PrintStatement(
+          Expression(
+            Expr1Term(
+              OptMinusNo(
+              ) [OptMinusNo]
+              TermFactor(
+                FactorDesignator(
+                  Designator(
+                   a
+                    OptExprNo(
+                    ) [OptExprNo]
+                  ) [Designator]
+                ) [FactorDesignator]
+              ) [TermFactor]
+            ) [Expr1Term]
+          ) [Expression]
+          OptNumConstNo(
+          ) [OptNumConstNo]
+        ) [PrintStatement]
+      ) [StatementsList]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+) [Program]
+INFO  12:28:26,933 - ===================================
+INFO  12:28:26,937 -  Print count calls = 3
+INFO  12:28:26,937 -  Deklarisanih promenljivih ima = 3
+INFO  12:28:26,937 - Read count calls = 1

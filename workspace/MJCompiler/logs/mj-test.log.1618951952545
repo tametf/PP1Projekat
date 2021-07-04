@@ -1,0 +1,65 @@
+INFO  22:45:39,611 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  22:45:39,664 - #2 program
+INFO  22:45:39,665 - #28 test301
+INFO  22:45:39,665 - #3 {
+INFO  22:45:39,667 - #14 void
+INFO  22:45:39,668 - #28 main
+INFO  22:45:39,668 - #12 (
+INFO  22:45:39,668 - #13 )
+INFO  22:45:39,669 - #3 {
+INFO  22:45:39,670 - #27 print
+INFO  22:45:39,671 - #12 (
+INFO  22:45:39,671 - #29 2
+INFO  22:45:39,672 - #7 ,
+INFO  22:45:39,673 - #29 2
+INFO  22:45:39,674 - #13 )
+INFO  22:45:39,674 - #6 ;
+INFO  22:45:39,674 - #4 }
+INFO  22:45:39,674 - #4 }
+INFO  22:45:39,688 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      StatementsList(
+        NoStatementsList(
+        ) [NoStatementsList]
+        PrintStatement(
+          Expression(
+            Expr1Term(
+              OptMinusNo(
+              ) [OptMinusNo]
+              TermFactor(
+                FactorNumConst(
+                 2
+                ) [FactorNumConst]
+              ) [TermFactor]
+            ) [Expr1Term]
+          ) [Expression]
+          OptNumConstYes(
+           2
+          ) [OptNumConstYes]
+        ) [PrintStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  22:45:39,689 - ===================================
+INFO  22:45:39,693 - Definisana funkcija programa sa imenom main na liniji 6
+INFO  22:45:39,693 - HEJ 

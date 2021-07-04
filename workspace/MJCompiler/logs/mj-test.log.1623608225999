@@ -1,0 +1,131 @@
+INFO  20:16:47,286 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  20:16:47,287 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  20:16:47,352 - #2 program
+INFO  20:16:47,352 - #31 test301
+INFO  20:16:47,352 - #3 {
+INFO  20:16:47,354 - #14 void
+INFO  20:16:47,354 - #31 main
+INFO  20:16:47,354 - #12 (
+INFO  20:16:47,355 - #13 )
+INFO  20:16:47,355 - #31 char
+INFO  20:16:47,356 - #31 a
+INFO  20:16:47,356 - #6 ;
+INFO  20:16:47,357 - #31 int
+INFO  20:16:47,358 - #31 niz
+INFO  20:16:47,358 - #10 [
+INFO  20:16:47,358 - #11 ]
+INFO  20:16:47,358 - #6 ;
+INFO  20:16:47,358 - #31 int
+INFO  20:16:47,358 - #31 b
+INFO  20:16:47,358 - #6 ;
+INFO  20:16:47,358 - #3 {
+INFO  20:16:47,359 - #31 b
+INFO  20:16:47,360 - #8 =
+INFO  20:16:47,361 - #57 |
+INFO  20:16:47,361 - #32 1
+INFO  20:16:47,361 - #16 :
+ERROR 20:16:47,361 - 
+Sintaksna greska na liniji 27
+INFO  20:16:47,361 - #32 2
+INFO  20:16:47,361 - #16 :
+INFO  20:16:47,361 - #32 3
+INFO  20:16:47,362 - #57 |
+INFO  20:16:47,362 - #6 ;
+INFO  20:16:47,362 - #4 }
+INFO  20:16:47,362 - #4 }
+ERROR 20:16:47,363 - Greska pri dodeli vrednosti 
+INFO  20:16:47,371 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        VarDeclListMore(
+          VarDeclListMore(
+            NoVarDeclList(
+            ) [NoVarDeclList]
+            VarDeclLocal(
+              Type(
+               char
+              ) [Type]
+              VarDeclarationListLocalOne(
+                VarDeclListLocalOne(
+                  VarIdentLocal(
+                   a
+                    OptBracketsNo(
+                    ) [OptBracketsNo]
+                  ) [VarIdentLocal]
+                ) [VarDeclListLocalOne]
+              ) [VarDeclarationListLocalOne]
+            ) [VarDeclLocal]
+          ) [VarDeclListMore]
+          VarDeclLocal(
+            Type(
+             int
+            ) [Type]
+            VarDeclarationListLocalOne(
+              VarDeclListLocalOne(
+                VarIdentLocal(
+                 niz
+                  OptBracketsYes(
+                  ) [OptBracketsYes]
+                ) [VarIdentLocal]
+              ) [VarDeclListLocalOne]
+            ) [VarDeclarationListLocalOne]
+          ) [VarDeclLocal]
+        ) [VarDeclListMore]
+        VarDeclLocal(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               b
+                OptBracketsNo(
+                ) [OptBracketsNo]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      StatementsList(
+        NoStatementsList(
+        ) [NoStatementsList]
+        DesignatorStmt(
+          ERROR2(
+            null
+          ) [ERROR2]
+        ) [DesignatorStmt]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  20:16:47,371 - ===================================
+INFO  20:16:47,376 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  20:16:47,376 - TIP JE: char
+INFO  20:16:47,376 - Deklarisana lokalna promenljiva ana liniji 8 : Var a: char, 0, 1 
+INFO  20:16:47,376 - TIP JE: int
+INFO  20:16:47,376 - Deklarisan lokalni niz sa imenom: nizna liniji 9 : Var niz: Arr of int, 1, 1 
+INFO  20:16:47,377 - TIP JE: int
+INFO  20:16:47,377 - Deklarisana lokalna promenljiva bna liniji 10 : Var b: int, 2, 1 
+INFO  20:16:47,380 -  Print count calls = 0
+INFO  20:16:47,380 -  Deklarisanih promenljivih ima = 20
+INFO  20:16:47,380 - ===================================
+ERROR 20:16:47,382 - GRESKA!
+ERROR 20:16:47,382 - Parsiranje NIJE uspesno zavrseno!

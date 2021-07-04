@@ -1,0 +1,124 @@
+INFO  15:13:03,422 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  15:13:03,423 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  15:13:03,483 - #2 program
+INFO  15:13:03,483 - #31 test301
+INFO  15:13:03,483 - #31 inst
+INFO  15:13:03,484 - #31 niz
+INFO  15:13:03,484 - #10 [
+INFO  15:13:03,484 - #11 ]
+INFO  15:13:03,485 - #6 ;
+INFO  15:13:03,486 - #3 {
+INFO  15:13:03,487 - #14 void
+INFO  15:13:03,487 - #31 main
+INFO  15:13:03,487 - #12 (
+INFO  15:13:03,488 - #13 )
+INFO  15:13:03,488 - #3 {
+INFO  15:13:03,489 - #31 niz
+INFO  15:13:03,489 - #8 =
+INFO  15:13:03,490 - #25 new
+INFO  15:13:03,491 - #31 int
+INFO  15:13:03,491 - #10 [
+INFO  15:13:03,492 - #32 3
+INFO  15:13:03,492 - #11 ]
+INFO  15:13:03,493 - #6 ;
+INFO  15:13:03,493 - #4 }
+INFO  15:13:03,495 - #4 }
+INFO  15:13:03,500 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  VariableDeclList(
+    NoDeclList(
+    ) [NoDeclList]
+    VarDecl(
+      Type(
+       inst
+      ) [Type]
+      VarDeclarationListOne(
+        VarIdentGlobal(
+         niz
+          OptBracketsYes(
+          ) [OptBracketsYes]
+        ) [VarIdentGlobal]
+      ) [VarDeclarationListOne]
+    ) [VarDecl]
+  ) [VariableDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      StatementsList(
+        NoStatementsList(
+        ) [NoStatementsList]
+        DesignatorStmt(
+          DesignatorAssign(
+            Designator(
+             niz
+              OptExprNo(
+              ) [OptExprNo]
+            ) [Designator]
+            Expression(
+              Expr1AddopTerm(
+                OptMinusNo(
+                ) [OptMinusNo]
+                AddopTermListOne(
+                  TermFactorMulop(
+                    MulopFactorListOne(
+                      FactorNewTypeExpr(
+                        Type(
+                         int
+                        ) [Type]
+                        Expression(
+                          Expr1AddopTerm(
+                            OptMinusNo(
+                            ) [OptMinusNo]
+                            AddopTermListOne(
+                              TermFactorMulop(
+                                MulopFactorListOne(
+                                  Cnst(
+                                    NumConstant(
+                                     3
+                                    ) [NumConstant]
+                                  ) [Cnst]
+                                ) [MulopFactorListOne]
+                              ) [TermFactorMulop]
+                            ) [AddopTermListOne]
+                          ) [Expr1AddopTerm]
+                        ) [Expression]
+                      ) [FactorNewTypeExpr]
+                    ) [MulopFactorListOne]
+                  ) [TermFactorMulop]
+                ) [AddopTermListOne]
+              ) [Expr1AddopTerm]
+            ) [Expression]
+          ) [DesignatorAssign]
+        ) [DesignatorStmt]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  15:13:03,500 - ===================================
+INFO  15:13:03,505 - TIP JE: inst
+ERROR 15:13:03,505 - Greska na liniji 5, nije pronadjen tip inst u tabeli simbola! 
+INFO  15:13:03,506 - Deklarisan globalni niz nizna liniji 5:Var niz: Arr of notype, 0, 0 
+INFO  15:13:03,506 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  15:13:03,506 - Pristup globalnoj promenljivoj: niz na liniji 13[ Var niz: Arr of notype, 0, 0  ]
+INFO  15:13:03,506 - TIP JE: int
+ERROR 15:13:03,507 - Greska na liniji 13, designatoru se ne moze dodati taj tip izraza
+INFO  15:13:03,516 -  Print count calls = 0
+INFO  15:13:03,516 -  Deklarisanih promenljivih ima = 00
+INFO  15:13:03,516 - ===================================
+ERROR 15:13:03,517 - GRESKAaaa!
+ERROR 15:13:03,518 - Parsiranje NIJE uspesno zavrseno!

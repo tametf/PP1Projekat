@@ -1,0 +1,265 @@
+INFO  13:48:18,462 - Compiling source file: C:\Users\pavle\Desktop\New folder (3)\poslednjaVerzija\tamarajevdjevic20150492\workspace\MJCompiler\test\javniTest.mj
+INFO  13:48:18,463 - Compiling source file: C:\Users\pavle\Desktop\New folder (3)\poslednjaVerzija\tamarajevdjevic20150492\workspace\MJCompiler\test\javniTest.mj
+INFO  13:48:18,525 - #2 program
+INFO  13:48:18,525 - #31 test301
+INFO  13:48:18,525 - #31 int
+INFO  13:48:18,526 - #31 niz
+INFO  13:48:18,526 - #10 [
+INFO  13:48:18,526 - #11 ]
+INFO  13:48:18,527 - #6 ;
+INFO  13:48:18,528 - #3 {
+INFO  13:48:18,528 - #14 void
+INFO  13:48:18,529 - #31 main
+INFO  13:48:18,529 - #12 (
+INFO  13:48:18,529 - #13 )
+INFO  13:48:18,530 - #31 int
+INFO  13:48:18,530 - #31 niz
+INFO  13:48:18,531 - #10 [
+INFO  13:48:18,531 - #11 ]
+INFO  13:48:18,531 - #6 ;
+INFO  13:48:18,532 - #3 {
+INFO  13:48:18,532 - #31 niz
+INFO  13:48:18,533 - #8 =
+INFO  13:48:18,534 - #25 new
+INFO  13:48:18,534 - #31 int
+INFO  13:48:18,534 - #10 [
+INFO  13:48:18,534 - #32 4
+INFO  13:48:18,534 - #11 ]
+INFO  13:48:18,535 - #6 ;
+INFO  13:48:18,535 - #31 niz
+INFO  13:48:18,536 - #10 [
+INFO  13:48:18,536 - #32 2
+INFO  13:48:18,536 - #11 ]
+INFO  13:48:18,536 - #8 =
+INFO  13:48:18,537 - #32 5
+INFO  13:48:18,537 - #6 ;
+INFO  13:48:18,537 - #27 print
+INFO  13:48:18,537 - #12 (
+INFO  13:48:18,538 - #31 niz
+INFO  13:48:18,538 - #10 [
+INFO  13:48:18,538 - #32 2
+INFO  13:48:18,538 - #11 ]
+INFO  13:48:18,538 - #13 )
+INFO  13:48:18,539 - #6 ;
+INFO  13:48:18,539 - #4 }
+INFO  13:48:18,539 - #4 }
+INFO  13:48:18,546 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  VariableDeclList(
+    NoDeclList(
+    ) [NoDeclList]
+    VarDecl(
+      Type(
+       int
+      ) [Type]
+      VarDeclarationListOne(
+        VarIdentGlobal(
+         niz
+          OptBracketsYes(
+          ) [OptBracketsYes]
+        ) [VarIdentGlobal]
+      ) [VarDeclarationListOne]
+    ) [VarDecl]
+  ) [VariableDeclList]
+  Lbrace(
+  ) [Lbrace]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDeclaration(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        NoVarDeclList(
+        ) [NoVarDeclList]
+        VarDeclLocal(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               niz
+                OptBracketsYes(
+                ) [OptBracketsYes]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      Lbrace(
+      ) [Lbrace]
+      StatementsList(
+        StatementsList(
+          StatementsList(
+            NoStatementsList(
+            ) [NoStatementsList]
+            DesignatorStmt(
+              DesignatorAssign(
+                Designator(
+                  DesignatorIdent(
+                   niz
+                  ) [DesignatorIdent]
+                  OptExprNo(
+                  ) [OptExprNo]
+                ) [Designator]
+                Expression(
+                  Expr1AddopTerm(
+                    OptMinusNo(
+                    ) [OptMinusNo]
+                    AddopTermListOne(
+                      TermFactorMulop(
+                        MulopFactorListOne(
+                          FactorNewTypeExpr(
+                            Type(
+                             int
+                            ) [Type]
+                            Expression(
+                              Expr1AddopTerm(
+                                OptMinusNo(
+                                ) [OptMinusNo]
+                                AddopTermListOne(
+                                  TermFactorMulop(
+                                    MulopFactorListOne(
+                                      Cnst(
+                                        NumConstantFactor(
+                                         4
+                                        ) [NumConstantFactor]
+                                      ) [Cnst]
+                                    ) [MulopFactorListOne]
+                                  ) [TermFactorMulop]
+                                ) [AddopTermListOne]
+                              ) [Expr1AddopTerm]
+                            ) [Expression]
+                          ) [FactorNewTypeExpr]
+                        ) [MulopFactorListOne]
+                      ) [TermFactorMulop]
+                    ) [AddopTermListOne]
+                  ) [Expr1AddopTerm]
+                ) [Expression]
+              ) [DesignatorAssign]
+            ) [DesignatorStmt]
+          ) [StatementsList]
+          DesignatorStmt(
+            DesignatorAssign(
+              Designator(
+                DesignatorIdent(
+                 niz
+                ) [DesignatorIdent]
+                OptExprYes(
+                  Lbracket(
+                  ) [Lbracket]
+                  Expression(
+                    Expr1AddopTerm(
+                      OptMinusNo(
+                      ) [OptMinusNo]
+                      AddopTermListOne(
+                        TermFactorMulop(
+                          MulopFactorListOne(
+                            Cnst(
+                              NumConstantFactor(
+                               2
+                              ) [NumConstantFactor]
+                            ) [Cnst]
+                          ) [MulopFactorListOne]
+                        ) [TermFactorMulop]
+                      ) [AddopTermListOne]
+                    ) [Expr1AddopTerm]
+                  ) [Expression]
+                  Rbracket(
+                  ) [Rbracket]
+                ) [OptExprYes]
+              ) [Designator]
+              Expression(
+                Expr1AddopTerm(
+                  OptMinusNo(
+                  ) [OptMinusNo]
+                  AddopTermListOne(
+                    TermFactorMulop(
+                      MulopFactorListOne(
+                        Cnst(
+                          NumConstantFactor(
+                           5
+                          ) [NumConstantFactor]
+                        ) [Cnst]
+                      ) [MulopFactorListOne]
+                    ) [TermFactorMulop]
+                  ) [AddopTermListOne]
+                ) [Expr1AddopTerm]
+              ) [Expression]
+            ) [DesignatorAssign]
+          ) [DesignatorStmt]
+        ) [StatementsList]
+        PrintStatement(
+          Print(
+          ) [Print]
+          Expression(
+            Expr1AddopTerm(
+              OptMinusNo(
+              ) [OptMinusNo]
+              AddopTermListOne(
+                TermFactorMulop(
+                  MulopFactorListOne(
+                    FactorDesignator(
+                      Designator(
+                        DesignatorIdent(
+                         niz
+                        ) [DesignatorIdent]
+                        OptExprYes(
+                          Lbracket(
+                          ) [Lbracket]
+                          Expression(
+                            Expr1AddopTerm(
+                              OptMinusNo(
+                              ) [OptMinusNo]
+                              AddopTermListOne(
+                                TermFactorMulop(
+                                  MulopFactorListOne(
+                                    Cnst(
+                                      NumConstantFactor(
+                                       2
+                                      ) [NumConstantFactor]
+                                    ) [Cnst]
+                                  ) [MulopFactorListOne]
+                                ) [TermFactorMulop]
+                              ) [AddopTermListOne]
+                            ) [Expr1AddopTerm]
+                          ) [Expression]
+                          Rbracket(
+                          ) [Rbracket]
+                        ) [OptExprYes]
+                      ) [Designator]
+                      OptParsNo(
+                      ) [OptParsNo]
+                    ) [FactorDesignator]
+                  ) [MulopFactorListOne]
+                ) [TermFactorMulop]
+              ) [AddopTermListOne]
+            ) [Expr1AddopTerm]
+          ) [Expression]
+          OptNumConstNo(
+          ) [OptNumConstNo]
+        ) [PrintStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDeclaration]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  13:48:18,546 - ===================================
+INFO  13:48:18,550 - Deklarisan globalni niz niz na liniji 5:Var niz: Arr of int, 0, 0 
+INFO  13:48:18,550 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  13:48:18,550 - Deklarisan lokalni niz sa imenom: nizna liniji 9 : Var niz: Arr of int, 0, 1 
+INFO  13:48:18,550 - Pristup lokalnoj promenljivoj: niz na liniji 11[ Var niz: Arr of int, 0, 1  ]
+INFO  13:48:18,551 - Pristup lokalnom nizu: niz na liniji 12[ Var niz: Arr of int, 0, 1  ]
+INFO  13:48:18,551 - Pristup lokalnom nizu: niz na liniji 13[ Var niz: Arr of int, 0, 1  ]
+INFO  13:48:18,552 - ===================================
+INFO  13:48:18,557 - Parsiranje uspesno zavrseno!

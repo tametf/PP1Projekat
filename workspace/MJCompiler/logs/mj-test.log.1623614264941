@@ -1,0 +1,123 @@
+INFO  21:57:35,075 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  21:57:35,076 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  21:57:35,128 - #2 program
+INFO  21:57:35,128 - #31 test301
+INFO  21:57:35,128 - #3 {
+INFO  21:57:35,129 - #14 void
+INFO  21:57:35,130 - #31 main
+INFO  21:57:35,130 - #12 (
+INFO  21:57:35,130 - #13 )
+INFO  21:57:35,130 - #31 int
+INFO  21:57:35,131 - #31 b
+INFO  21:57:35,132 - #6 ;
+INFO  21:57:35,133 - #3 {
+INFO  21:57:35,134 - #31 b
+INFO  21:57:35,135 - #8 =
+INFO  21:57:35,136 - #57 |
+INFO  21:57:35,137 - #32 5
+INFO  21:57:35,137 - #16 :
+INFO  21:57:35,137 - #32 0
+INFO  21:57:35,137 - #16 :
+INFO  21:57:35,137 - #17 -
+ERROR 21:57:35,138 - 
+Sintaksna greska na liniji 11
+INFO  21:57:35,138 - #32 5
+INFO  21:57:35,138 - #57 |
+INFO  21:57:35,138 - #6 ;
+INFO  21:57:35,139 - #27 print
+INFO  21:57:35,139 - #12 (
+INFO  21:57:35,139 - #31 b
+ERROR 21:57:35,139 - Greska pri dodeli vrednosti 
+INFO  21:57:35,141 - #13 )
+INFO  21:57:35,142 - #6 ;
+INFO  21:57:35,142 - #4 }
+INFO  21:57:35,143 - #4 }
+INFO  21:57:35,156 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        NoVarDeclList(
+        ) [NoVarDeclList]
+        VarDeclLocal(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               b
+                OptBracketsNo(
+                ) [OptBracketsNo]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      StatementsList(
+        StatementsList(
+          NoStatementsList(
+          ) [NoStatementsList]
+          DesignatorStmt(
+            ERROR2(
+              null
+            ) [ERROR2]
+          ) [DesignatorStmt]
+        ) [StatementsList]
+        PrintStatement(
+          Print(
+          ) [Print]
+          Expression(
+            Expr1AddopTerm(
+              OptMinusNo(
+              ) [OptMinusNo]
+              AddopTermListOne(
+                TermFactorMulop(
+                  MulopFactorListOne(
+                    FactorDesignator(
+                      Designator(
+                       b
+                        OptExprNo(
+                        ) [OptExprNo]
+                      ) [Designator]
+                      OptParsNo(
+                      ) [OptParsNo]
+                    ) [FactorDesignator]
+                  ) [MulopFactorListOne]
+                ) [TermFactorMulop]
+              ) [AddopTermListOne]
+            ) [Expr1AddopTerm]
+          ) [Expression]
+          OptNumConstNo(
+          ) [OptNumConstNo]
+        ) [PrintStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  21:57:35,156 - ===================================
+INFO  21:57:35,158 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  21:57:35,158 - TIP JE: int
+INFO  21:57:35,158 - Deklarisana lokalna promenljiva bna liniji 8 : Var b: int, 0, 1 
+INFO  21:57:35,160 - Pristup lokalnoj promenljivoj: b na liniji 12[ Var b: int, 0, 1  ]
+INFO  21:57:35,162 -  Print count calls = 1
+INFO  21:57:35,162 -  Deklarisanih promenljivih ima = 10
+INFO  21:57:35,162 - ===================================
+ERROR 21:57:35,165 - GRESKA!
+ERROR 21:57:35,165 - Parsiranje NIJE uspesno zavrseno!

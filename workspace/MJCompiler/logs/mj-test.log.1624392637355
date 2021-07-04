@@ -1,0 +1,65 @@
+INFO  22:10:22,762 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  22:10:22,763 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  22:10:22,824 - #2 program
+INFO  22:10:22,824 - #31 a
+INFO  22:10:22,824 - #3 {
+INFO  22:10:22,825 - #14 void
+INFO  22:10:22,826 - #31 main
+INFO  22:10:22,826 - #12 (
+INFO  22:10:22,826 - #13 )
+INFO  22:10:22,827 - #3 {
+INFO  22:10:22,827 - #26 read
+INFO  22:10:22,828 - #12 (
+INFO  22:10:22,828 - #34 'a'
+ERROR 22:10:22,828 - 
+Sintaksna greska na liniji 5
+INFO  22:10:22,828 - #13 )
+INFO  22:10:22,828 - #6 ;
+INFO  22:10:22,828 - #4 }
+INFO  22:10:22,829 - #4 }
+ERROR 22:10:22,829 - Greska pri dodeli vrednosti 
+INFO  22:10:22,835 - Program(
+  ProgName(
+   a
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  Lbrace(
+  ) [Lbrace]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDeclaration(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      Lbrace(
+      ) [Lbrace]
+      StatementsList(
+        NoStatementsList(
+        ) [NoStatementsList]
+        DesignatorStmt(
+          ERROR2(
+            null
+          ) [ERROR2]
+        ) [DesignatorStmt]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDeclaration]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  22:10:22,837 - ===================================
+INFO  22:10:22,840 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  22:10:22,843 -  Print count calls = 0
+INFO  22:10:22,844 -  Deklarisanih promenljivih ima = 00
+INFO  22:10:22,844 - ===================================
+ERROR 22:10:22,844 - GRESKA!
+ERROR 22:10:22,844 - Parsiranje NIJE uspesno zavrseno!

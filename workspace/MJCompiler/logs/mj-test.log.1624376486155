@@ -1,0 +1,161 @@
+INFO  17:40:21,177 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  17:40:21,178 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  17:40:21,259 - #2 program
+INFO  17:40:21,260 - #31 a
+INFO  17:40:21,260 - #3 {
+INFO  17:40:21,261 - #14 void
+INFO  17:40:21,262 - #31 main
+INFO  17:40:21,262 - #12 (
+INFO  17:40:21,263 - #13 )
+INFO  17:40:21,264 - #31 int
+INFO  17:40:21,265 - #31 a
+INFO  17:40:21,266 - #6 ;
+INFO  17:40:21,268 - #3 {
+INFO  17:40:21,270 - #31 a
+INFO  17:40:21,271 - #8 =
+INFO  17:40:21,274 - #32 1
+INFO  17:40:21,275 - #6 ;
+INFO  17:40:21,276 - #36 if
+INFO  17:40:21,277 - #12 (
+INFO  17:40:21,277 - #34 'a'
+INFO  17:40:21,278 - #38 >
+ERROR 17:40:21,278 - 
+Sintaksna greska na liniji 20
+INFO  17:40:21,279 - #31 a
+INFO  17:40:21,279 - #13 )
+INFO  17:40:21,279 - #31 a
+INFO  17:40:21,280 - #8 =
+INFO  17:40:21,280 - #32 2
+ERROR 17:40:21,281 - Greska sa uslovnim operatorom 
+INFO  17:40:21,284 - #6 ;
+INFO  17:40:21,285 - #4 }
+INFO  17:40:21,285 - #4 }
+INFO  17:40:21,310 - Program(
+  ProgName(
+   a
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  Lbrace(
+  ) [Lbrace]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDeclaration(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        NoVarDeclList(
+        ) [NoVarDeclList]
+        VarDeclLocal(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               a
+                OptBracketsNo(
+                ) [OptBracketsNo]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      Lbrace(
+      ) [Lbrace]
+      StatementsList(
+        StatementsList(
+          NoStatementsList(
+          ) [NoStatementsList]
+          DesignatorStmt(
+            DesignatorAssign(
+              Designator(
+               a
+                OptExprNo(
+                ) [OptExprNo]
+              ) [Designator]
+              Expression(
+                Expr1AddopTerm(
+                  OptMinusNo(
+                  ) [OptMinusNo]
+                  AddopTermListOne(
+                    TermFactorMulop(
+                      MulopFactorListOne(
+                        Cnst(
+                          NumConstant(
+                           1
+                          ) [NumConstant]
+                        ) [Cnst]
+                      ) [MulopFactorListOne]
+                    ) [TermFactorMulop]
+                  ) [AddopTermListOne]
+                ) [Expr1AddopTerm]
+              ) [Expression]
+            ) [DesignatorAssign]
+          ) [DesignatorStmt]
+        ) [StatementsList]
+        IfStatement(
+          IfCondition(
+            Lparen(
+            ) [Lparen]
+            ConditionOne(
+              CondTermOne(
+                ERROR3(
+                ) [ERROR3]
+              ) [CondTermOne]
+            ) [ConditionOne]
+            Rparen(
+            ) [Rparen]
+          ) [IfCondition]
+          DesignatorStmt(
+            DesignatorAssign(
+              Designator(
+               a
+                OptExprNo(
+                ) [OptExprNo]
+              ) [Designator]
+              Expression(
+                Expr1AddopTerm(
+                  OptMinusNo(
+                  ) [OptMinusNo]
+                  AddopTermListOne(
+                    TermFactorMulop(
+                      MulopFactorListOne(
+                        Cnst(
+                          NumConstant(
+                           2
+                          ) [NumConstant]
+                        ) [Cnst]
+                      ) [MulopFactorListOne]
+                    ) [TermFactorMulop]
+                  ) [AddopTermListOne]
+                ) [Expr1AddopTerm]
+              ) [Expression]
+            ) [DesignatorAssign]
+          ) [DesignatorStmt]
+        ) [IfStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDeclaration]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  17:40:21,311 - ===================================
+INFO  17:40:21,317 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  17:40:21,317 - Deklarisana lokalna promenljiva ana liniji 16 : Var a: int, 0, 1 
+INFO  17:40:21,317 - Pristup lokalnoj promenljivoj: a na liniji 19[ Var a: int, 0, 1  ]
+ERROR 17:40:21,318 - Problem, neispravan tip u IF naredbi na liniji 20STRnull
+INFO  17:40:21,318 - Pristup lokalnoj promenljivoj: a na liniji 20[ Var a: int, 0, 1  ]
+INFO  17:40:21,322 -  Print count calls = 0
+INFO  17:40:21,322 -  Deklarisanih promenljivih ima = 10
+INFO  17:40:21,323 - ===================================
+ERROR 17:40:21,323 - GRESKA!
+ERROR 17:40:21,323 - GRESKAaaa!
+ERROR 17:40:21,323 - Parsiranje NIJE uspesno zavrseno!

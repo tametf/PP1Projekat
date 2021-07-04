@@ -1,0 +1,65 @@
+INFO  19:33:54,471 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  19:33:54,532 - #2 program
+INFO  19:33:54,532 - #28 test301
+INFO  19:33:54,532 - #28 int
+INFO  19:33:54,534 - #28 a
+INFO  19:33:54,535 - #6 ;
+INFO  19:33:54,538 - #3 {
+INFO  19:33:54,539 - #14 void
+INFO  19:33:54,540 - #28 main
+INFO  19:33:54,540 - #12 (
+INFO  19:33:54,541 - #13 )
+INFO  19:33:54,542 - #3 {
+INFO  19:33:54,542 - #4 }
+INFO  19:33:54,543 - #4 }
+INFO  19:33:54,557 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  VariableDeclList(
+    NoDeclList(
+    ) [NoDeclList]
+    VarDecl(
+      Type(
+       int
+      ) [Type]
+      VarDeclarationListOne(
+        VarDeclListOne(
+          VarIdent(
+           a
+            OptBracketsNo(
+            ) [OptBracketsNo]
+          ) [VarIdent]
+        ) [VarDeclListOne]
+      ) [VarDeclarationListOne]
+    ) [VarDecl]
+  ) [VariableDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      NoStatementsList(
+      ) [NoStatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  19:33:54,557 - ===================================
+INFO  19:33:54,561 - Deklarisana globalna promenljiva sa imenom: ana liniji 4
+INFO  19:33:54,561 - Definisana funkcija programa sa imenom main na liniji 7
+ERROR 19:33:54,561 - Program nema MAIN funkciju! Greska na liniji2
+INFO  19:33:54,561 -  Print count calls = 0
+INFO  19:33:54,561 -  Deklarisanih promenljivih ima = 1
+INFO  19:33:54,561 - ===================================
+ERROR 19:33:54,563 - GRESKA!
+ERROR 19:33:54,563 - Parsiranje NIJE uspesno zavrseno!

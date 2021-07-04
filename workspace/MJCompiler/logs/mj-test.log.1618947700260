@@ -1,0 +1,320 @@
+INFO  21:40:59,878 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  21:40:59,935 - #2 program
+INFO  21:40:59,935 - #28 test301
+INFO  21:40:59,935 - #5 const
+INFO  21:40:59,937 - #28 int
+INFO  21:40:59,938 - #28 nula
+INFO  21:40:59,939 - #8 =
+INFO  21:40:59,939 - #29 0
+INFO  21:40:59,939 - #6 ;
+INFO  21:40:59,940 - #5 const
+INFO  21:40:59,941 - #28 bool
+INFO  21:40:59,941 - #28 tacno
+INFO  21:40:59,941 - #8 =
+INFO  21:40:59,941 - #30 true
+INFO  21:40:59,942 - #6 ;
+INFO  21:40:59,942 - #5 const
+INFO  21:40:59,942 - #28 char
+INFO  21:40:59,942 - #28 slovo
+INFO  21:40:59,942 - #8 =
+INFO  21:40:59,942 - #31 'f'
+INFO  21:40:59,942 - #6 ;
+INFO  21:40:59,943 - #5 const
+INFO  21:40:59,943 - #28 int
+INFO  21:40:59,944 - #28 nulas
+INFO  21:40:59,944 - #8 =
+INFO  21:40:59,944 - #29 5
+INFO  21:40:59,944 - #6 ;
+INFO  21:40:59,944 - #28 int
+INFO  21:40:59,945 - #28 globProm
+INFO  21:40:59,945 - #6 ;
+INFO  21:40:59,948 - #28 int
+INFO  21:40:59,949 - #28 ord
+INFO  21:40:59,949 - #6 ;
+INFO  21:40:59,949 - #28 bool
+INFO  21:40:59,949 - #28 niz
+INFO  21:40:59,950 - #10 [
+INFO  21:40:59,950 - #11 ]
+INFO  21:40:59,950 - #6 ;
+INFO  21:40:59,951 - #28 char
+INFO  21:40:59,951 - #28 prom
+INFO  21:40:59,951 - #7 ,
+INFO  21:40:59,951 - #28 prom3
+INFO  21:40:59,951 - #6 ;
+INFO  21:40:59,952 - #28 char
+INFO  21:40:59,953 - #28 slobve
+INFO  21:40:59,953 - #6 ;
+INFO  21:40:59,953 - #3 {
+INFO  21:40:59,953 - #14 void
+INFO  21:40:59,954 - #28 main
+INFO  21:40:59,954 - #12 (
+INFO  21:40:59,955 - #13 )
+INFO  21:40:59,956 - #28 int
+INFO  21:40:59,956 - #28 bodovi
+INFO  21:40:59,957 - #6 ;
+INFO  21:40:59,958 - #28 bool
+INFO  21:40:59,959 - #28 bt
+INFO  21:40:59,959 - #6 ;
+INFO  21:40:59,959 - #28 int
+INFO  21:40:59,960 - #28 nizLok
+INFO  21:40:59,960 - #10 [
+INFO  21:40:59,960 - #11 ]
+INFO  21:40:59,960 - #6 ;
+INFO  21:40:59,960 - #3 {
+INFO  21:40:59,960 - #4 }
+INFO  21:40:59,962 - #4 }
+INFO  21:40:59,975 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  VariableDeclList(
+    VariableDeclList(
+      VariableDeclList(
+        VariableDeclList(
+          VariableDeclList(
+            ConstDeclList(
+              ConstDeclList(
+                ConstDeclList(
+                  ConstDeclList(
+                    NoDeclList(
+                    ) [NoDeclList]
+                    ConstDecl(
+                      Type(
+                       int
+                      ) [Type]
+                      ConstDeclarationListOne(
+                        ConstDeclOne(
+                         nula
+                          NumConstant(
+                           0
+                          ) [NumConstant]
+                        ) [ConstDeclOne]
+                      ) [ConstDeclarationListOne]
+                    ) [ConstDecl]
+                  ) [ConstDeclList]
+                  ConstDecl(
+                    Type(
+                     bool
+                    ) [Type]
+                    ConstDeclarationListOne(
+                      ConstDeclOne(
+                       tacno
+                        BoolConstant(
+                         true
+                        ) [BoolConstant]
+                      ) [ConstDeclOne]
+                    ) [ConstDeclarationListOne]
+                  ) [ConstDecl]
+                ) [ConstDeclList]
+                ConstDecl(
+                  Type(
+                   char
+                  ) [Type]
+                  ConstDeclarationListOne(
+                    ConstDeclOne(
+                     slovo
+                      CharConstant(
+                       'f'
+                      ) [CharConstant]
+                    ) [ConstDeclOne]
+                  ) [ConstDeclarationListOne]
+                ) [ConstDecl]
+              ) [ConstDeclList]
+              ConstDecl(
+                Type(
+                 int
+                ) [Type]
+                ConstDeclarationListOne(
+                  ConstDeclOne(
+                   nulas
+                    NumConstant(
+                     5
+                    ) [NumConstant]
+                  ) [ConstDeclOne]
+                ) [ConstDeclarationListOne]
+              ) [ConstDecl]
+            ) [ConstDeclList]
+            VarDecl(
+              Type(
+               int
+              ) [Type]
+              VarDeclarationListOne(
+                VarDeclListOne(
+                  VarIdent(
+                   globProm
+                    OptBracketsNo(
+                    ) [OptBracketsNo]
+                  ) [VarIdent]
+                ) [VarDeclListOne]
+              ) [VarDeclarationListOne]
+            ) [VarDecl]
+          ) [VariableDeclList]
+          VarDecl(
+            Type(
+             int
+            ) [Type]
+            VarDeclarationListOne(
+              VarDeclListOne(
+                VarIdent(
+                 ord
+                  OptBracketsNo(
+                  ) [OptBracketsNo]
+                ) [VarIdent]
+              ) [VarDeclListOne]
+            ) [VarDeclarationListOne]
+          ) [VarDecl]
+        ) [VariableDeclList]
+        VarDecl(
+          Type(
+           bool
+          ) [Type]
+          VarDeclarationListOne(
+            VarDeclListOne(
+              VarIdent(
+               niz
+                OptBracketsYes(
+                ) [OptBracketsYes]
+              ) [VarIdent]
+            ) [VarDeclListOne]
+          ) [VarDeclarationListOne]
+        ) [VarDecl]
+      ) [VariableDeclList]
+      VarDecl(
+        Type(
+         char
+        ) [Type]
+        VarDeclarationListMore(
+          VarDeclarationListOne(
+            VarDeclListOne(
+              VarIdent(
+               prom
+                OptBracketsNo(
+                ) [OptBracketsNo]
+              ) [VarIdent]
+            ) [VarDeclListOne]
+          ) [VarDeclarationListOne]
+          VarDeclListOne(
+            VarIdent(
+             prom3
+              OptBracketsNo(
+              ) [OptBracketsNo]
+            ) [VarIdent]
+          ) [VarDeclListOne]
+        ) [VarDeclarationListMore]
+      ) [VarDecl]
+    ) [VariableDeclList]
+    VarDecl(
+      Type(
+       char
+      ) [Type]
+      VarDeclarationListOne(
+        VarDeclListOne(
+          VarIdent(
+           slobve
+            OptBracketsNo(
+            ) [OptBracketsNo]
+          ) [VarIdent]
+        ) [VarDeclListOne]
+      ) [VarDeclarationListOne]
+    ) [VarDecl]
+  ) [VariableDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        VarDeclListMore(
+          VarDeclListMore(
+            NoVarDeclList(
+            ) [NoVarDeclList]
+            VarDeclLocal(
+              Type(
+               int
+              ) [Type]
+              VarDeclarationListLocalOne(
+                VarDeclListLocalOne(
+                  VarIdentLocal(
+                   bodovi
+                    OptBracketsNo(
+                    ) [OptBracketsNo]
+                  ) [VarIdentLocal]
+                ) [VarDeclListLocalOne]
+              ) [VarDeclarationListLocalOne]
+            ) [VarDeclLocal]
+          ) [VarDeclListMore]
+          VarDeclLocal(
+            Type(
+             bool
+            ) [Type]
+            VarDeclarationListLocalOne(
+              VarDeclListLocalOne(
+                VarIdentLocal(
+                 bt
+                  OptBracketsNo(
+                  ) [OptBracketsNo]
+                ) [VarIdentLocal]
+              ) [VarDeclListLocalOne]
+            ) [VarDeclarationListLocalOne]
+          ) [VarDeclLocal]
+        ) [VarDeclListMore]
+        VarDeclLocal(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               nizLok
+                OptBracketsYes(
+                ) [OptBracketsYes]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      NoStatementsList(
+      ) [NoStatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  21:40:59,976 - ===================================
+INFO  21:40:59,980 - TIP JE: int
+INFO  21:40:59,980 - Definisana je konstanta nula na liniji 4
+INFO  21:40:59,980 - TIP JE: bool
+INFO  21:40:59,981 - Definisana je konstanta tacno na liniji 5
+INFO  21:40:59,981 - TIP JE: char
+INFO  21:40:59,981 - Definisana je konstanta slovo na liniji 6
+INFO  21:40:59,981 - TIP JE: int
+INFO  21:40:59,981 - Definisana je konstanta nulas na liniji 7
+INFO  21:40:59,981 - TIP JE: int
+INFO  21:40:59,982 - Deklarisana globalna promenljiva sa imenom: globProm na liniji 8
+INFO  21:40:59,982 - TIP JE: int
+ERROR 21:40:59,982 - Greska! Na liniji 9 se koristi nedozvoljeno ime za globalnu promenljivu!
+INFO  21:40:59,982 - TIP JE: bool
+INFO  21:40:59,982 - Deklarisan globalni niz sa imenom: nizna liniji 10
+INFO  21:40:59,983 - TIP JE: char
+INFO  21:40:59,983 - Deklarisana globalna promenljiva sa imenom: prom na liniji 11
+INFO  21:40:59,983 - Deklarisana globalna promenljiva sa imenom: prom3 na liniji 11
+INFO  21:40:59,984 - TIP JE: char
+INFO  21:40:59,984 - Deklarisana globalna promenljiva sa imenom: slobve na liniji 12
+INFO  21:40:59,984 - Definisana funkcija programa sa imenom main na liniji 16
+INFO  21:40:59,984 - TIP JE: int
+INFO  21:40:59,984 - Deklarisana lokalna promenljiva sa imenom: bodovina liniji 17
+INFO  21:40:59,984 - TIP JE: bool
+INFO  21:40:59,984 - Deklarisana lokalna promenljiva sa imenom: btna liniji 18
+INFO  21:40:59,984 - TIP JE: int
+INFO  21:40:59,985 - Deklarisan lokalni niz sa imenom: nizLokna liniji 19
+INFO  21:40:59,985 -  Print count calls = 0
+INFO  21:40:59,985 -  Deklarisanih promenljivih ima = 6
+INFO  21:40:59,985 - ===================================
+ERROR 21:40:59,986 - GRESKA!
+ERROR 21:40:59,986 - Parsiranje NIJE uspesno zavrseno!

@@ -1,0 +1,69 @@
+INFO  20:38:13,503 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  20:38:13,538 - #2 program
+INFO  20:38:13,539 - #28 test301
+INFO  20:38:13,539 - #3 {
+INFO  20:38:13,540 - #14 void
+INFO  20:38:13,540 - #28 main
+INFO  20:38:13,540 - #12 (
+INFO  20:38:13,541 - #13 )
+INFO  20:38:13,541 - #3 {
+INFO  20:38:13,542 - #27 print
+INFO  20:38:13,542 - #12 (
+INFO  20:38:13,542 - #29 11
+INFO  20:38:13,543 - #13 )
+INFO  20:38:13,544 - #6 ;
+INFO  20:38:13,544 - #4 }
+INFO  20:38:13,545 - #4 }
+INFO  20:38:13,551 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      StatementsList(
+        NoStatementsList(
+        ) [NoStatementsList]
+        PrintStatement(
+          Expression(
+            Expr1AddopTerm(
+              OptMinusNo(
+              ) [OptMinusNo]
+              AddopTermListOne(
+                TermFactorMulop(
+                  MulopFactorListOne(
+                    FactorNumConst(
+                     11
+                    ) [FactorNumConst]
+                  ) [MulopFactorListOne]
+                ) [TermFactorMulop]
+              ) [AddopTermListOne]
+            ) [Expr1AddopTerm]
+          ) [Expression]
+          OptNumConstNo(
+          ) [OptNumConstNo]
+        ) [PrintStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  20:38:13,552 - ===================================
+INFO  20:38:13,554 - Obradjuje se funkcija main tip funkcije: VOID
+INFO  20:38:13,555 -  Print count calls = 0
+INFO  20:38:13,555 -  Deklarisanih promenljivih ima = 0
+INFO  20:38:13,555 - ===================================
+INFO  20:38:13,557 - Parsiranje uspesno zavrseno!

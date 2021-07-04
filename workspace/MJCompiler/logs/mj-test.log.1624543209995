@@ -1,0 +1,360 @@
+INFO  15:59:37,734 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  15:59:37,735 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  15:59:37,796 - #2 program
+INFO  15:59:37,796 - #31 a
+INFO  15:59:37,796 - #3 {
+INFO  15:59:37,797 - #14 void
+INFO  15:59:37,798 - #31 main
+INFO  15:59:37,798 - #12 (
+INFO  15:59:37,798 - #13 )
+INFO  15:59:37,798 - #31 char
+INFO  15:59:37,799 - #31 niz
+INFO  15:59:37,799 - #10 [
+INFO  15:59:37,799 - #11 ]
+INFO  15:59:37,800 - #6 ;
+INFO  15:59:37,801 - #31 bool
+INFO  15:59:37,801 - #31 niz1
+INFO  15:59:37,801 - #10 [
+INFO  15:59:37,801 - #11 ]
+INFO  15:59:37,801 - #6 ;
+INFO  15:59:37,802 - #31 bool
+INFO  15:59:37,802 - #31 tacno
+INFO  15:59:37,802 - #6 ;
+INFO  15:59:37,803 - #31 bool
+INFO  15:59:37,803 - #31 tam
+INFO  15:59:37,803 - #6 ;
+INFO  15:59:37,803 - #31 int
+INFO  15:59:37,803 - #31 a
+INFO  15:59:37,803 - #6 ;
+INFO  15:59:37,803 - #3 {
+INFO  15:59:37,804 - #31 a
+INFO  15:59:37,804 - #8 =
+INFO  15:59:37,805 - #32 2
+INFO  15:59:37,806 - #6 ;
+INFO  15:59:37,806 - #31 niz
+INFO  15:59:37,807 - #8 =
+INFO  15:59:37,807 - #25 new
+INFO  15:59:37,807 - #31 char
+INFO  15:59:37,807 - #10 [
+INFO  15:59:37,807 - #32 5
+INFO  15:59:37,807 - #11 ]
+INFO  15:59:37,807 - #6 ;
+INFO  15:59:37,808 - #26 read
+INFO  15:59:37,808 - #12 (
+INFO  15:59:37,808 - #31 tacno
+INFO  15:59:37,808 - #13 )
+INFO  15:59:37,808 - #6 ;
+INFO  15:59:37,808 - #27 print
+INFO  15:59:37,809 - #12 (
+INFO  15:59:37,809 - #31 tacno
+INFO  15:59:37,809 - #13 )
+INFO  15:59:37,810 - #6 ;
+INFO  15:59:37,811 - #36 if
+INFO  15:59:37,811 - #12 (
+INFO  15:59:37,811 - #31 tacno
+INFO  15:59:37,811 - #13 )
+INFO  15:59:37,812 - #27 print
+INFO  15:59:37,812 - #12 (
+INFO  15:59:37,812 - #32 55
+INFO  15:59:37,812 - #13 )
+INFO  15:59:37,812 - #6 ;
+INFO  15:59:37,813 - #4 }
+INFO  15:59:37,813 - #4 }
+INFO  15:59:37,831 - Program(
+  ProgName(
+   a
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  Lbrace(
+  ) [Lbrace]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDeclaration(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        VarDeclListMore(
+          VarDeclListMore(
+            VarDeclListMore(
+              VarDeclListMore(
+                NoVarDeclList(
+                ) [NoVarDeclList]
+                VarDeclLocal(
+                  Type(
+                   char
+                  ) [Type]
+                  VarDeclarationListLocalOne(
+                    VarDeclListLocalOne(
+                      VarIdentLocal(
+                       niz
+                        OptBracketsYes(
+                        ) [OptBracketsYes]
+                      ) [VarIdentLocal]
+                    ) [VarDeclListLocalOne]
+                  ) [VarDeclarationListLocalOne]
+                ) [VarDeclLocal]
+              ) [VarDeclListMore]
+              VarDeclLocal(
+                Type(
+                 bool
+                ) [Type]
+                VarDeclarationListLocalOne(
+                  VarDeclListLocalOne(
+                    VarIdentLocal(
+                     niz1
+                      OptBracketsYes(
+                      ) [OptBracketsYes]
+                    ) [VarIdentLocal]
+                  ) [VarDeclListLocalOne]
+                ) [VarDeclarationListLocalOne]
+              ) [VarDeclLocal]
+            ) [VarDeclListMore]
+            VarDeclLocal(
+              Type(
+               bool
+              ) [Type]
+              VarDeclarationListLocalOne(
+                VarDeclListLocalOne(
+                  VarIdentLocal(
+                   tacno
+                    OptBracketsNo(
+                    ) [OptBracketsNo]
+                  ) [VarIdentLocal]
+                ) [VarDeclListLocalOne]
+              ) [VarDeclarationListLocalOne]
+            ) [VarDeclLocal]
+          ) [VarDeclListMore]
+          VarDeclLocal(
+            Type(
+             bool
+            ) [Type]
+            VarDeclarationListLocalOne(
+              VarDeclListLocalOne(
+                VarIdentLocal(
+                 tam
+                  OptBracketsNo(
+                  ) [OptBracketsNo]
+                ) [VarIdentLocal]
+              ) [VarDeclListLocalOne]
+            ) [VarDeclarationListLocalOne]
+          ) [VarDeclLocal]
+        ) [VarDeclListMore]
+        VarDeclLocal(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               a
+                OptBracketsNo(
+                ) [OptBracketsNo]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      Lbrace(
+      ) [Lbrace]
+      StatementsList(
+        StatementsList(
+          StatementsList(
+            StatementsList(
+              StatementsList(
+                NoStatementsList(
+                ) [NoStatementsList]
+                DesignatorStmt(
+                  DesignatorAssign(
+                    Designator(
+                     a
+                      OptExprNo(
+                      ) [OptExprNo]
+                    ) [Designator]
+                    Expression(
+                      Expr1AddopTerm(
+                        OptMinusNo(
+                        ) [OptMinusNo]
+                        AddopTermListOne(
+                          TermFactorMulop(
+                            MulopFactorListOne(
+                              Cnst(
+                                NumConstant(
+                                 2
+                                ) [NumConstant]
+                              ) [Cnst]
+                            ) [MulopFactorListOne]
+                          ) [TermFactorMulop]
+                        ) [AddopTermListOne]
+                      ) [Expr1AddopTerm]
+                    ) [Expression]
+                  ) [DesignatorAssign]
+                ) [DesignatorStmt]
+              ) [StatementsList]
+              DesignatorStmt(
+                DesignatorAssign(
+                  Designator(
+                   niz
+                    OptExprNo(
+                    ) [OptExprNo]
+                  ) [Designator]
+                  Expression(
+                    Expr1AddopTerm(
+                      OptMinusNo(
+                      ) [OptMinusNo]
+                      AddopTermListOne(
+                        TermFactorMulop(
+                          MulopFactorListOne(
+                            FactorNewTypeExpr(
+                              Type(
+                               char
+                              ) [Type]
+                              Expression(
+                                Expr1AddopTerm(
+                                  OptMinusNo(
+                                  ) [OptMinusNo]
+                                  AddopTermListOne(
+                                    TermFactorMulop(
+                                      MulopFactorListOne(
+                                        Cnst(
+                                          NumConstant(
+                                           5
+                                          ) [NumConstant]
+                                        ) [Cnst]
+                                      ) [MulopFactorListOne]
+                                    ) [TermFactorMulop]
+                                  ) [AddopTermListOne]
+                                ) [Expr1AddopTerm]
+                              ) [Expression]
+                            ) [FactorNewTypeExpr]
+                          ) [MulopFactorListOne]
+                        ) [TermFactorMulop]
+                      ) [AddopTermListOne]
+                    ) [Expr1AddopTerm]
+                  ) [Expression]
+                ) [DesignatorAssign]
+              ) [DesignatorStmt]
+            ) [StatementsList]
+            ReadStatement(
+              Read(
+              ) [Read]
+              Designator(
+               tacno
+                OptExprNo(
+                ) [OptExprNo]
+              ) [Designator]
+            ) [ReadStatement]
+          ) [StatementsList]
+          PrintStatement(
+            Print(
+            ) [Print]
+            Expression(
+              Expr1AddopTerm(
+                OptMinusNo(
+                ) [OptMinusNo]
+                AddopTermListOne(
+                  TermFactorMulop(
+                    MulopFactorListOne(
+                      FactorDesignator(
+                        Designator(
+                         tacno
+                          OptExprNo(
+                          ) [OptExprNo]
+                        ) [Designator]
+                        OptParsNo(
+                        ) [OptParsNo]
+                      ) [FactorDesignator]
+                    ) [MulopFactorListOne]
+                  ) [TermFactorMulop]
+                ) [AddopTermListOne]
+              ) [Expr1AddopTerm]
+            ) [Expression]
+            OptNumConstNo(
+            ) [OptNumConstNo]
+          ) [PrintStatement]
+        ) [StatementsList]
+        IfStatement(
+          IfCondition(
+            Lparen(
+            ) [Lparen]
+            ConditionOne(
+              CondTermOne(
+                CondFactExprOnly(
+                  Expression(
+                    Expr1AddopTerm(
+                      OptMinusNo(
+                      ) [OptMinusNo]
+                      AddopTermListOne(
+                        TermFactorMulop(
+                          MulopFactorListOne(
+                            FactorDesignator(
+                              Designator(
+                               tacno
+                                OptExprNo(
+                                ) [OptExprNo]
+                              ) [Designator]
+                              OptParsNo(
+                              ) [OptParsNo]
+                            ) [FactorDesignator]
+                          ) [MulopFactorListOne]
+                        ) [TermFactorMulop]
+                      ) [AddopTermListOne]
+                    ) [Expr1AddopTerm]
+                  ) [Expression]
+                ) [CondFactExprOnly]
+              ) [CondTermOne]
+            ) [ConditionOne]
+            Rparen(
+            ) [Rparen]
+          ) [IfCondition]
+          PrintStatement(
+            Print(
+            ) [Print]
+            Expression(
+              Expr1AddopTerm(
+                OptMinusNo(
+                ) [OptMinusNo]
+                AddopTermListOne(
+                  TermFactorMulop(
+                    MulopFactorListOne(
+                      Cnst(
+                        NumConstant(
+                         55
+                        ) [NumConstant]
+                      ) [Cnst]
+                    ) [MulopFactorListOne]
+                  ) [TermFactorMulop]
+                ) [AddopTermListOne]
+              ) [Expr1AddopTerm]
+            ) [Expression]
+            OptNumConstNo(
+            ) [OptNumConstNo]
+          ) [PrintStatement]
+        ) [IfStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDeclaration]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  15:59:37,832 - ===================================
+INFO  15:59:37,836 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  15:59:37,836 - Deklarisan lokalni niz sa imenom: nizna liniji 4 : Var niz: Arr of char, 0, 1 
+INFO  15:59:37,840 - Deklarisan lokalni niz sa imenom: niz1na liniji 5 : Var niz1: Arr of Class, 1, 1 
+INFO  15:59:37,840 - Deklarisana lokalna promenljiva tacnona liniji 6 : Var tacno: Class [], 2, 1 
+INFO  15:59:37,840 - Deklarisana lokalna promenljiva tamna liniji 7 : Var tam: Class [], 3, 1 
+INFO  15:59:37,840 - Deklarisana lokalna promenljiva ana liniji 8 : Var a: int, 4, 1 
+INFO  15:59:37,840 - Pristup lokalnoj promenljivoj: a na liniji 10[ Var a: int, 4, 1  ]
+INFO  15:59:37,840 - Pristup lokalnoj promenljivoj: niz na liniji 11[ Var niz: Arr of char, 0, 1  ]
+INFO  15:59:37,841 - Pristup lokalnoj promenljivoj: tacno na liniji 12[ Var tacno: Class [], 2, 1  ]
+INFO  15:59:37,841 - Pristup lokalnoj promenljivoj: tacno na liniji 13[ Var tacno: Class [], 2, 1  ]
+INFO  15:59:37,841 - Pristup lokalnoj promenljivoj: tacno na liniji 14[ Var tacno: Class [], 2, 1  ]
+INFO  15:59:37,842 - ===================================
+INFO  15:59:37,847 - Parsiranje uspesno zavrseno!

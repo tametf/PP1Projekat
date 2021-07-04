@@ -1,0 +1,113 @@
+INFO  09:00:37,320 - Compiling source file: C:\Users\jt150492\Desktop\pptam\workspace\MJCompiler\test\test1.mj
+INFO  09:00:37,321 - Compiling source file: C:\Users\jt150492\Desktop\pptam\workspace\MJCompiler\test\test1.mj
+INFO  09:00:37,371 - #2 program
+INFO  09:00:37,371 - #31 test301
+INFO  09:00:37,372 - #3 {
+INFO  09:00:37,372 - #14 void
+INFO  09:00:37,373 - #31 main
+INFO  09:00:37,373 - #12 (
+INFO  09:00:37,373 - #13 )
+INFO  09:00:37,374 - #3 {
+INFO  09:00:37,374 - #27 print
+INFO  09:00:37,375 - #12 (
+INFO  09:00:37,375 - #34 'd'
+INFO  09:00:37,376 - #7 ,
+INFO  09:00:37,376 - #32 10
+INFO  09:00:37,376 - #13 )
+INFO  09:00:37,376 - #6 ;
+INFO  09:00:37,376 - #27 print
+INFO  09:00:37,377 - #12 (
+INFO  09:00:37,377 - #34 'a'
+INFO  09:00:37,377 - #7 ,
+INFO  09:00:37,377 - #32 1
+INFO  09:00:37,377 - #13 )
+INFO  09:00:37,377 - #6 ;
+INFO  09:00:37,377 - #4 }
+INFO  09:00:37,377 - #4 }
+INFO  09:00:37,384 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  Lbrace(
+  ) [Lbrace]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDeclaration(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      Lbrace(
+      ) [Lbrace]
+      StatementsList(
+        StatementsList(
+          NoStatementsList(
+          ) [NoStatementsList]
+          PrintStatement(
+            Print(
+            ) [Print]
+            Expression(
+              Expr1AddopTerm(
+                OptMinusNo(
+                ) [OptMinusNo]
+                AddopTermListOne(
+                  TermFactorMulop(
+                    MulopFactorListOne(
+                      Cnst(
+                        CharConstant(
+                         'd'
+                        ) [CharConstant]
+                      ) [Cnst]
+                    ) [MulopFactorListOne]
+                  ) [TermFactorMulop]
+                ) [AddopTermListOne]
+              ) [Expr1AddopTerm]
+            ) [Expression]
+            OptNumConstYes(
+             10
+            ) [OptNumConstYes]
+          ) [PrintStatement]
+        ) [StatementsList]
+        PrintStatement(
+          Print(
+          ) [Print]
+          Expression(
+            Expr1AddopTerm(
+              OptMinusNo(
+              ) [OptMinusNo]
+              AddopTermListOne(
+                TermFactorMulop(
+                  MulopFactorListOne(
+                    Cnst(
+                      CharConstant(
+                       'a'
+                      ) [CharConstant]
+                    ) [Cnst]
+                  ) [MulopFactorListOne]
+                ) [TermFactorMulop]
+              ) [AddopTermListOne]
+            ) [Expr1AddopTerm]
+          ) [Expression]
+          OptNumConstYes(
+           1
+          ) [OptNumConstYes]
+        ) [PrintStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDeclaration]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  09:00:37,385 - ===================================
+INFO  09:00:37,389 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  09:00:37,389 - ===================================
+INFO  09:00:37,394 - Parsiranje uspesno zavrseno!

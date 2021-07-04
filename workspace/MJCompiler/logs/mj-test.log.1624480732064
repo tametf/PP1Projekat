@@ -1,0 +1,141 @@
+INFO  22:37:36,150 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  22:37:36,151 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  22:37:36,220 - #2 program
+INFO  22:37:36,220 - #31 a
+INFO  22:37:36,220 - #3 {
+INFO  22:37:36,221 - #14 void
+INFO  22:37:36,223 - #31 main
+INFO  22:37:36,223 - #12 (
+INFO  22:37:36,223 - #13 )
+INFO  22:37:36,224 - #31 char
+INFO  22:37:36,224 - #31 slovo
+INFO  22:37:36,226 - #6 ;
+INFO  22:37:36,227 - #31 bool
+INFO  22:37:36,228 - #31 tacno
+INFO  22:37:36,228 - #6 ;
+INFO  22:37:36,228 - #3 {
+INFO  22:37:36,228 - #26 read
+INFO  22:37:36,229 - #12 (
+INFO  22:37:36,230 - #31 tacno
+INFO  22:37:36,230 - #13 )
+INFO  22:37:36,232 - #6 ;
+INFO  22:37:36,233 - #27 print
+INFO  22:37:36,233 - #12 (
+INFO  22:37:36,234 - #31 tacno
+INFO  22:37:36,235 - #13 )
+INFO  22:37:36,237 - #6 ;
+INFO  22:37:36,237 - #4 }
+INFO  22:37:36,238 - #4 }
+INFO  22:37:36,257 - Program(
+  ProgName(
+   a
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  Lbrace(
+  ) [Lbrace]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDeclaration(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        VarDeclListMore(
+          NoVarDeclList(
+          ) [NoVarDeclList]
+          VarDeclLocal(
+            Type(
+             char
+            ) [Type]
+            VarDeclarationListLocalOne(
+              VarDeclListLocalOne(
+                VarIdentLocal(
+                 slovo
+                  OptBracketsNo(
+                  ) [OptBracketsNo]
+                ) [VarIdentLocal]
+              ) [VarDeclListLocalOne]
+            ) [VarDeclarationListLocalOne]
+          ) [VarDeclLocal]
+        ) [VarDeclListMore]
+        VarDeclLocal(
+          Type(
+           bool
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               tacno
+                OptBracketsNo(
+                ) [OptBracketsNo]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      Lbrace(
+      ) [Lbrace]
+      StatementsList(
+        StatementsList(
+          NoStatementsList(
+          ) [NoStatementsList]
+          ReadStatement(
+            Read(
+            ) [Read]
+            Designator(
+             tacno
+              OptExprNo(
+              ) [OptExprNo]
+            ) [Designator]
+          ) [ReadStatement]
+        ) [StatementsList]
+        PrintStatement(
+          Print(
+          ) [Print]
+          Expression(
+            Expr1AddopTerm(
+              OptMinusNo(
+              ) [OptMinusNo]
+              AddopTermListOne(
+                TermFactorMulop(
+                  MulopFactorListOne(
+                    FactorDesignator(
+                      Designator(
+                       tacno
+                        OptExprNo(
+                        ) [OptExprNo]
+                      ) [Designator]
+                      OptParsNo(
+                      ) [OptParsNo]
+                    ) [FactorDesignator]
+                  ) [MulopFactorListOne]
+                ) [TermFactorMulop]
+              ) [AddopTermListOne]
+            ) [Expr1AddopTerm]
+          ) [Expression]
+          OptNumConstNo(
+          ) [OptNumConstNo]
+        ) [PrintStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDeclaration]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  22:37:36,257 - ===================================
+INFO  22:37:36,262 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  22:37:36,262 - Deklarisana lokalna promenljiva slovona liniji 4 : Var slovo: char, 0, 1 
+INFO  22:37:36,262 - Deklarisana lokalna promenljiva tacnona liniji 5 : Var tacno: , 1, 1 
+INFO  22:37:36,263 - Pristup lokalnoj promenljivoj: tacno na liniji 7[ Var tacno: , 1, 1  ]
+INFO  22:37:36,263 - Pristup lokalnoj promenljivoj: tacno na liniji 8[ Var tacno: , 1, 1  ]
+INFO  22:37:36,264 -  Print count calls = 1
+INFO  22:37:36,264 -  Deklarisanih promenljivih ima = 20
+INFO  22:37:36,264 - ===================================
+INFO  22:37:36,270 - Parsiranje uspesno zavrseno!

@@ -1,0 +1,39 @@
+INFO  12:36:53,609 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  12:36:53,638 - #2 program
+INFO  12:36:53,638 - #28 MJProgram
+INFO  12:36:53,638 - #5 const
+INFO  12:36:53,639 - #28 int
+INFO  12:36:53,640 - #28 pera
+INFO  12:36:53,640 - #8 =
+INFO  12:36:53,641 - #29 5
+INFO  12:36:53,641 - #6 ;
+INFO  12:36:53,641 - #3 {
+INFO  12:36:53,642 - #4 }
+INFO  12:36:53,643 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  ConstDeclaList(
+    NoDeclList(
+    ) [NoDeclList]
+    ConstDecl(
+      Type(
+       int
+      ) [Type]
+      ConstDeclarationListOne(
+        ConstDeclOne(
+         pera
+          NumConstant(
+           5
+          ) [NumConstant]
+        ) [ConstDeclOne]
+      ) [ConstDeclarationListOne]
+    ) [ConstDecl]
+  ) [ConstDeclaList]
+  NoMethodDeclList(
+  ) [NoMethodDeclList]
+) [Program]
+INFO  12:36:53,645 - ===================================
+INFO  12:36:53,646 -  Print count calls = 0
+INFO  12:36:53,646 -  Deklarisanih promenljivih ima = 1
+INFO  12:36:53,646 - Read count calls = 0

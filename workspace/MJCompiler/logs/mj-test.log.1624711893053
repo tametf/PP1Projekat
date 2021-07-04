@@ -1,0 +1,69 @@
+INFO  14:51:19,085 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  14:51:19,086 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  14:51:19,155 - #2 program
+INFO  14:51:19,156 - #31 test301
+INFO  14:51:19,156 - #3 {
+INFO  14:51:19,157 - #14 void
+INFO  14:51:19,158 - #31 main
+INFO  14:51:19,158 - #12 (
+INFO  14:51:19,159 - #13 )
+INFO  14:51:19,159 - #31 int
+INFO  14:51:19,160 - #31 a
+INFO  14:51:19,161 - #10 [
+INFO  14:51:19,161 - #11 ]
+INFO  14:51:19,161 - #6 ;
+INFO  14:51:19,162 - #3 {
+INFO  14:51:19,163 - #4 }
+INFO  14:51:19,164 - #4 }
+INFO  14:51:19,184 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  Lbrace(
+  ) [Lbrace]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDeclaration(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        NoVarDeclList(
+        ) [NoVarDeclList]
+        VarDeclLocal(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               a
+                OptBracketsYes(
+                ) [OptBracketsYes]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      Lbrace(
+      ) [Lbrace]
+      NoStatementsList(
+      ) [NoStatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDeclaration]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  14:51:19,248 - ===================================
+INFO  14:51:19,254 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  14:51:19,255 - Deklarisan lokalni niz sa imenom: ana liniji 10 : Var a: Arr of int, 0, 1 
+INFO  14:51:19,255 - ===================================
+INFO  14:51:19,264 - Parsiranje uspesno zavrseno!

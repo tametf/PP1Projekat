@@ -1,0 +1,124 @@
+INFO  17:31:34,537 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  17:31:34,538 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  17:31:34,580 - #2 program
+INFO  17:31:34,580 - #31 a
+INFO  17:31:34,581 - #3 {
+INFO  17:31:34,581 - #14 void
+INFO  17:31:34,582 - #31 main
+INFO  17:31:34,582 - #12 (
+INFO  17:31:34,582 - #13 )
+INFO  17:31:34,583 - #31 char
+INFO  17:31:34,583 - #31 slovo
+INFO  17:31:34,584 - #6 ;
+INFO  17:31:34,585 - #3 {
+INFO  17:31:34,586 - #27 print
+INFO  17:31:34,586 - #12 (
+INFO  17:31:34,587 - #10 [
+INFO  17:31:34,587 - #34 'A'
+INFO  17:31:34,588 - #55 #
+INFO  17:31:34,588 - #32 1
+INFO  17:31:34,588 - #11 ]
+INFO  17:31:34,588 - #13 )
+INFO  17:31:34,590 - #6 ;
+INFO  17:31:34,590 - #4 }
+INFO  17:31:34,590 - #4 }
+INFO  17:31:34,605 - Program(
+  ProgName(
+   a
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  Lbrace(
+  ) [Lbrace]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDeclaration(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        NoVarDeclList(
+        ) [NoVarDeclList]
+        VarDeclLocal(
+          Type(
+           char
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               slovo
+                OptBracketsNo(
+                ) [OptBracketsNo]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      Lbrace(
+      ) [Lbrace]
+      StatementsList(
+        NoStatementsList(
+        ) [NoStatementsList]
+        PrintStatement(
+          Print(
+          ) [Print]
+          Expression(
+            ExprHash(
+              Expression(
+                Expr1AddopTerm(
+                  OptMinusNo(
+                  ) [OptMinusNo]
+                  AddopTermListOne(
+                    TermFactorMulop(
+                      MulopFactorListOne(
+                        Cnst(
+                          CharConstant(
+                           'A'
+                          ) [CharConstant]
+                        ) [Cnst]
+                      ) [MulopFactorListOne]
+                    ) [TermFactorMulop]
+                  ) [AddopTermListOne]
+                ) [Expr1AddopTerm]
+              ) [Expression]
+              Expression(
+                Expr1AddopTerm(
+                  OptMinusNo(
+                  ) [OptMinusNo]
+                  AddopTermListOne(
+                    TermFactorMulop(
+                      MulopFactorListOne(
+                        Cnst(
+                          NumConstant(
+                           1
+                          ) [NumConstant]
+                        ) [Cnst]
+                      ) [MulopFactorListOne]
+                    ) [TermFactorMulop]
+                  ) [AddopTermListOne]
+                ) [Expr1AddopTerm]
+              ) [Expression]
+            ) [ExprHash]
+          ) [Expression]
+          OptNumConstNo(
+          ) [OptNumConstNo]
+        ) [PrintStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDeclaration]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  17:31:34,605 - ===================================
+INFO  17:31:34,609 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  17:31:34,609 - Deklarisana lokalna promenljiva slovona liniji 4 : Var slovo: char, 0, 1 
+INFO  17:31:34,610 -  Print count calls = 1
+INFO  17:31:34,610 -  Deklarisanih promenljivih ima = 10
+INFO  17:31:34,610 - ===================================
+INFO  17:31:34,614 - Parsiranje uspesno zavrseno!

@@ -1,0 +1,233 @@
+INFO  15:17:30,397 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  15:17:30,397 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  15:17:30,452 - #2 program
+INFO  15:17:30,452 - #31 test301
+INFO  15:17:30,452 - #5 const
+INFO  15:17:30,453 - #31 int
+INFO  15:17:30,453 - #31 nula
+INFO  15:17:30,453 - #8 =
+INFO  15:17:30,453 - #32 0
+INFO  15:17:30,453 - #6 ;
+INFO  15:17:30,454 - #5 const
+INFO  15:17:30,454 - #31 int
+INFO  15:17:30,454 - #31 jedan
+INFO  15:17:30,454 - #8 =
+INFO  15:17:30,454 - #32 1
+INFO  15:17:30,454 - #6 ;
+INFO  15:17:30,454 - #5 const
+INFO  15:17:30,454 - #31 int
+INFO  15:17:30,455 - #31 pet
+INFO  15:17:30,455 - #8 =
+INFO  15:17:30,455 - #32 5
+INFO  15:17:30,455 - #6 ;
+INFO  15:17:30,455 - #31 int
+INFO  15:17:30,455 - #31 niz
+INFO  15:17:30,455 - #10 [
+INFO  15:17:30,455 - #11 ]
+INFO  15:17:30,456 - #6 ;
+INFO  15:17:30,456 - #31 char
+INFO  15:17:30,457 - #31 nizch
+INFO  15:17:30,457 - #10 [
+INFO  15:17:30,457 - #11 ]
+INFO  15:17:30,457 - #6 ;
+INFO  15:17:30,457 - #3 {
+INFO  15:17:30,457 - #14 void
+INFO  15:17:30,458 - #31 main
+INFO  15:17:30,458 - #12 (
+INFO  15:17:30,458 - #13 )
+INFO  15:17:30,458 - #31 char
+INFO  15:17:30,458 - #31 c
+INFO  15:17:30,458 - #6 ;
+INFO  15:17:30,459 - #3 {
+INFO  15:17:30,461 - #31 c
+INFO  15:17:30,461 - #8 =
+INFO  15:17:30,463 - #34 'a'
+INFO  15:17:30,465 - #6 ;
+INFO  15:17:30,465 - #10 [
+ERROR 15:17:30,465 - 
+Sintaksna greska na liniji 17
+INFO  15:17:30,465 - #32 1
+INFO  15:17:30,465 - #55 #
+INFO  15:17:30,465 - #32 1
+INFO  15:17:30,466 - #11 ]
+INFO  15:17:30,466 - #6 ;
+INFO  15:17:30,466 - #27 print
+INFO  15:17:30,466 - #12 (
+INFO  15:17:30,466 - #31 c
+ERROR 15:17:30,467 - Greska pri dodeli vrednosti 
+INFO  15:17:30,468 - #13 )
+INFO  15:17:30,468 - #6 ;
+INFO  15:17:30,468 - #4 }
+INFO  15:17:30,468 - #4 }
+INFO  15:17:30,479 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  VariableDeclList(
+    VariableDeclList(
+      ConstDeclList(
+        ConstDeclList(
+          ConstDeclList(
+            NoDeclList(
+            ) [NoDeclList]
+            ConstDecl(
+              Type(
+               int
+              ) [Type]
+              ConstDeclarationListOne(
+                ConstDeclOne(
+                 nula
+                  NumConstant(
+                   0
+                  ) [NumConstant]
+                ) [ConstDeclOne]
+              ) [ConstDeclarationListOne]
+            ) [ConstDecl]
+          ) [ConstDeclList]
+          ConstDecl(
+            Type(
+             int
+            ) [Type]
+            ConstDeclarationListOne(
+              ConstDeclOne(
+               jedan
+                NumConstant(
+                 1
+                ) [NumConstant]
+              ) [ConstDeclOne]
+            ) [ConstDeclarationListOne]
+          ) [ConstDecl]
+        ) [ConstDeclList]
+        ConstDecl(
+          Type(
+           int
+          ) [Type]
+          ConstDeclarationListOne(
+            ConstDeclOne(
+             pet
+              NumConstant(
+               5
+              ) [NumConstant]
+            ) [ConstDeclOne]
+          ) [ConstDeclarationListOne]
+        ) [ConstDecl]
+      ) [ConstDeclList]
+      VarDecl(
+        Type(
+         int
+        ) [Type]
+        VarDeclarationListOne(
+          VarIdentGlobal(
+           niz
+            OptBracketsYes(
+            ) [OptBracketsYes]
+          ) [VarIdentGlobal]
+        ) [VarDeclarationListOne]
+      ) [VarDecl]
+    ) [VariableDeclList]
+    VarDecl(
+      Type(
+       char
+      ) [Type]
+      VarDeclarationListOne(
+        VarIdentGlobal(
+         nizch
+          OptBracketsYes(
+          ) [OptBracketsYes]
+        ) [VarIdentGlobal]
+      ) [VarDeclarationListOne]
+    ) [VarDecl]
+  ) [VariableDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        NoVarDeclList(
+        ) [NoVarDeclList]
+        VarDeclLocal(
+          Type(
+           char
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               c
+                OptBracketsNo(
+                ) [OptBracketsNo]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      StatementsList(
+        StatementsList(
+          NoStatementsList(
+          ) [NoStatementsList]
+          DesignatorStmt(
+            ERROR2(
+              null
+            ) [ERROR2]
+          ) [DesignatorStmt]
+        ) [StatementsList]
+        PrintStatement(
+          Print(
+          ) [Print]
+          Expression(
+            Expr1AddopTerm(
+              OptMinusNo(
+              ) [OptMinusNo]
+              AddopTermListOne(
+                TermFactorMulop(
+                  MulopFactorListOne(
+                    FactorDesignator(
+                      Designator(
+                       c
+                        OptExprNo(
+                        ) [OptExprNo]
+                      ) [Designator]
+                      OptParsNo(
+                      ) [OptParsNo]
+                    ) [FactorDesignator]
+                  ) [MulopFactorListOne]
+                ) [TermFactorMulop]
+              ) [AddopTermListOne]
+            ) [Expr1AddopTerm]
+          ) [Expression]
+          OptNumConstNo(
+          ) [OptNumConstNo]
+        ) [PrintStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  15:17:30,479 - ===================================
+INFO  15:17:30,480 - TIP JE: int
+INFO  15:17:30,483 - Definisana je konstanta nula na liniji 5
+INFO  15:17:30,483 - TIP JE: int
+INFO  15:17:30,483 - Definisana je konstanta jedan na liniji 6
+INFO  15:17:30,483 - TIP JE: int
+INFO  15:17:30,483 - Definisana je konstanta pet na liniji 7
+INFO  15:17:30,485 - TIP JE: int
+INFO  15:17:30,485 - Deklarisan globalni niz nizna liniji 9:Var niz: Arr of int, 0, 0 
+INFO  15:17:30,485 - TIP JE: char
+INFO  15:17:30,485 - Deklarisan globalni niz nizchna liniji 10:Var nizch: Arr of char, 1, 0 
+INFO  15:17:30,487 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  15:17:30,487 - TIP JE: char
+INFO  15:17:30,487 - Deklarisana lokalna promenljiva cna liniji 14 : Var c: char, 0, 1 
+INFO  15:17:30,487 - Pristup lokalnoj promenljivoj: c na liniji 18[ Var c: char, 0, 1  ]
+INFO  15:17:30,489 -  Print count calls = 1
+INFO  15:17:30,490 -  Deklarisanih promenljivih ima = 10
+INFO  15:17:30,490 - ===================================
+ERROR 15:17:30,490 - GRESKA!
+ERROR 15:17:30,490 - Parsiranje NIJE uspesno zavrseno!

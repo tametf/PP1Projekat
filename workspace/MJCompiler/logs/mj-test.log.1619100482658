@@ -1,0 +1,64 @@
+INFO  16:07:26,067 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  16:07:26,101 - #2 program
+INFO  16:07:26,101 - #28 test301
+INFO  16:07:26,101 - #28 int
+INFO  16:07:26,101 - #28 x
+INFO  16:07:26,101 - #6 ;
+INFO  16:07:26,104 - #3 {
+INFO  16:07:26,104 - #14 void
+INFO  16:07:26,104 - #28 main
+INFO  16:07:26,104 - #12 (
+INFO  16:07:26,104 - #13 )
+INFO  16:07:26,105 - #3 {
+INFO  16:07:26,106 - #4 }
+INFO  16:07:26,106 - #4 }
+INFO  16:07:26,113 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  VariableDeclList(
+    NoDeclList(
+    ) [NoDeclList]
+    VarDecl(
+      Type(
+       int
+      ) [Type]
+      VarDeclarationListOne(
+        VarDeclListOne(
+          VarIdent(
+           x
+            OptBracketsNo(
+            ) [OptBracketsNo]
+          ) [VarIdent]
+        ) [VarDeclListOne]
+      ) [VarDeclarationListOne]
+    ) [VarDecl]
+  ) [VariableDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      NoStatementsList(
+      ) [NoStatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  16:07:26,113 - ===================================
+INFO  16:07:26,115 - TIP JE: int
+INFO  16:07:26,116 - Deklarisana globalna promenljiva sa imenom: x na liniji 3
+INFO  16:07:26,116 - Definisana funkcija programa sa imenom main na liniji 5
+INFO  16:07:26,116 -  Print count calls = 0
+INFO  16:07:26,116 -  Deklarisanih promenljivih ima = 0
+INFO  16:07:26,116 - ===================================
+INFO  16:07:26,121 - Parsiranje uspesno zavrseno!

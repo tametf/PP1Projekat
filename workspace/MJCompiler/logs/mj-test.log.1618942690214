@@ -1,0 +1,151 @@
+INFO  19:57:58,542 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  19:57:58,607 - #2 program
+INFO  19:57:58,607 - #28 test301
+INFO  19:57:58,607 - #5 const
+INFO  19:57:58,609 - #28 int
+INFO  19:57:58,610 - #28 nula
+INFO  19:57:58,611 - #8 =
+INFO  19:57:58,611 - #29 0
+INFO  19:57:58,611 - #6 ;
+INFO  19:57:58,612 - #5 const
+INFO  19:57:58,613 - #28 bool
+INFO  19:57:58,614 - #28 tacno
+INFO  19:57:58,614 - #8 =
+INFO  19:57:58,614 - #30 true
+INFO  19:57:58,614 - #6 ;
+INFO  19:57:58,614 - #5 const
+INFO  19:57:58,614 - #28 char
+INFO  19:57:58,614 - #28 slovo
+INFO  19:57:58,615 - #8 =
+INFO  19:57:58,615 - #30 true
+INFO  19:57:58,615 - #6 ;
+INFO  19:57:58,615 - #3 {
+INFO  19:57:58,615 - #14 void
+INFO  19:57:58,618 - #28 main
+INFO  19:57:58,620 - #12 (
+INFO  19:57:58,620 - #13 )
+INFO  19:57:58,621 - #28 int
+INFO  19:57:58,622 - #28 bodovi
+INFO  19:57:58,622 - #6 ;
+INFO  19:57:58,625 - #28 bool
+INFO  19:57:58,626 - #28 bt
+INFO  19:57:58,626 - #6 ;
+INFO  19:57:58,627 - #3 {
+INFO  19:57:58,627 - #4 }
+INFO  19:57:58,628 - #4 }
+INFO  19:57:58,639 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  ConstDeclList(
+    ConstDeclList(
+      ConstDeclList(
+        NoDeclList(
+        ) [NoDeclList]
+        ConstDecl(
+          Type(
+           int
+          ) [Type]
+          ConstDeclarationListOne(
+            ConstDeclOne(
+             nula
+              NumConstant(
+               0
+              ) [NumConstant]
+            ) [ConstDeclOne]
+          ) [ConstDeclarationListOne]
+        ) [ConstDecl]
+      ) [ConstDeclList]
+      ConstDecl(
+        Type(
+         bool
+        ) [Type]
+        ConstDeclarationListOne(
+          ConstDeclOne(
+           tacno
+            BoolConstant(
+             true
+            ) [BoolConstant]
+          ) [ConstDeclOne]
+        ) [ConstDeclarationListOne]
+      ) [ConstDecl]
+    ) [ConstDeclList]
+    ConstDecl(
+      Type(
+       char
+      ) [Type]
+      ConstDeclarationListOne(
+        ConstDeclOne(
+         slovo
+          BoolConstant(
+           true
+          ) [BoolConstant]
+        ) [ConstDeclOne]
+      ) [ConstDeclarationListOne]
+    ) [ConstDecl]
+  ) [ConstDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        VarDeclListMore(
+          NoVarDeclList(
+          ) [NoVarDeclList]
+          VarDeclLocal(
+            Type(
+             int
+            ) [Type]
+            VarDeclarationListLocalOne(
+              VarDeclListLocalOne(
+                VarIdentLocal(
+                 bodovi
+                  OptBracketsNo(
+                  ) [OptBracketsNo]
+                ) [VarIdentLocal]
+              ) [VarDeclListLocalOne]
+            ) [VarDeclarationListLocalOne]
+          ) [VarDeclLocal]
+        ) [VarDeclListMore]
+        VarDeclLocal(
+          Type(
+           bool
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               bt
+                OptBracketsNo(
+                ) [OptBracketsNo]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      NoStatementsList(
+      ) [NoStatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  19:57:58,640 - ===================================
+INFO  19:57:58,644 - Definisana je konstanta nula na liniji 4
+INFO  19:57:58,644 - Definisana je konstanta tacno na liniji 5
+ERROR 19:57:58,644 - Greska! Tip konstante slovo na liniji 6 se razlikuje od ocekivanog tipa: rs.etf.pp1.symboltable.concepts.Struct@50f8360d
+INFO  19:57:58,645 - Definisana funkcija programa sa imenom main na liniji 10
+INFO  19:57:58,647 - Deklarisana lokalna promenljiva sa imenom: bodovina liniji 11
+INFO  19:57:58,647 - Deklarisana lokalna promenljiva sa imenom: btna liniji 12
+ERROR 19:57:58,648 - Program nema MAIN funkciju! Greska na liniji2
+INFO  19:57:58,648 -  Print count calls = 0
+INFO  19:57:58,648 -  Deklarisanih promenljivih ima = 0
+INFO  19:57:58,649 - ===================================
+ERROR 19:57:58,649 - GRESKA!
+ERROR 19:57:58,650 - Parsiranje NIJE uspesno zavrseno!

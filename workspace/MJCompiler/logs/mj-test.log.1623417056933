@@ -1,0 +1,120 @@
+INFO  15:10:31,760 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  15:10:31,831 - #2 program
+INFO  15:10:31,832 - #31 test301
+INFO  15:10:31,832 - #31 int
+INFO  15:10:31,834 - #31 niz
+INFO  15:10:31,834 - #10 [
+INFO  15:10:31,834 - #11 ]
+INFO  15:10:31,835 - #6 ;
+INFO  15:10:31,836 - #3 {
+INFO  15:10:31,838 - #14 void
+INFO  15:10:31,838 - #31 main
+INFO  15:10:31,838 - #12 (
+INFO  15:10:31,839 - #13 )
+INFO  15:10:31,839 - #3 {
+INFO  15:10:31,840 - #31 niz
+INFO  15:10:31,841 - #8 =
+INFO  15:10:31,843 - #25 new
+INFO  15:10:31,845 - #31 int
+INFO  15:10:31,845 - #10 [
+INFO  15:10:31,845 - #32 3
+INFO  15:10:31,845 - #11 ]
+INFO  15:10:31,846 - #6 ;
+INFO  15:10:31,847 - #4 }
+INFO  15:10:31,848 - #4 }
+INFO  15:10:31,856 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  VariableDeclList(
+    NoDeclList(
+    ) [NoDeclList]
+    VarDecl(
+      Type(
+       int
+      ) [Type]
+      VarDeclarationListOne(
+        VarIdentGlobal(
+         niz
+          OptBracketsYes(
+          ) [OptBracketsYes]
+        ) [VarIdentGlobal]
+      ) [VarDeclarationListOne]
+    ) [VarDecl]
+  ) [VariableDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      StatementsList(
+        NoStatementsList(
+        ) [NoStatementsList]
+        DesignatorStmt(
+          DesignatorAssign(
+            Designator(
+             niz
+              OptExprNo(
+              ) [OptExprNo]
+            ) [Designator]
+            Expression(
+              Expr1AddopTerm(
+                OptMinusNo(
+                ) [OptMinusNo]
+                AddopTermListOne(
+                  TermFactorMulop(
+                    MulopFactorListOne(
+                      FactorNewTypeExpr(
+                        Type(
+                         int
+                        ) [Type]
+                        Expression(
+                          Expr1AddopTerm(
+                            OptMinusNo(
+                            ) [OptMinusNo]
+                            AddopTermListOne(
+                              TermFactorMulop(
+                                MulopFactorListOne(
+                                  Cnst(
+                                    NumConstant(
+                                     3
+                                    ) [NumConstant]
+                                  ) [Cnst]
+                                ) [MulopFactorListOne]
+                              ) [TermFactorMulop]
+                            ) [AddopTermListOne]
+                          ) [Expr1AddopTerm]
+                        ) [Expression]
+                      ) [FactorNewTypeExpr]
+                    ) [MulopFactorListOne]
+                  ) [TermFactorMulop]
+                ) [AddopTermListOne]
+              ) [Expr1AddopTerm]
+            ) [Expression]
+          ) [DesignatorAssign]
+        ) [DesignatorStmt]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  15:10:31,856 - ===================================
+INFO  15:10:31,860 - TIP JE: int
+INFO  15:10:31,861 - Deklarisan globalni niz nizna liniji 5:Var niz: Arr of int, 0, 0 
+INFO  15:10:31,861 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  15:10:31,861 - Pristup globalnoj promenljivoj: niz na liniji 13[ Var niz: Arr of int, 0, 0  ]
+INFO  15:10:31,861 - TIP JE: int
+INFO  15:10:31,863 -  Print count calls = 0
+INFO  15:10:31,863 -  Deklarisanih promenljivih ima = 00
+INFO  15:10:31,863 - ===================================
+INFO  15:10:31,868 - Parsiranje uspesno zavrseno!

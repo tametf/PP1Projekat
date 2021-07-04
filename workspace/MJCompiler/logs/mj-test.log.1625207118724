@@ -1,0 +1,145 @@
+INFO  08:24:40,699 - Compiling source file: C:\Users\pavle\Desktop\New folder (3)\poslednjaVerzija\tamarajevdjevic20150492\workspace\MJCompiler\test\javniTest.mj
+INFO  08:24:40,700 - Compiling source file: C:\Users\pavle\Desktop\New folder (3)\poslednjaVerzija\tamarajevdjevic20150492\workspace\MJCompiler\test\javniTest.mj
+INFO  08:24:40,752 - #2 program
+INFO  08:24:40,752 - #31 test301
+INFO  08:24:40,752 - #31 int
+INFO  08:24:40,754 - #31 niz
+INFO  08:24:40,754 - #10 [
+INFO  08:24:40,754 - #11 ]
+INFO  08:24:40,754 - #6 ;
+INFO  08:24:40,755 - #3 {
+INFO  08:24:40,756 - #14 void
+INFO  08:24:40,757 - #31 main
+INFO  08:24:40,757 - #12 (
+INFO  08:24:40,757 - #13 )
+INFO  08:24:40,758 - #31 int
+INFO  08:24:40,758 - #31 niz
+INFO  08:24:40,759 - #10 [
+INFO  08:24:40,759 - #11 ]
+INFO  08:24:40,759 - #6 ;
+INFO  08:24:40,760 - #3 {
+INFO  08:24:40,761 - #31 niz
+INFO  08:24:40,761 - #8 =
+INFO  08:24:40,762 - #25 new
+INFO  08:24:40,763 - #31 int
+INFO  08:24:40,763 - #10 [
+INFO  08:24:40,763 - #32 4
+INFO  08:24:40,763 - #11 ]
+INFO  08:24:40,764 - #6 ;
+INFO  08:24:40,764 - #32 2
+ERROR 08:24:40,764 - 
+Sintaksna greska na liniji 12
+INFO  08:24:40,765 - #8 =
+INFO  08:24:40,765 - #32 5
+INFO  08:24:40,765 - #6 ;
+INFO  08:24:40,765 - #27 print
+INFO  08:24:40,765 - #12 (
+INFO  08:24:40,765 - #31 niz
+INFO  08:24:40,765 - #13 )
+ERROR 08:24:40,766 - Greska pri dodeli vrednosti 
+INFO  08:24:40,768 - #6 ;
+INFO  08:24:40,769 - #4 }
+INFO  08:24:40,769 - #4 }
+INFO  08:24:40,776 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  VariableDeclList(
+    NoDeclList(
+    ) [NoDeclList]
+    VarDecl(
+      Type(
+       int
+      ) [Type]
+      VarDeclarationListOne(
+        VarIdentGlobal(
+         niz
+          OptBracketsYes(
+          ) [OptBracketsYes]
+        ) [VarIdentGlobal]
+      ) [VarDeclarationListOne]
+    ) [VarDecl]
+  ) [VariableDeclList]
+  Lbrace(
+  ) [Lbrace]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDeclaration(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        NoVarDeclList(
+        ) [NoVarDeclList]
+        VarDeclLocal(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               niz
+                OptBracketsYes(
+                ) [OptBracketsYes]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      Lbrace(
+      ) [Lbrace]
+      StatementsList(
+        StatementsList(
+          NoStatementsList(
+          ) [NoStatementsList]
+          ERROR222(
+            null
+          ) [ERROR222]
+        ) [StatementsList]
+        PrintStatement(
+          Print(
+          ) [Print]
+          Expression(
+            Expr1AddopTerm(
+              OptMinusNo(
+              ) [OptMinusNo]
+              AddopTermListOne(
+                TermFactorMulop(
+                  MulopFactorListOne(
+                    FactorDesignator(
+                      DesignatorNoArray(
+                        DesignatorIdent(
+                         niz
+                        ) [DesignatorIdent]
+                      ) [DesignatorNoArray]
+                      OptParsNo(
+                      ) [OptParsNo]
+                    ) [FactorDesignator]
+                  ) [MulopFactorListOne]
+                ) [TermFactorMulop]
+              ) [AddopTermListOne]
+            ) [Expr1AddopTerm]
+          ) [Expression]
+          OptNumConstNo(
+          ) [OptNumConstNo]
+        ) [PrintStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDeclaration]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  08:24:40,776 - ===================================
+INFO  08:24:40,779 - Deklarisan globalni niz niz na liniji 5:Var niz: Arr of int, 0, 0 
+INFO  08:24:40,780 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  08:24:40,780 - Deklarisan lokalni niz sa imenom: nizna liniji 9 : Var niz: Arr of int, 0, 1 
+ERROR 08:24:40,780 - Neispravna print funkcija. Vrednost se moze upisati samo u promenljivu ili element niza.
+ERROR 08:24:40,780 - Neispravna print funkcija!
+INFO  08:24:40,781 - ===================================
+ERROR 08:24:40,781 - Parsiranje NIJE uspesno zavrseno!

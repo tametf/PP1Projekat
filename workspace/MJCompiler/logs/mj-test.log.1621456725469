@@ -1,0 +1,172 @@
+INFO  22:37:13,749 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  22:37:13,796 - #2 program
+INFO  22:37:13,796 - #31 test302
+INFO  22:37:13,796 - #3 {
+INFO  22:37:13,797 - #14 void
+INFO  22:37:13,798 - #31 main
+INFO  22:37:13,798 - #12 (
+INFO  22:37:13,798 - #13 )
+INFO  22:37:13,799 - #3 {
+INFO  22:37:13,799 - #27 print
+INFO  22:37:13,800 - #12 (
+INFO  22:37:13,801 - #31 ord
+INFO  22:37:13,802 - #12 (
+INFO  22:37:13,803 - #34 'A'
+INFO  22:37:13,803 - #13 )
+INFO  22:37:13,804 - #13 )
+INFO  22:37:13,804 - #6 ;
+INFO  22:37:13,804 - #27 print
+INFO  22:37:13,805 - #12 (
+INFO  22:37:13,805 - #31 eol
+INFO  22:37:13,805 - #13 )
+INFO  22:37:13,805 - #6 ;
+INFO  22:37:13,805 - #27 print
+INFO  22:37:13,806 - #12 (
+INFO  22:37:13,806 - #31 eol
+INFO  22:37:13,806 - #13 )
+INFO  22:37:13,806 - #6 ;
+INFO  22:37:13,806 - #4 }
+INFO  22:37:13,807 - #4 }
+INFO  22:37:13,813 - Program(
+  ProgName(
+   test302
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      StatementsList(
+        StatementsList(
+          StatementsList(
+            NoStatementsList(
+            ) [NoStatementsList]
+            PrintStatement(
+              Print(
+              ) [Print]
+              Expression(
+                Expr1AddopTerm(
+                  OptMinusNo(
+                  ) [OptMinusNo]
+                  AddopTermListOne(
+                    TermFactorMulop(
+                      MulopFactorListOne(
+                        FactorDesignator(
+                          Designator(
+                           ord
+                            OptExprNo(
+                            ) [OptExprNo]
+                          ) [Designator]
+                          OptParsYes(
+                            ActParams(
+                              ActParamList(
+                                Expression(
+                                  Expr1AddopTerm(
+                                    OptMinusNo(
+                                    ) [OptMinusNo]
+                                    AddopTermListOne(
+                                      TermFactorMulop(
+                                        MulopFactorListOne(
+                                          Cnst(
+                                            CharConstant(
+                                             'A'
+                                            ) [CharConstant]
+                                          ) [Cnst]
+                                        ) [MulopFactorListOne]
+                                      ) [TermFactorMulop]
+                                    ) [AddopTermListOne]
+                                  ) [Expr1AddopTerm]
+                                ) [Expression]
+                              ) [ActParamList]
+                            ) [ActParams]
+                          ) [OptParsYes]
+                        ) [FactorDesignator]
+                      ) [MulopFactorListOne]
+                    ) [TermFactorMulop]
+                  ) [AddopTermListOne]
+                ) [Expr1AddopTerm]
+              ) [Expression]
+              OptNumConstNo(
+              ) [OptNumConstNo]
+            ) [PrintStatement]
+          ) [StatementsList]
+          PrintStatement(
+            Print(
+            ) [Print]
+            Expression(
+              Expr1AddopTerm(
+                OptMinusNo(
+                ) [OptMinusNo]
+                AddopTermListOne(
+                  TermFactorMulop(
+                    MulopFactorListOne(
+                      FactorDesignator(
+                        Designator(
+                         eol
+                          OptExprNo(
+                          ) [OptExprNo]
+                        ) [Designator]
+                        OptParsNo(
+                        ) [OptParsNo]
+                      ) [FactorDesignator]
+                    ) [MulopFactorListOne]
+                  ) [TermFactorMulop]
+                ) [AddopTermListOne]
+              ) [Expr1AddopTerm]
+            ) [Expression]
+            OptNumConstNo(
+            ) [OptNumConstNo]
+          ) [PrintStatement]
+        ) [StatementsList]
+        PrintStatement(
+          Print(
+          ) [Print]
+          Expression(
+            Expr1AddopTerm(
+              OptMinusNo(
+              ) [OptMinusNo]
+              AddopTermListOne(
+                TermFactorMulop(
+                  MulopFactorListOne(
+                    FactorDesignator(
+                      Designator(
+                       eol
+                        OptExprNo(
+                        ) [OptExprNo]
+                      ) [Designator]
+                      OptParsNo(
+                      ) [OptParsNo]
+                    ) [FactorDesignator]
+                  ) [MulopFactorListOne]
+                ) [TermFactorMulop]
+              ) [AddopTermListOne]
+            ) [Expr1AddopTerm]
+          ) [Expression]
+          OptNumConstNo(
+          ) [OptNumConstNo]
+        ) [PrintStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  22:37:13,814 - ===================================
+INFO  22:37:13,817 - Obradjuje se funkcija main tip funkcije: VOID
+INFO  22:37:13,817 - Poziv funkcije: ord na liniji 11
+INFO  22:37:13,818 - Pristup konstanti: eol na liniji 12
+INFO  22:37:13,818 - Pristup konstanti: eol na liniji 13
+INFO  22:37:13,818 -  Print count calls = 3
+INFO  22:37:13,818 -  Deklarisanih promenljivih ima = 00
+INFO  22:37:13,818 - ===================================
+INFO  22:37:13,822 - Parsiranje uspesno zavrseno!

@@ -1,0 +1,81 @@
+package rs.ac.bg.etf.pp1;
+
+import org.apache.log4j.Logger;
+
+import rs.ac.bg.etf.pp1.ast.*;
+import rs.etf.pp1.symboltable.*;
+import rs.etf.pp1.symboltable.concepts.*;
+
+public class SemanticPass extends VisitorAdaptor {
+
+	int printCallCount = 0;
+	int varDeclCount = 0;
+	int varDecl = 0;
+	int varDeclarationListOne = 0;
+	boolean errorDetected = false;
+	
+	Logger log = Logger.getLogger(getClass());
+
+	
+	public void report_error(String message, SyntaxNode info) {
+		errorDetected = true;
+		StringBuilder msg = new StringBuilder(message);
+		int line = (info == null) ? 0: info.getLine();
+		if (line != 0)
+			msg.append (" na liniji ").append(line);
+		log.error(msg.toString());
+	}
+
+	public void report_info(String message, SyntaxNode info) {
+		StringBuilder msg = new StringBuilder(message); 
+		int line = (info == null) ? 0: info.getLine();
+		if (line != 0)
+			msg.append (" na liniji ").append(line);
+		log.info(msg.toString());
+	}
+    public void visit(VarDeclListOne VarDeclListOne) {
+    	varDeclCount++;
+    	//Tab.insert(Obj.Var, VarDeclListOne.getI1(), VarDeclListOne.getI1());
+//    	Obj varNode = Tab.insert(Obj.Var, VarDeclListOne.getI1(), VarDeclListOne.getParent());
+    }
+    
+    public void visit(VarDecl VarDecl) {
+    	varDecl++;
+    	Obj varNode = Tab.insert(Obj.Var, VarDecl.getVarDeclarationList().toString(), VarDecl.getType().struct);
+    }
+
+    public void visit(VarDeclarationListOne VarDeclarationListOne) {
+    	varDeclarationListOne++;
+//    	Tab.insert(Obj.Var, VarDeclarationListOne.getVarDeclListOne(), VarDeclarationListOne.getLine());
+//    	Obj varNode = Tab.insert(Obj.Var, VarDeclarationListOne.getVarDeclListOne().toString(), VarDeclarationListOne.getLine());
+    }
+
+    public void visit(PrintStatement PrintStatement) {
+		printCallCount++;
+	}
+    
+    public void visit(ProgName ProgName){
+    	ProgName.obj = Tab.insert(Obj.Prog, ProgName.getProgName(), Tab.noType);
+    	Tab.openScope();
+    }
+    
+    public void visit(Program program){
+    	Tab.chainLocalSymbols(program.getProgName().obj);
+    	Tab.closeScope();
+    }
+    
+    public void visit(Type type){
+    	Obj typeNode = Tab.find(type.getNameOfType());
+    	if(typeNode == Tab.noObj){
+    		report_error("Nije pronadjen tip " + type.getNameOfType() + " u tabeli simbola! ", null);
+    		type.struct = Tab.noType;
+    	}else{
+    		if(Obj.Type == typeNode.getKind()){
+    			type.struct = typeNode.getType();
+    		}else{
+    			report_error("Greska: Ime " + type.getNameOfType() + " ne predstavlja tip!", type);
+    			type.struct = Tab.noType;
+    		}
+    	}
+    }
+}

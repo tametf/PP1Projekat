@@ -1,0 +1,191 @@
+INFO  23:05:36,570 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  23:05:36,571 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  23:05:36,641 - #2 program
+INFO  23:05:36,641 - #31 a
+INFO  23:05:36,642 - #3 {
+INFO  23:05:36,643 - #14 void
+INFO  23:05:36,645 - #31 main
+INFO  23:05:36,645 - #12 (
+INFO  23:05:36,645 - #13 )
+INFO  23:05:36,646 - #31 char
+INFO  23:05:36,648 - #31 slovo
+INFO  23:05:36,649 - #6 ;
+INFO  23:05:36,651 - #31 char
+INFO  23:05:36,652 - #31 t
+INFO  23:05:36,652 - #6 ;
+INFO  23:05:36,652 - #31 int
+INFO  23:05:36,653 - #31 niz
+INFO  23:05:36,653 - #10 [
+INFO  23:05:36,653 - #11 ]
+INFO  23:05:36,653 - #6 ;
+INFO  23:05:36,653 - #31 bool
+INFO  23:05:36,654 - #31 tacno
+INFO  23:05:36,655 - #6 ;
+INFO  23:05:36,655 - #3 {
+INFO  23:05:36,655 - #31 niz
+INFO  23:05:36,655 - #8 =
+INFO  23:05:36,657 - #25 new
+INFO  23:05:36,658 - #31 int
+INFO  23:05:36,658 - #10 [
+INFO  23:05:36,658 - #32 50
+INFO  23:05:36,658 - #26 read
+ERROR 23:05:36,659 - 
+Sintaksna greska na liniji 10
+INFO  23:05:36,659 - #12 (
+INFO  23:05:36,659 - #31 niz
+INFO  23:05:36,659 - #10 [
+INFO  23:05:36,660 - #32 0
+INFO  23:05:36,660 - #11 ]
+INFO  23:05:36,661 - #13 )
+INFO  23:05:36,661 - #6 ;
+INFO  23:05:36,661 - #27 print
+INFO  23:05:36,661 - #12 (
+INFO  23:05:36,661 - #31 t
+ERROR 23:05:36,661 - Greska pri dodeli vrednosti 
+INFO  23:05:36,663 - #13 )
+INFO  23:05:36,666 - #6 ;
+INFO  23:05:36,666 - #4 }
+INFO  23:05:36,666 - #4 }
+INFO  23:05:36,687 - Program(
+  ProgName(
+   a
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  Lbrace(
+  ) [Lbrace]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDeclaration(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        VarDeclListMore(
+          VarDeclListMore(
+            VarDeclListMore(
+              NoVarDeclList(
+              ) [NoVarDeclList]
+              VarDeclLocal(
+                Type(
+                 char
+                ) [Type]
+                VarDeclarationListLocalOne(
+                  VarDeclListLocalOne(
+                    VarIdentLocal(
+                     slovo
+                      OptBracketsNo(
+                      ) [OptBracketsNo]
+                    ) [VarIdentLocal]
+                  ) [VarDeclListLocalOne]
+                ) [VarDeclarationListLocalOne]
+              ) [VarDeclLocal]
+            ) [VarDeclListMore]
+            VarDeclLocal(
+              Type(
+               char
+              ) [Type]
+              VarDeclarationListLocalOne(
+                VarDeclListLocalOne(
+                  VarIdentLocal(
+                   t
+                    OptBracketsNo(
+                    ) [OptBracketsNo]
+                  ) [VarIdentLocal]
+                ) [VarDeclListLocalOne]
+              ) [VarDeclarationListLocalOne]
+            ) [VarDeclLocal]
+          ) [VarDeclListMore]
+          VarDeclLocal(
+            Type(
+             int
+            ) [Type]
+            VarDeclarationListLocalOne(
+              VarDeclListLocalOne(
+                VarIdentLocal(
+                 niz
+                  OptBracketsYes(
+                  ) [OptBracketsYes]
+                ) [VarIdentLocal]
+              ) [VarDeclListLocalOne]
+            ) [VarDeclarationListLocalOne]
+          ) [VarDeclLocal]
+        ) [VarDeclListMore]
+        VarDeclLocal(
+          Type(
+           bool
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               tacno
+                OptBracketsNo(
+                ) [OptBracketsNo]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      Lbrace(
+      ) [Lbrace]
+      StatementsList(
+        StatementsList(
+          NoStatementsList(
+          ) [NoStatementsList]
+          DesignatorStmt(
+            ERROR2(
+              null
+            ) [ERROR2]
+          ) [DesignatorStmt]
+        ) [StatementsList]
+        PrintStatement(
+          Print(
+          ) [Print]
+          Expression(
+            Expr1AddopTerm(
+              OptMinusNo(
+              ) [OptMinusNo]
+              AddopTermListOne(
+                TermFactorMulop(
+                  MulopFactorListOne(
+                    FactorDesignator(
+                      Designator(
+                       t
+                        OptExprNo(
+                        ) [OptExprNo]
+                      ) [Designator]
+                      OptParsNo(
+                      ) [OptParsNo]
+                    ) [FactorDesignator]
+                  ) [MulopFactorListOne]
+                ) [TermFactorMulop]
+              ) [AddopTermListOne]
+            ) [Expr1AddopTerm]
+          ) [Expression]
+          OptNumConstNo(
+          ) [OptNumConstNo]
+        ) [PrintStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDeclaration]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  23:05:36,688 - ===================================
+INFO  23:05:36,692 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  23:05:36,693 - Deklarisana lokalna promenljiva slovona liniji 4 : Var slovo: char, 0, 1 
+INFO  23:05:36,693 - Deklarisana lokalna promenljiva tna liniji 5 : Var t: char, 1, 1 
+INFO  23:05:36,693 - Deklarisan lokalni niz sa imenom: nizna liniji 6 : Var niz: Arr of int, 2, 1 
+INFO  23:05:36,693 - Deklarisana lokalna promenljiva tacnona liniji 7 : Var tacno: , 3, 1 
+INFO  23:05:36,693 - Pristup lokalnoj promenljivoj: t na liniji 11[ Var t: char, 1, 1  ]
+INFO  23:05:36,698 -  Print count calls = 1
+INFO  23:05:36,698 -  Deklarisanih promenljivih ima = 30
+INFO  23:05:36,698 - ===================================
+ERROR 23:05:36,699 - GRESKA!
+ERROR 23:05:36,699 - Parsiranje NIJE uspesno zavrseno!

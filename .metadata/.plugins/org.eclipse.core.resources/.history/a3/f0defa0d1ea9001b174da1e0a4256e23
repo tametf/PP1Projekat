@@ -1,0 +1,207 @@
+package rs.ac.bg.etf.pp1;
+
+import java.util.Stack;
+
+import rs.ac.bg.etf.pp1.CounterVisitor.FormParamCounter;
+import rs.ac.bg.etf.pp1.CounterVisitor.VarCounter;
+import rs.ac.bg.etf.pp1.ast.*;
+import rs.etf.pp1.mj.runtime.Code;
+import rs.etf.pp1.symboltable.Tab;
+import rs.etf.pp1.symboltable.concepts.Obj;
+import rs.etf.pp1.symboltable.concepts.Struct;
+
+public class CodeGenerator extends VisitorAdaptor {
+/*
+	public int mainPc;
+	Stack<Boolean> minusStack = new Stack<>();
+	static boolean minus = false;
+	public int getMainPc() {
+		return mainPc;
+	}
+	
+	public void visit(PrintStatement printStatement) {
+	
+		if(printStatement.getExpr().struct.getKind() != Struct.Array) {
+			if(printStatement.getExpr().struct ==Tab.intType) {
+				Code.put(Code.const_5);
+				Code.put(Code.print);
+			} else {
+				Code.put(Code.const_1);
+				Code.put(Code.bprint);
+			}
+			
+		} else {
+			if(printStatement.getExpr().struct.getElemType() == Tab.intType) {
+				Code.put(Code.const_5);
+				Code.put(Code.print);
+			} else {
+				Code.put(Code.const_1);
+				Code.put(Code.bprint);
+			}
+		}
+	}
+	
+	
+	public void visit(FactorNumConst factorNumConst) {
+		System.out.println("NUM_CONST POCETAK");
+		Obj constant = new Obj(Obj.Con, "NUM_CONST", factorNumConst.struct, factorNumConst.getN1(), 0);
+		//constant.setAdr(numConstant.getNumValue());
+		//constant.setLevel(0);
+		//stavljam objektni cvor na expr stek
+		Code.load(constant);
+		System.out.println("NUM_CONST KRAJ");
+	} 
+	/*public void visit(CharConstant charConstant) {
+		Obj constant = new Obj(Obj.Con, "CHAR_CONST", charConstant.struct);
+		constant.setAdr(charConstant.getCharValue().charAt(0));
+		constant.setLevel(0);
+		Code.load(constant);
+	} 
+	public void visit(BoolConstant boolConstant) {
+		Obj constant = new Obj(Obj.Con, "BOOL_CONST", boolConstant.struct);
+		constant.setAdr(boolConstant.getBoolValue() == "true" ? 1 : 0);
+		constant.setLevel(0);
+		Code.load(constant);
+	} 
+	
+	public void visit(ReturnValueTypeVoid returnValueTypeVoid) {
+		if(returnValueTypeVoid.getParent().getClass().getSimpleName().compareTo("MethodDecl") == 0) {
+			if("main".equalsIgnoreCase(returnValueTypeVoid.getNameOfMethod())) {
+				mainPc = Code.pc;
+			}			
+		}
+		
+		returnValueTypeVoid.obj.setAdr(Code.pc);
+		SyntaxNode methodNode = returnValueTypeVoid.getParent();
+		VarCounter varCounter = new VarCounter();
+		methodNode.traverseTopDown(varCounter); 
+		
+		FormParamCounter fpc = new FormParamCounter();
+		methodNode.traverseTopDown(fpc); 
+		Code.put(Code.enter);
+		Code.put(fpc.getCount());
+		Code.put(fpc.getCount() + varCounter.getCount());
+		
+	}
+	public void visit(ReturnValueTypeOther returnValueTypeOther) {
+		if(returnValueTypeOther.getParent().getClass().getSimpleName().compareTo("MethodDecl") == 0) {
+			if("main".equalsIgnoreCase(returnValueTypeOther.getNameOfMethod())) {
+				mainPc = Code.pc;
+			}			
+		}
+		
+		returnValueTypeOther.obj.setAdr(Code.pc);
+		SyntaxNode methodNode = returnValueTypeOther.getParent();
+		VarCounter varCounter = new VarCounter();
+		methodNode.traverseTopDown(varCounter); 
+		
+		FormParamCounter fpc = new FormParamCounter();
+		methodNode.traverseTopDown(fpc); 
+		Code.put(Code.enter);
+		Code.put(fpc.getCount());
+		Code.put(fpc.getCount() + varCounter.getCount());
+	}
+	
+	public void visit(ReturnValueType returnValueType) {
+		returnValueType.obj.setAdr(Code.pc);
+		
+		//dohvatanje argumenata i lokalnih varijabli
+		SyntaxNode methodNode = returnValueType.getParent();	
+		VarCounter varCounter = new VarCounter();
+		methodNode.traverseTopDown(varCounter); 
+		
+		FormParamCounter fpc = new FormParamCounter();
+		methodNode.traverseTopDown(fpc); 
+		
+		//generisemo ulaz
+		
+		Code.put(Code.enter);
+		Code.put(fpc.getCount());
+		Code.put(fpc.getCount() + varCounter.getCount());
+	}
+	
+	public void visit(MethodDecl MethodDecl) {
+		Code.put(Code.exit);
+		Code.put(Code.return_);
+	}
+	
+	public void visit(FactorNumConst factorNumConst) {
+		Code.loadConst(factorNumConst.getN1());
+		
+		if(minusStack.peek() == true) {
+			Code.put(Code.neg);
+			minusStack.pop();
+			minusStack.push(false);
+		}
+	}
+	
+public void visit(FactorDesignator factorDesignator){
+		
+		Code.load(factorDesignator.getDesignator().obj);
+		
+		if(minusStack.peek() == true) {
+			Code.put(Code.neg);
+			minusStack.pop();
+			minusStack.push(false);
+		}
+	}
+
+
+
+public void visit(OptExprYes optExprYes) {
+	minusStack.push(true);
+}
+
+public void visit(OptExprNo optExprNo) {
+	minusStack.push(false);
+}
+
+public void visit(FactorExpr factorExpr) {
+	if(minusStack.peek() == true) {
+		Code.put(Code.neg);
+		minusStack.pop();
+		minusStack.push(false);
+	}
+}
+public void visit(Expr1AddopTerm Expr1AddopTerm){
+	minusStack.pop();
+}
+
+	private int mainPc;
+	int nVars;
+	static boolean isMinus = false;
+	Stack<Boolean> minus = new Stack<>();
+	
+	public int getMainPc(){
+		return mainPc;
+	}
+	
+	
+//	Methods out		
+/*	public void visit(MethodDecl methodDeclaration){
+		
+		Code.put(Code.exit);
+		Code.put(Code.return_);
+	}
+	
+//	Designator in factor	
+	public void visit(FactorDesignator factorDesignator){
+		System.out.println("FACTOR_DESIGNATOR");
+		Code.load(factorDesignator.getDesignator().obj);
+		
+		if(minus.peek() == true) {
+			Code.put(Code.neg);
+			minus.pop();
+			minus.push(false);
+		}
+		System.out.println("FACTOR_DESIGNATOR_KRAJ");
+		
+	}
+	
+//	Load Arrays addres	
+/*	public void visit(ArrayName arrayName){
+		
+		Code.load(arrayName.obj);
+		
+	}*/
+}

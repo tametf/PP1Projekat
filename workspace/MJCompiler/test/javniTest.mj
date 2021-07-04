@@ -1,0 +1,32 @@
+// Test301
+
+program test301
+
+int niz[];
+	
+{
+	void main()	
+	{
+		print(0);
+		jump 10;
+		
+		if(false) {
+			print (0);
+			
+			do {
+				print (1);
+				print (2);
+			} while (true);
+			
+			print(3);
+		}
+		
+		print (4);
+		
+		if (false) {
+			print (5);
+		}
+		
+		print (6);
+	}
+}

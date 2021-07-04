@@ -1,0 +1,90 @@
+INFO  16:43:51,955 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  16:43:51,994 - #2 program
+INFO  16:43:51,994 - #28 test301
+INFO  16:43:51,994 - #28 int
+INFO  16:43:51,995 - #28 x
+INFO  16:43:51,996 - #6 ;
+INFO  16:43:51,998 - #3 {
+INFO  16:43:51,999 - #14 void
+INFO  16:43:52,000 - #28 main
+INFO  16:43:52,000 - #12 (
+INFO  16:43:52,000 - #13 )
+INFO  16:43:52,001 - #3 {
+INFO  16:43:52,001 - #28 x
+INFO  16:43:52,002 - #8 =
+INFO  16:43:52,003 - #29 5
+INFO  16:43:52,004 - #6 ;
+INFO  16:43:52,004 - #4 }
+INFO  16:43:52,004 - #4 }
+INFO  16:43:52,013 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  VariableDeclList(
+    NoDeclList(
+    ) [NoDeclList]
+    VarDecl(
+      Type(
+       int
+      ) [Type]
+      VarDeclarationListOne(
+        VarDeclListOne(
+          VarIdent(
+           x
+            OptBracketsNo(
+            ) [OptBracketsNo]
+          ) [VarIdent]
+        ) [VarDeclListOne]
+      ) [VarDeclarationListOne]
+    ) [VarDecl]
+  ) [VariableDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      StatementsList(
+        NoStatementsList(
+        ) [NoStatementsList]
+        DesignatorStmt(
+          DesignatorAssign(
+            Designator(
+             x
+              OptExprNo(
+              ) [OptExprNo]
+            ) [Designator]
+            Expression(
+              Expr1Term(
+                OptMinusNo(
+                ) [OptMinusNo]
+                TermFactor(
+                  FactorNumConst(
+                   5
+                  ) [FactorNumConst]
+                ) [TermFactor]
+              ) [Expr1Term]
+            ) [Expression]
+          ) [DesignatorAssign]
+        ) [DesignatorStmt]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  16:43:52,015 - ===================================
+INFO  16:43:52,018 - TIP JE: int
+INFO  16:43:52,018 - Deklarisana globalna promenljiva sa imenom: x na liniji 3
+INFO  16:43:52,018 - Definisana funkcija programa sa imenom main na liniji 5
+INFO  16:43:52,018 -  Print count calls = 0
+INFO  16:43:52,019 -  Deklarisanih promenljivih ima = 0
+INFO  16:43:52,019 - ===================================
+INFO  16:43:52,026 - Parsiranje uspesno zavrseno!

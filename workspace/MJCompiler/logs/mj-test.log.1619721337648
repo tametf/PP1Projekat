@@ -1,0 +1,69 @@
+INFO  20:34:31,506 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  20:34:31,538 - #2 program
+INFO  20:34:31,538 - #28 test301
+INFO  20:34:31,538 - #3 {
+INFO  20:34:31,539 - #14 void
+INFO  20:34:31,540 - #28 main
+INFO  20:34:31,540 - #12 (
+INFO  20:34:31,540 - #13 )
+INFO  20:34:31,540 - #3 {
+INFO  20:34:31,541 - #27 print
+INFO  20:34:31,542 - #12 (
+INFO  20:34:31,542 - #29 11
+INFO  20:34:31,542 - #13 )
+INFO  20:34:31,544 - #6 ;
+INFO  20:34:31,544 - #4 }
+INFO  20:34:31,544 - #4 }
+INFO  20:34:31,552 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      StatementsList(
+        NoStatementsList(
+        ) [NoStatementsList]
+        PrintStatement(
+          Expression(
+            Expr1AddopTerm(
+              OptMinusNo(
+              ) [OptMinusNo]
+              AddopTermListOne(
+                TermFactorMulop(
+                  MulopFactorListOne(
+                    FactorNumConst(
+                     11
+                    ) [FactorNumConst]
+                  ) [MulopFactorListOne]
+                ) [TermFactorMulop]
+              ) [AddopTermListOne]
+            ) [Expr1AddopTerm]
+          ) [Expression]
+          OptNumConstNo(
+          ) [OptNumConstNo]
+        ) [PrintStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  20:34:31,553 - ===================================
+INFO  20:34:31,556 - Obradjuje se funkcija main tip funkcije: VOID
+INFO  20:34:31,557 -  Print count calls = 0
+INFO  20:34:31,557 -  Deklarisanih promenljivih ima = 0
+INFO  20:34:31,557 - ===================================
+INFO  20:34:31,560 - Parsiranje uspesno zavrseno!

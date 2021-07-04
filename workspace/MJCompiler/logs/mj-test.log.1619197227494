@@ -1,0 +1,97 @@
+INFO  18:57:36,707 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  18:57:36,742 - #2 program
+INFO  18:57:36,742 - #28 test301
+INFO  18:57:36,742 - #28 int
+INFO  18:57:36,743 - #28 x
+INFO  18:57:36,744 - #6 ;
+INFO  18:57:36,745 - #3 {
+INFO  18:57:36,746 - #14 void
+INFO  18:57:36,747 - #28 main
+INFO  18:57:36,747 - #12 (
+INFO  18:57:36,747 - #13 )
+INFO  18:57:36,747 - #3 {
+INFO  18:57:36,748 - #28 x
+INFO  18:57:36,748 - #8 =
+INFO  18:57:36,749 - #29 5
+INFO  18:57:36,750 - #6 ;
+INFO  18:57:36,751 - #4 }
+INFO  18:57:36,751 - #4 }
+INFO  18:57:36,758 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  VariableDeclList(
+    NoDeclList(
+    ) [NoDeclList]
+    VarDecl(
+      Type(
+       int
+      ) [Type]
+      VarDeclarationListOne(
+        VarDeclListOne(
+          VarIdent(
+           x
+            OptBracketsNo(
+            ) [OptBracketsNo]
+          ) [VarIdent]
+        ) [VarDeclListOne]
+      ) [VarDeclarationListOne]
+    ) [VarDecl]
+  ) [VariableDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      StatementsList(
+        NoStatementsList(
+        ) [NoStatementsList]
+        DesignatorStmt(
+          DesignatorAssign(
+            Designator(
+             x
+              OptExprNo(
+              ) [OptExprNo]
+            ) [Designator]
+            Expression(
+              Expr1AddopTerm(
+                OptMinusNo(
+                ) [OptMinusNo]
+                AddopTermListOne(
+                  TermFactorMulop(
+                    MulopFactorListOne(
+                      FactorNumConst(
+                       5
+                      ) [FactorNumConst]
+                    ) [MulopFactorListOne]
+                  ) [TermFactorMulop]
+                ) [AddopTermListOne]
+              ) [Expr1AddopTerm]
+            ) [Expression]
+          ) [DesignatorAssign]
+        ) [DesignatorStmt]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  18:57:36,759 - ===================================
+INFO  18:57:36,762 - TIP JE: int
+INFO  18:57:36,762 - Deklarisana globalna promenljiva sa imenom: x na liniji 3
+INFO  18:57:36,763 - Obradjuje se funkcija main tip funkcije: VOID
+INFO  18:57:36,763 - Pristup globalnoj promenljivoj: x na liniji 7[Var x: int, 0, 0 ]
+ERROR 18:57:36,764 - Greska: program mora da sadrzi main metodu
+INFO  18:57:36,764 -  Print count calls = 0
+INFO  18:57:36,765 -  Deklarisanih promenljivih ima = 0
+INFO  18:57:36,765 - ===================================
+ERROR 18:57:36,765 - GRESKA!
+ERROR 18:57:36,765 - Parsiranje NIJE uspesno zavrseno!

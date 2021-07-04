@@ -1,0 +1,339 @@
+package rs.ac.bg.etf.pp1;
+
+import java.util.LinkedList;
+import java.util.Stack;
+
+//import com.sun.org.apache.bcel.internal.generic.ARRAYLENGTH;
+
+import rs.ac.bg.etf.pp1.CounterVisitor.FormParamCounter;
+import rs.ac.bg.etf.pp1.CounterVisitor.VarCounter;
+import rs.ac.bg.etf.pp1.ast.*;
+import rs.etf.pp1.mj.runtime.Code;
+import rs.etf.pp1.symboltable.Tab;
+import rs.etf.pp1.symboltable.concepts.Obj;
+import rs.etf.pp1.symboltable.concepts.Struct;
+
+public class CodeGenerator extends VisitorAdaptor {
+
+	public int mainPc;
+	boolean minus = false;
+	String relop = "";
+	boolean elsePartHere = false;
+	boolean jmpAfterThen = false;
+
+	public int getMainPc() {
+		return mainPc;
+	}
+
+	public void visit(ReturnValueTypeVoid returnValueTypeVoid) {
+
+		if ("main".equalsIgnoreCase(returnValueTypeVoid.getNameOfMethod())) {
+			mainPc = Code.pc;
+		}
+
+		returnValueTypeVoid.obj.setAdr(Code.pc);
+
+		SyntaxNode methodNode = returnValueTypeVoid.getParent();
+
+		VarCounter varCounter = new VarCounter();
+		methodNode.traverseTopDown(varCounter);
+
+		FormParamCounter fpc = new FormParamCounter();
+		methodNode.traverseTopDown(fpc);
+
+		Code.put(Code.enter);
+		Code.put(fpc.getCount()); // za prvi nivo ovde je 0
+		Code.put(fpc.getCount() + varCounter.getCount());
+
+	}
+
+	public void visit(ReturnValueTypeOther returnValueTypeOther) {
+		if ("main".equalsIgnoreCase(returnValueTypeOther.getNameOfMethod())) {
+			mainPc = Code.pc;
+		}
+
+		returnValueTypeOther.obj.setAdr(Code.pc);
+
+		SyntaxNode methodNode = returnValueTypeOther.getParent();
+
+		VarCounter varCounter = new VarCounter();
+		methodNode.traverseTopDown(varCounter);
+
+		FormParamCounter fpc = new FormParamCounter();
+		methodNode.traverseTopDown(fpc);
+
+		Code.put(Code.enter);
+		Code.put(fpc.getCount());
+		Code.put(fpc.getCount() + varCounter.getCount());
+	}
+
+	/*
+	 * public void visit(FactorNumConst factorNumConst) { Obj constant = new
+	 * Obj(Obj.Con, "factorNumConst", factorNumConst.struct,
+	 * factorNumConst.getNumConstFact(), 0);
+	 * 
+	 * Code.load(constant); }
+	 */
+
+	public void visit(NumConstant numConstant) {
+		// napravimo objekat i pozovemo load, da se ucita na stek
+
+		Obj constant = new Obj(Obj.Con, "numConst", numConstant.struct, numConstant.getNumValue(), 1);
+
+		Code.load(constant);
+		// System.out.println("NUM_CONST KRAJ");
+
+	}
+
+	public void visit(BoolConstant boolConstant) {
+		// napravimo objekat i pozovemo load, da se ucita na stek
+
+		Obj constant = new Obj(Obj.Con, "factorNumConst", boolConstant.struct, boolConstant.getBoolValue(), 0);
+		// constant.setAdr(numConstant.getNumValue());
+		// constant.setLevel(0);
+		// stavljam objektni cvor na expr stek
+		Code.load(constant);
+		// System.out.println("NUM_CONST KRAJ");
+
+	}
+
+	public void visit(CharConstant charConstant) {
+		// napravimo objekat i pozovemo load, da se ucita na stek
+		Obj constant = new Obj(Obj.Con, "factorNumConst", charConstant.struct, charConstant.getCharValue().charAt(1),
+				0);
+		// constant.setAdr(numConstant.getNumValue());
+		// constant.setLevel(0);
+		// stavljam objektni cvor na expr stek
+		Code.load(constant);
+		// System.out.println("NUM_CONST KRAJ");
+
+	}
+
+	/*
+	 * public void visit(FactorCharConst factorCharConst) { // factorCharConst.obj
+	 * // napravimo objekat i pozovemo load, da se ucita na stek
+	 * System.out.println("NUM_CONST POCETAK");
+	 * 
+	 * Obj constant = new Obj(Obj.Con, "factorCharConst", factorCharConst.struct,
+	 * factorCharConst.getCharConstFact().charAt(1), 0); //
+	 * constant.setAdr(numConstant.getNumValue()); // constant.setLevel(0); //
+	 * stavljam objektni cvor na expr stek Code.load(constant);
+	 * System.out.println("NUM_CONST KRAJ");
+	 * 
+	 * }
+	 */
+
+	/*
+	 * public void visit(FactorBoolConst factorBoolConst) { // factorCharConst.obj
+	 * // napravimo objekat i pozovemo load, da se ucita na stek
+	 * System.out.println("NUM_CONST POCETAK");
+	 * 
+	 * Obj constant = new Obj(Obj.Con, "factorCharConst", factorBoolConst.struct,
+	 * factorBoolConst.getBoolConstFact(), 0); //
+	 * constant.setAdr(numConstant.getNumValue()); // constant.setLevel(0); //
+	 * stavljam objektni cvor na expr stek Code.load(constant);
+	 * System.out.println("NUM_CONST KRAJ");
+	 * 
+	 * }
+	 */
+
+	public void visit(FactorDesignator factorDesignator) {
+
+		if (factorDesignator.getDesignator().getOptExpr() instanceof OptExprYes) {
+			// proverim da li je niz u pitanju, u tom slucaju, ucitam element niza na stek
+			Obj arrayElem = new Obj(Obj.Elem, factorDesignator.getDesignator().getDesignatorName(),
+					factorDesignator.getDesignator().obj.getType().getElemType());
+			Code.load(arrayElem);
+
+		} else {
+			// inace, samo ucitam taj objekat
+			Code.load(factorDesignator.getDesignator().obj);
+		}
+	}
+
+	public void visit(DesignatorAssign designatorAssign) {
+		if (designatorAssign.getDesignator().obj.getType().getKind() == Struct.Array
+				&& (designatorAssign.getDesignator().getOptExpr() instanceof OptExprYes)) {
+			Obj des = new Obj(Obj.Elem, designatorAssign.getDesignator().getDesignatorName(),
+					designatorAssign.getDesignator().obj.getType());
+			Code.store(des);
+		} else
+			// znaci samo treba da u designator storujem/ucitam vrednost expr-a, koji je vec
+			// na steku(stavljen ranije)
+			Code.store(designatorAssign.getDesignator().obj);
+
+	}
+
+	public void visit(DesignatorIncrement designatorIncrement) {
+		Code.load(designatorIncrement.getDesignator().obj);
+		Code.loadConst(1);
+		Code.put(Code.add);
+		Code.store(designatorIncrement.getDesignator().obj);
+	}
+
+	public void visit(DesignatorDecrement designatorDecrement) {
+		Code.load(designatorDecrement.getDesignator().obj);
+		Code.loadConst(1);
+		Code.put(Code.sub);
+		Code.store(designatorDecrement.getDesignator().obj);
+	}
+
+	public void visit(PrintStatement printStatement) {
+		if (printStatement.getExpr().struct.getKind() != Struct.Array) {
+			if (printStatement.getExpr().struct == Tab.intType) {
+				Code.put(Code.const_5);
+				Code.put(Code.print);
+			} else {
+				Code.put(Code.const_1);
+				Code.put(Code.bprint);
+			}
+
+		} else {
+			if (printStatement.getExpr().struct.getElemType() == Tab.intType) {
+				Code.put(Code.const_5);
+				Code.put(Code.print);
+			} else {
+				Code.put(Code.const_1);
+				Code.put(Code.bprint);
+			}
+		}
+	}
+
+	public void visit(ReadStatement readStatement) {
+
+		if (readStatement.getDesignator().obj.getKind() != Struct.Array) {
+			if (readStatement.getDesignator().obj.getType() == Tab.intType) {
+				Code.put(Code.read);
+				Code.store(readStatement.getDesignator().obj);
+
+			} else {
+				Code.put(Code.bread);
+				Code.store(readStatement.getDesignator().obj);
+			}
+		} else {
+			if (readStatement.getDesignator().obj.getType().getElemType() == Tab.intType) {
+				Code.put(Code.read);
+				Code.put(Code.astore);
+			} else {
+				Code.put(Code.bread);
+				Code.put(Code.bastore);
+			}
+
+		}
+	}
+
+	public void visit(MulopFactorListMore mulopFactorListMore) {
+		// moram da stavim mull operator na stek
+		if (mulopFactorListMore.getMulop() instanceof MulopMul) {
+			Code.put(Code.mul);
+		} else if (mulopFactorListMore.getMulop() instanceof MulopDiv) {
+			Code.put(Code.div);
+		} else if (mulopFactorListMore.getMulop() instanceof MulopMod) {
+			Code.put(Code.rem);
+		}
+	}
+
+	public void visit(AddopTermListMore addopTermListMore) {
+		if (addopTermListMore.getAddop() instanceof AddopPlus) {
+			Code.put(Code.add);
+		} else if (addopTermListMore.getAddop() instanceof AddopMinus) {
+			Code.put(Code.sub);
+		}
+	}
+
+	public void visit(Expr1AddopTerm expr1AddopTerm) {
+		if (minus == true) {
+			Code.put(Code.neg);
+			minus = false;
+		}
+	}
+
+	public void visit(OptMinusYes optMinusYes) {
+		minus = true;
+		// Code.put(Code.neg);
+		// minus = true;
+	}
+
+	public void visit(MethodCall methodCall) {
+
+		Code.put(Code.call);
+		Code.put(methodCall.getDesignator().obj.getAdr() - Code.pc);
+	}
+
+	public void visit(FactorNewTypeExpr factorNewTypeExpr) {
+		Code.put(Code.newarray);
+
+		if (factorNewTypeExpr.getType().struct == Tab.intType) {
+			Code.put(1);
+		} else {
+			Code.put(0);
+		}
+
+	}
+
+	public void visit(OptExprYes optExprYes) {
+		/*
+		 * Designator parent = (Designator) optExprYes.getParent();
+		 * Code.load(parent.obj); Code.put(Code.dup_x1); Code.put(Code.pop);
+		 */ }
+
+	public void visit(MethodDecl methodDecl) {
+		Code.put(Code.exit);
+		Code.put(Code.return_);
+
+	}
+
+	public void visit(StandardFunctionLen standardFunctionLen) {
+		Code.put(Code.arraylength);
+	}
+
+//==========================================================================================
+
+	Stack<Integer> ifStack = new Stack<>();
+	//Stack<Integer> elseStack = new Stack<>();
+
+	// ifelse
+
+	public void visit(CondFactExprRelopExpr condFactExprRelopExpr) {
+
+		if (condFactExprRelopExpr.getRelop() instanceof RelopEqual) {
+			Code.putFalseJump(Code.eq, 0);
+		} else if (condFactExprRelopExpr.getRelop() instanceof RelopNotEqual) {
+			Code.putFalseJump(Code.ne, 0);
+		} else if (condFactExprRelopExpr.getRelop() instanceof RelopGrt) {
+			Code.putFalseJump(Code.gt, 0);
+		} else if (condFactExprRelopExpr.getRelop() instanceof RelopGrtE) {
+			Code.putFalseJump(Code.ge, 0);
+		} else if (condFactExprRelopExpr.getRelop() instanceof RelopLess) {
+			Code.putFalseJump(Code.lt, 0);
+		} else if (condFactExprRelopExpr.getRelop() instanceof RelopLessE) {
+			Code.putFalseJump(Code.le, 0);
+		}
+
+		ifStack.add(Code.pc - 2);
+	}
+
+	public void visit(CondFactExprOnly condFactExprOnly) {
+		Code.put(Code.const_1);
+		Code.putFalseJump(Code.eq, 0);
+		ifStack.add(Code.pc - 2);
+	}
+
+	public void visit(Else Else) {
+		Code.putJump(0);
+		int jmpElse = ifStack.pop();
+		ifStack.add(Code.pc - 2);
+		Code.fixup(jmpElse);
+	}
+
+	public void visit(IfElseStatement ies) {
+		int stackValue = ifStack.pop();
+		Code.fixup(stackValue);
+	}
+
+	public void visit(IfStatement ifStatement) {
+		int stackValue = ifStack.pop();
+		Code.fixup(stackValue);
+	}
+
+}

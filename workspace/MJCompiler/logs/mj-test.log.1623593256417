@@ -1,0 +1,127 @@
+INFO  16:07:27,356 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  16:07:27,356 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  16:07:27,421 - #2 program
+INFO  16:07:27,421 - #31 test301
+INFO  16:07:27,421 - #3 {
+INFO  16:07:27,422 - #14 void
+INFO  16:07:27,422 - #31 main
+INFO  16:07:27,422 - #12 (
+INFO  16:07:27,422 - #13 )
+INFO  16:07:27,423 - #31 int
+INFO  16:07:27,424 - #31 a
+INFO  16:07:27,425 - #6 ;
+INFO  16:07:27,428 - #3 {
+INFO  16:07:27,429 - #31 a
+INFO  16:07:27,429 - #8 =
+INFO  16:07:27,429 - #10 [
+INFO  16:07:27,429 - #32 1
+INFO  16:07:27,430 - #55 #
+INFO  16:07:27,431 - #32 1
+INFO  16:07:27,431 - #11 ]
+INFO  16:07:27,431 - #6 ;
+INFO  16:07:27,431 - #4 }
+INFO  16:07:27,432 - #4 }
+INFO  16:07:27,438 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        NoVarDeclList(
+        ) [NoVarDeclList]
+        VarDeclLocal(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               a
+                OptBracketsNo(
+                ) [OptBracketsNo]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      StatementsList(
+        NoStatementsList(
+        ) [NoStatementsList]
+        DesignatorStmt(
+          DesignatorAssign(
+            Designator(
+             a
+              OptExprNo(
+              ) [OptExprNo]
+            ) [Designator]
+            Expression(
+              ExprHash(
+                Expression(
+                  Expr1AddopTerm(
+                    OptMinusNo(
+                    ) [OptMinusNo]
+                    AddopTermListOne(
+                      TermFactorMulop(
+                        MulopFactorListOne(
+                          Cnst(
+                            NumConstant(
+                             1
+                            ) [NumConstant]
+                          ) [Cnst]
+                        ) [MulopFactorListOne]
+                      ) [TermFactorMulop]
+                    ) [AddopTermListOne]
+                  ) [Expr1AddopTerm]
+                ) [Expression]
+                Expression(
+                  Expr1AddopTerm(
+                    OptMinusNo(
+                    ) [OptMinusNo]
+                    AddopTermListOne(
+                      TermFactorMulop(
+                        MulopFactorListOne(
+                          Cnst(
+                            NumConstant(
+                             1
+                            ) [NumConstant]
+                          ) [Cnst]
+                        ) [MulopFactorListOne]
+                      ) [TermFactorMulop]
+                    ) [AddopTermListOne]
+                  ) [Expr1AddopTerm]
+                ) [Expression]
+              ) [ExprHash]
+            ) [Expression]
+          ) [DesignatorAssign]
+        ) [DesignatorStmt]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  16:07:27,439 - ===================================
+INFO  16:07:27,443 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  16:07:27,443 - TIP JE: int
+INFO  16:07:27,445 - Deklarisana lokalna promenljiva ana liniji 8 : Var a: int, 0, 1 
+INFO  16:07:27,445 - Pristup lokalnoj promenljivoj: a na liniji 10[ Var a: int, 0, 1  ]
+ERROR 16:07:27,445 - Greska na liniji 6, neophodno da bude char # int!
+ERROR 16:07:27,447 - Greska na liniji 10, designatoru se ne moze dodati taj tip izraza
+INFO  16:07:27,448 -  Print count calls = 0
+INFO  16:07:27,450 -  Deklarisanih promenljivih ima = 10
+INFO  16:07:27,450 - ===================================
+ERROR 16:07:27,450 - GRESKAaaa!
+ERROR 16:07:27,450 - Parsiranje NIJE uspesno zavrseno!

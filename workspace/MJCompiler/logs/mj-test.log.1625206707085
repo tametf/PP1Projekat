@@ -1,0 +1,171 @@
+INFO  08:08:00,576 - Compiling source file: C:\Users\pavle\Desktop\New folder (3)\poslednjaVerzija\tamarajevdjevic20150492\workspace\MJCompiler\test\javniTest.mj
+INFO  08:08:00,577 - Compiling source file: C:\Users\pavle\Desktop\New folder (3)\poslednjaVerzija\tamarajevdjevic20150492\workspace\MJCompiler\test\javniTest.mj
+INFO  08:08:00,626 - #2 program
+INFO  08:08:00,626 - #31 test301
+INFO  08:08:00,626 - #31 int
+INFO  08:08:00,627 - #31 niz
+INFO  08:08:00,627 - #10 [
+INFO  08:08:00,627 - #11 ]
+INFO  08:08:00,627 - #6 ;
+INFO  08:08:00,628 - #3 {
+INFO  08:08:00,629 - #14 void
+INFO  08:08:00,630 - #31 main
+INFO  08:08:00,631 - #12 (
+INFO  08:08:00,631 - #13 )
+INFO  08:08:00,631 - #31 int
+INFO  08:08:00,632 - #31 niz
+INFO  08:08:00,633 - #10 [
+INFO  08:08:00,633 - #11 ]
+INFO  08:08:00,633 - #6 ;
+INFO  08:08:00,634 - #3 {
+INFO  08:08:00,634 - #31 niz
+INFO  08:08:00,635 - #8 =
+INFO  08:08:00,635 - #25 new
+INFO  08:08:00,636 - #31 int
+INFO  08:08:00,636 - #10 [
+INFO  08:08:00,636 - #32 4
+INFO  08:08:00,636 - #11 ]
+INFO  08:08:00,636 - #6 ;
+INFO  08:08:00,636 - #32 2
+ERROR 08:08:00,637 - 
+Sintaksna greska na liniji 12
+INFO  08:08:00,637 - #8 =
+INFO  08:08:00,637 - #32 5
+INFO  08:08:00,637 - #6 ;
+INFO  08:08:00,637 - #27 print
+INFO  08:08:00,637 - #12 (
+INFO  08:08:00,637 - #31 niz
+ERROR 08:08:00,638 - Greska pri dodeli vrednosti 
+INFO  08:08:00,639 - #10 [
+INFO  08:08:00,639 - #32 2
+INFO  08:08:00,639 - #11 ]
+INFO  08:08:00,639 - #13 )
+INFO  08:08:00,640 - #6 ;
+INFO  08:08:00,641 - #4 }
+INFO  08:08:00,641 - #4 }
+INFO  08:08:00,647 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  VariableDeclList(
+    NoDeclList(
+    ) [NoDeclList]
+    VarDecl(
+      Type(
+       int
+      ) [Type]
+      VarDeclarationListOne(
+        VarIdentGlobal(
+         niz
+          OptBracketsYes(
+          ) [OptBracketsYes]
+        ) [VarIdentGlobal]
+      ) [VarDeclarationListOne]
+    ) [VarDecl]
+  ) [VariableDeclList]
+  Lbrace(
+  ) [Lbrace]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDeclaration(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        NoVarDeclList(
+        ) [NoVarDeclList]
+        VarDeclLocal(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               niz
+                OptBracketsYes(
+                ) [OptBracketsYes]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      Lbrace(
+      ) [Lbrace]
+      StatementsList(
+        StatementsList(
+          NoStatementsList(
+          ) [NoStatementsList]
+          DesignatorStmt(
+            ERROR222(
+              null
+            ) [ERROR222]
+          ) [DesignatorStmt]
+        ) [StatementsList]
+        PrintStatement(
+          Print(
+          ) [Print]
+          Expression(
+            Expr1AddopTerm(
+              OptMinusNo(
+              ) [OptMinusNo]
+              AddopTermListOne(
+                TermFactorMulop(
+                  MulopFactorListOne(
+                    FactorDesignator(
+                      DesignatorArray(
+                        DesignatorIdent(
+                         niz
+                        ) [DesignatorIdent]
+                        Lbracket(
+                        ) [Lbracket]
+                        Expression(
+                          Expr1AddopTerm(
+                            OptMinusNo(
+                            ) [OptMinusNo]
+                            AddopTermListOne(
+                              TermFactorMulop(
+                                MulopFactorListOne(
+                                  Cnst(
+                                    NumConstantFactor(
+                                     2
+                                    ) [NumConstantFactor]
+                                  ) [Cnst]
+                                ) [MulopFactorListOne]
+                              ) [TermFactorMulop]
+                            ) [AddopTermListOne]
+                          ) [Expr1AddopTerm]
+                        ) [Expression]
+                        Rbracket(
+                        ) [Rbracket]
+                      ) [DesignatorArray]
+                      OptParsNo(
+                      ) [OptParsNo]
+                    ) [FactorDesignator]
+                  ) [MulopFactorListOne]
+                ) [TermFactorMulop]
+              ) [AddopTermListOne]
+            ) [Expr1AddopTerm]
+          ) [Expression]
+          OptNumConstNo(
+          ) [OptNumConstNo]
+        ) [PrintStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDeclaration]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  08:08:00,647 - ===================================
+INFO  08:08:00,651 - Deklarisan globalni niz niz na liniji 5:Var niz: Arr of int, 0, 0 
+INFO  08:08:00,652 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  08:08:00,652 - Deklarisan lokalni niz sa imenom: nizna liniji 9 : Var niz: Arr of int, 0, 1 
+INFO  08:08:00,652 - Pristup lokalnom nizu: niz na liniji 13[ Var niz: Arr of int, 0, 1  ]
+ERROR 08:08:00,652 - Neispravna print funkcija!
+INFO  08:08:00,653 - ===================================
+ERROR 08:08:00,653 - Parsiranje NIJE uspesno zavrseno!

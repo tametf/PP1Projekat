@@ -1,0 +1,126 @@
+INFO  16:07:36,419 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  16:07:36,420 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  16:07:36,481 - #2 program
+INFO  16:07:36,481 - #31 test301
+INFO  16:07:36,481 - #3 {
+INFO  16:07:36,482 - #14 void
+INFO  16:07:36,482 - #31 main
+INFO  16:07:36,482 - #12 (
+INFO  16:07:36,482 - #13 )
+INFO  16:07:36,483 - #31 int
+INFO  16:07:36,484 - #31 a
+INFO  16:07:36,484 - #6 ;
+INFO  16:07:36,487 - #3 {
+INFO  16:07:36,487 - #31 a
+INFO  16:07:36,487 - #8 =
+INFO  16:07:36,488 - #10 [
+INFO  16:07:36,488 - #34 'A'
+INFO  16:07:36,489 - #55 #
+INFO  16:07:36,489 - #32 1
+INFO  16:07:36,490 - #11 ]
+INFO  16:07:36,490 - #6 ;
+INFO  16:07:36,491 - #4 }
+INFO  16:07:36,491 - #4 }
+INFO  16:07:36,497 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        NoVarDeclList(
+        ) [NoVarDeclList]
+        VarDeclLocal(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               a
+                OptBracketsNo(
+                ) [OptBracketsNo]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      StatementsList(
+        NoStatementsList(
+        ) [NoStatementsList]
+        DesignatorStmt(
+          DesignatorAssign(
+            Designator(
+             a
+              OptExprNo(
+              ) [OptExprNo]
+            ) [Designator]
+            Expression(
+              ExprHash(
+                Expression(
+                  Expr1AddopTerm(
+                    OptMinusNo(
+                    ) [OptMinusNo]
+                    AddopTermListOne(
+                      TermFactorMulop(
+                        MulopFactorListOne(
+                          Cnst(
+                            CharConstant(
+                             'A'
+                            ) [CharConstant]
+                          ) [Cnst]
+                        ) [MulopFactorListOne]
+                      ) [TermFactorMulop]
+                    ) [AddopTermListOne]
+                  ) [Expr1AddopTerm]
+                ) [Expression]
+                Expression(
+                  Expr1AddopTerm(
+                    OptMinusNo(
+                    ) [OptMinusNo]
+                    AddopTermListOne(
+                      TermFactorMulop(
+                        MulopFactorListOne(
+                          Cnst(
+                            NumConstant(
+                             1
+                            ) [NumConstant]
+                          ) [Cnst]
+                        ) [MulopFactorListOne]
+                      ) [TermFactorMulop]
+                    ) [AddopTermListOne]
+                  ) [Expr1AddopTerm]
+                ) [Expression]
+              ) [ExprHash]
+            ) [Expression]
+          ) [DesignatorAssign]
+        ) [DesignatorStmt]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  16:07:36,498 - ===================================
+INFO  16:07:36,501 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  16:07:36,501 - TIP JE: int
+INFO  16:07:36,501 - Deklarisana lokalna promenljiva ana liniji 8 : Var a: int, 0, 1 
+INFO  16:07:36,504 - Pristup lokalnoj promenljivoj: a na liniji 10[ Var a: int, 0, 1  ]
+ERROR 16:07:36,504 - Greska na liniji 10, designatoru se ne moze dodati taj tip izraza
+INFO  16:07:36,508 -  Print count calls = 0
+INFO  16:07:36,508 -  Deklarisanih promenljivih ima = 10
+INFO  16:07:36,510 - ===================================
+ERROR 16:07:36,510 - GRESKAaaa!
+ERROR 16:07:36,510 - Parsiranje NIJE uspesno zavrseno!

@@ -1,0 +1,242 @@
+INFO  13:35:42,071 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  13:35:42,105 - #2 program
+INFO  13:35:42,105 - #28 MJProgram
+INFO  13:35:42,105 - #9 class
+INFO  13:35:42,106 - #28 tamarajevdjevic
+INFO  13:35:42,106 - #24 extends
+INFO  13:35:42,106 - #28 tamara
+INFO  13:35:42,107 - #3 {
+INFO  13:35:42,107 - #28 int
+INFO  13:35:42,108 - #28 pera
+INFO  13:35:42,108 - #7 ,
+INFO  13:35:42,110 - #28 mika
+INFO  13:35:42,110 - #10 [
+INFO  13:35:42,110 - #11 ]
+INFO  13:35:42,110 - #7 ,
+INFO  13:35:42,110 - #28 zika
+INFO  13:35:42,111 - #6 ;
+INFO  13:35:42,111 - #3 {
+INFO  13:35:42,111 - #28 int
+INFO  13:35:42,112 - #28 sabiranje
+INFO  13:35:42,112 - #12 (
+INFO  13:35:42,112 - #28 int
+INFO  13:35:42,117 - #28 broj
+INFO  13:35:42,117 - #7 ,
+INFO  13:35:42,118 - #28 string
+INFO  13:35:42,118 - #28 perinibrojevi
+INFO  13:35:42,118 - #10 [
+INFO  13:35:42,118 - #11 ]
+INFO  13:35:42,118 - #13 )
+INFO  13:35:42,118 - #28 int
+INFO  13:35:42,118 - #28 povratnavrednost
+INFO  13:35:42,118 - #7 ,
+INFO  13:35:42,119 - #28 povvr1
+INFO  13:35:42,119 - #10 [
+INFO  13:35:42,119 - #11 ]
+INFO  13:35:42,119 - #7 ,
+INFO  13:35:42,119 - #28 caca
+INFO  13:35:42,119 - #6 ;
+INFO  13:35:42,119 - #3 {
+INFO  13:35:42,119 - #28 pozitivno
+INFO  13:35:42,120 - #20 --
+INFO  13:35:42,121 - #6 ;
+INFO  13:35:42,121 - #28 negativno
+INFO  13:35:42,121 - #19 ++
+INFO  13:35:42,121 - #6 ;
+INFO  13:35:42,122 - #26 read
+INFO  13:35:42,122 - #12 (
+INFO  13:35:42,122 - #28 flasa
+INFO  13:35:42,122 - #13 )
+INFO  13:35:42,123 - #6 ;
+INFO  13:35:42,123 - #27 print
+INFO  13:35:42,123 - #12 (
+INFO  13:35:42,123 - #29 2
+INFO  13:35:42,124 - #13 )
+INFO  13:35:42,125 - #6 ;
+INFO  13:35:42,126 - #28 ananas
+INFO  13:35:42,126 - #8 =
+INFO  13:35:42,126 - #3 {
+ERROR 13:35:42,126 - 
+Sintaksna greska na liniji 13
+INFO  13:35:42,126 - #29 5
+INFO  13:35:42,126 - #4 }
+INFO  13:35:42,126 - #6 ;
+INFO  13:35:42,127 - #4 }
+INFO  13:35:42,127 - #4 }
+INFO  13:35:42,127 - #4 }
+ERROR 13:35:42,127 - Izvrsen oporavak do ; u liniji13
+INFO  13:35:42,128 - #3 {
+INFO  13:35:42,129 - #4 }
+INFO  13:35:42,130 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  ClassDeclList(
+    NoDeclList(
+    ) [NoDeclList]
+    ClassDecl(
+     tamarajevdjevic
+      OptionalExtendsType(
+        Type(
+         tamara
+        ) [Type]
+      ) [OptionalExtendsType]
+      VarDeclListMore(
+        NoVarDeclList(
+        ) [NoVarDeclList]
+        VarDecl(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListMore(
+            VarDeclarationListMore(
+              VarDeclarationListOne(
+                VarDeclListOne(
+                 pera
+                  OptBracketsNo(
+                  ) [OptBracketsNo]
+                ) [VarDeclListOne]
+              ) [VarDeclarationListOne]
+              VarDeclListOne(
+               mika
+                OptBracketsYes(
+                ) [OptBracketsYes]
+              ) [VarDeclListOne]
+            ) [VarDeclarationListMore]
+            VarDeclListOne(
+             zika
+              OptBracketsNo(
+              ) [OptBracketsNo]
+            ) [VarDeclListOne]
+          ) [VarDeclarationListMore]
+        ) [VarDecl]
+      ) [VarDeclListMore]
+      OptionalMethodDeclList(
+        MethodDeclListMore(
+          NoMethodDeclList(
+          ) [NoMethodDeclList]
+          MethodDecl(
+            ReturnValueTypeOther(
+              Type(
+               int
+              ) [Type]
+            ) [ReturnValueTypeOther]
+           sabiranje
+            FormParams(
+              FormParamsList(
+                FormParam(
+                  FormParsOne(
+                    Type(
+                     int
+                    ) [Type]
+                   broj
+                    OptBracketsNo(
+                    ) [OptBracketsNo]
+                  ) [FormParsOne]
+                ) [FormParam]
+                FormParsOne(
+                  Type(
+                   string
+                  ) [Type]
+                 perinibrojevi
+                  OptBracketsYes(
+                  ) [OptBracketsYes]
+                ) [FormParsOne]
+              ) [FormParamsList]
+            ) [FormParams]
+            VarDeclListMore(
+              NoVarDeclList(
+              ) [NoVarDeclList]
+              VarDecl(
+                Type(
+                 int
+                ) [Type]
+                VarDeclarationListMore(
+                  VarDeclarationListMore(
+                    VarDeclarationListOne(
+                      VarDeclListOne(
+                       povratnavrednost
+                        OptBracketsNo(
+                        ) [OptBracketsNo]
+                      ) [VarDeclListOne]
+                    ) [VarDeclarationListOne]
+                    VarDeclListOne(
+                     povvr1
+                      OptBracketsYes(
+                      ) [OptBracketsYes]
+                    ) [VarDeclListOne]
+                  ) [VarDeclarationListMore]
+                  VarDeclListOne(
+                   caca
+                    OptBracketsNo(
+                    ) [OptBracketsNo]
+                  ) [VarDeclListOne]
+                ) [VarDeclarationListMore]
+              ) [VarDecl]
+            ) [VarDeclListMore]
+            StatementsList(
+              StatementsList(
+                StatementsList(
+                  StatementsList(
+                    StatementsList(
+                      NoStatementsList(
+                      ) [NoStatementsList]
+                      DesignatorStmt(
+                        DesignatorDecrement(
+                          Designator(
+                           pozitivno
+                            OptExprNo(
+                            ) [OptExprNo]
+                          ) [Designator]
+                        ) [DesignatorDecrement]
+                      ) [DesignatorStmt]
+                    ) [StatementsList]
+                    DesignatorStmt(
+                      DesignatorIncrement(
+                        Designator(
+                         negativno
+                          OptExprNo(
+                          ) [OptExprNo]
+                        ) [Designator]
+                      ) [DesignatorIncrement]
+                    ) [DesignatorStmt]
+                  ) [StatementsList]
+                  ReadStatement(
+                    Designator(
+                     flasa
+                      OptExprNo(
+                      ) [OptExprNo]
+                    ) [Designator]
+                  ) [ReadStatement]
+                ) [StatementsList]
+                PrintStatement(
+                  Expression(
+                    Expr1Term(
+                      OptMinusNo(
+                      ) [OptMinusNo]
+                      TermFactor(
+                        FactorNumConst(
+                         2
+                        ) [FactorNumConst]
+                      ) [TermFactor]
+                    ) [Expr1Term]
+                  ) [Expression]
+                  OptNumConstNo(
+                  ) [OptNumConstNo]
+                ) [PrintStatement]
+              ) [StatementsList]
+              StatementDerived1(
+              ) [StatementDerived1]
+            ) [StatementsList]
+          ) [MethodDecl]
+        ) [MethodDeclListMore]
+      ) [OptionalMethodDeclList]
+    ) [ClassDecl]
+  ) [ClassDeclList]
+  NoMethodDeclList(
+  ) [NoMethodDeclList]
+) [Program]
+INFO  13:35:42,131 - ===================================
+INFO  13:35:42,133 -  Print count calls = 1
+INFO  13:35:42,133 -  Deklarisanih promenljivih ima = 7
+INFO  13:35:42,133 - Read count calls = 1

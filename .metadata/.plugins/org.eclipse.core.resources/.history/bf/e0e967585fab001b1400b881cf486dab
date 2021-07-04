@@ -1,0 +1,231 @@
+package rs.ac.bg.etf.pp1;
+
+import java.util.Stack;
+
+import rs.ac.bg.etf.pp1.CounterVisitor.FormParamCounter;
+import rs.ac.bg.etf.pp1.CounterVisitor.VarCounter;
+import rs.ac.bg.etf.pp1.ast.*;
+import rs.etf.pp1.mj.runtime.Code;
+import rs.etf.pp1.symboltable.Tab;
+import rs.etf.pp1.symboltable.concepts.Obj;
+import rs.etf.pp1.symboltable.concepts.Struct;
+
+public class CodeGenerator extends VisitorAdaptor {
+
+	public int mainPc;
+	
+	
+	Stack<Boolean> minusStek = new Stack<>();
+			
+	
+	
+	public int getMainPc() {
+		return mainPc;
+	}
+	
+	
+	public void visit(PrintStatement printStatement) {
+		System.out.println("PRINT_STATEMENT POCETAK");
+		if(printStatement.getExpr().struct.getKind() != Struct.Array) {
+			System.out.println("NIJE NIZ");
+			if(printStatement.getExpr().struct ==Tab.intType) {
+				Code.put(Code.const_5);
+				Code.put(Code.print);
+				System.out.println("INT TIP");
+			} else {
+				System.out.println("NIJE INT TIP");
+				Code.put(Code.const_1);
+				Code.put(Code.bprint);
+			}
+			
+		} else {
+			System.out.println("JESTE NIZ");
+			if(printStatement.getExpr().struct.getElemType() == Tab.intType) {
+				System.out.println("INT TIP");
+				Code.put(Code.const_5);
+				Code.put(Code.print);
+			} else {
+				System.out.println("NIJE INT TIP");
+				Code.put(Code.const_1);
+				Code.put(Code.bprint);
+			}
+		}
+		System.out.println("PRINT_STATEMENT KRAJ");
+	}
+
+	public void visit(ReadStatement readStatement) {
+		System.out.println("READ_STATEMENT POCETAK");
+		
+		
+		if(readStatement.getDesignator().obj.getKind() != Struct.Array) {
+			System.out.println("NIJE NIZ");
+			if(readStatement.getDesignator().obj.getType() ==Tab.intType) {
+				Code.put(Code.read);
+				Code.store(readStatement.getDesignator().obj);
+				/*
+				System.out.println("INT TIP");
+			} else {
+				System.out.println("NIJE INT TIP");
+				Code.put(Code.bread);			}
+			Code.store(readStatement.getDesignator().obj);
+			
+		} else {
+			System.out.println("JESTE NIZ");
+			if(readStatement.getDesignator().obj.getType().getElemType() == Tab.intType) {
+				System.out.println("INT TIP");
+				Code.put(Code.read);
+				Code.put(Code.astore);
+			} else {
+				System.out.println("NIJE INT TIP");
+				Code.put(Code.bread);
+				Code.put(Code.bastore);
+			}
+		*/
+		}
+		}
+		System.out.println("READ_STATEMENT KRAJ");
+	}
+
+	public void visit(ReturnValueTypeVoid returnValueTypeVoid) {
+		System.out.println("RET_VOID POCETAK");
+		if(returnValueTypeVoid.getParent().getClass().getSimpleName().compareTo("MethodDecl") == 0) {
+			if("main".equalsIgnoreCase(returnValueTypeVoid.getNameOfMethod())) {
+				mainPc = Code.pc;
+			}			
+		}
+		
+		returnValueTypeVoid.obj.setAdr(Code.pc);
+		SyntaxNode methodNode = returnValueTypeVoid.getParent();
+		VarCounter varCounter = new VarCounter();
+		methodNode.traverseTopDown(varCounter); 
+		
+		FormParamCounter fpc = new FormParamCounter();
+		methodNode.traverseTopDown(fpc); 
+		Code.put(Code.enter);
+		Code.put(fpc.getCount());
+		Code.put(fpc.getCount() + varCounter.getCount());
+		//Code.put(0);
+		//Code.put(varCounter.getCount());
+		System.out.println("RET_VOID KRAJ");
+	}
+	
+	
+	public void visit(ReturnValueTypeOther returnValueTypeOther) {
+		System.out.println("RET_OTHER POCETAK");
+		if(returnValueTypeOther.getParent().getClass().getSimpleName().compareTo("MethodDecl") == 0) {
+			if("main".equalsIgnoreCase(returnValueTypeOther.getNameOfMethod())) {
+				mainPc = Code.pc;
+			}			
+		}
+		
+		returnValueTypeOther.obj.setAdr(Code.pc);
+		SyntaxNode methodNode = returnValueTypeOther.getParent();
+		VarCounter varCounter = new VarCounter();
+		methodNode.traverseTopDown(varCounter); 
+		
+		FormParamCounter fpc = new FormParamCounter();
+		methodNode.traverseTopDown(fpc); 
+		Code.put(Code.enter);
+		Code.put(fpc.getCount());
+		Code.put(fpc.getCount() + varCounter.getCount());
+		//Code.put(0);
+		//Code.put(returnValueTypeOther.obj.getLocalSymbols().size());
+		System.out.println("RET_OTHER KRAJ");
+	}
+	
+	
+
+	public void visit(FactorNumConst factorNumConst) {
+		if(!(factorNumConst.getParent() instanceof ConstDeclOne)) {
+			System.out.println("NUM_CONST POCETAK");
+			Obj constant = new Obj(Obj.Con, "factorNumConst", factorNumConst.struct, factorNumConst.getN1(), 0);
+			//constant.setAdr(numConstant.getNumValue());
+			//constant.setLevel(0);
+			//stavljam objektni cvor na expr stek
+			Code.load(constant);
+			System.out.println("NUM_CONST KRAJ");
+			
+		}
+	}
+	
+	
+	public void visit(MulopFactorListMore mulopFactorListMore) {
+		Code.put(mulopFactorListMore.getMulop().struct.getKind());
+	}
+	
+	public void visit(AddopTermListMore addopTermListMore) {
+		Code.put(addopTermListMore.getAddopTermList().struct.getKind());
+	}
+	
+	public void visit(Expr1AddopTerm expr1AddopTerm) {
+		if(expr1AddopTerm.getOptMinus() instanceof OptMinusYes) {
+			minusStek.pop();
+		}
+	}
+	
+	
+	public void visit(MethodDecl methodDecl) {
+		System.out.println("Method Decl pocetak");
+		Code.put(Code.exit);
+		Code.put(Code.return_);
+		
+		System.out.println("Method Decl kraj");
+	}
+	
+	
+	public void visit(DesignatorAssign designatorAssign) {
+		System.out.println("DESINATOR = pocetak");
+		
+		Code.store(designatorAssign.getDesignator().obj);
+		System.out.println("DESIGNATOR = kraj");
+		
+	}
+	
+	
+	public void visit(CharConstant charConstant) {
+		Obj constant = new Obj(Obj.Con, "CHAR_CONST", charConstant.struct);
+		constant.setAdr(charConstant.getCharValue().charAt(0));
+		constant.setLevel(0);
+		Code.load(constant);
+	} 
+	public void visit(BoolConstant boolConstant) {
+		Obj constant = new Obj(Obj.Con, "BOOL_CONST", boolConstant.struct);
+		constant.setAdr(boolConstant.getBoolValue() == "true" ? 1 : 0);
+		constant.setLevel(0);
+		Code.load(constant);
+	} 
+	
+	public void visit(FactorDesignator factorDesignator) {
+		System.out.println("FD POCETAK");
+		if(factorDesignator.getDesignator().getOptExpr() instanceof OptExprYes) {
+			Obj arrayElem = new Obj(Obj.Elem, factorDesignator.getDesignator().getDesignatorName(), factorDesignator.getDesignator().obj.getType().getElemType());
+			Code.load(arrayElem);
+		} else {
+			Code.load(factorDesignator.getDesignator().obj);
+		}
+		System.out.println("FD KRAJ");		
+	}
+	
+	public void visit(DesignatorIncrement designatorIncrement) {
+		Code.load(designatorIncrement.getDesignator().obj);
+		Code.loadConst(1);
+		Code.put(Code.add);
+		Code.store(designatorIncrement.getDesignator().obj);
+	}
+	
+	public void visit(DesignatorDecrement designatorDecrement) {
+		Code.load(designatorDecrement.getDesignator().obj);
+		Code.loadConst(1);
+		Code.put(Code.sub);
+		Code.store(designatorDecrement.getDesignator().obj);
+	}
+	public void visit(OptExprYes optExprYes) {
+		Designator parent = (Designator) optExprYes.getParent();
+		Code.load(parent.obj);
+		Code.put(Code.dup);
+		Code.put(Code.pop);
+	}
+	
+	
+	
+}

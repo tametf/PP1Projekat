@@ -1,0 +1,203 @@
+INFO  23:19:40,549 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  23:19:40,620 - #2 program
+INFO  23:19:40,621 - #31 test301
+INFO  23:19:40,621 - #3 {
+INFO  23:19:40,623 - #14 void
+INFO  23:19:40,623 - #31 main
+INFO  23:19:40,624 - #12 (
+INFO  23:19:40,624 - #13 )
+INFO  23:19:40,624 - #3 {
+INFO  23:19:40,625 - #36 if
+INFO  23:19:40,626 - #12 (
+INFO  23:19:40,626 - #33 1
+INFO  23:19:40,628 - #13 )
+INFO  23:19:40,628 - #36 if
+INFO  23:19:40,629 - #12 (
+INFO  23:19:40,629 - #33 0
+INFO  23:19:40,630 - #13 )
+INFO  23:19:40,630 - #27 print
+INFO  23:19:40,630 - #12 (
+INFO  23:19:40,631 - #32 0
+INFO  23:19:40,631 - #13 )
+INFO  23:19:40,632 - #6 ;
+INFO  23:19:40,632 - #35 else
+INFO  23:19:40,633 - #27 print
+INFO  23:19:40,635 - #12 (
+INFO  23:19:40,635 - #32 5
+INFO  23:19:40,635 - #13 )
+INFO  23:19:40,635 - #6 ;
+INFO  23:19:40,635 - #35 else
+INFO  23:19:40,636 - #27 print
+INFO  23:19:40,636 - #12 (
+INFO  23:19:40,636 - #32 2
+INFO  23:19:40,636 - #13 )
+INFO  23:19:40,636 - #6 ;
+INFO  23:19:40,636 - #4 }
+INFO  23:19:40,636 - #4 }
+INFO  23:19:40,644 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      StatementsList(
+        NoStatementsList(
+        ) [NoStatementsList]
+        MatchedStmt(
+          MatchedStatement(
+            If(
+            ) [If]
+            IfCond(
+              ConditionOne(
+                CondTermOne(
+                  CondFactExprOnly(
+                    Expression(
+                      Expr1AddopTerm(
+                        OptMinusNo(
+                        ) [OptMinusNo]
+                        AddopTermListOne(
+                          TermFactorMulop(
+                            MulopFactorListOne(
+                              Cnst(
+                                BoolConstant(
+                                 1
+                                ) [BoolConstant]
+                              ) [Cnst]
+                            ) [MulopFactorListOne]
+                          ) [TermFactorMulop]
+                        ) [AddopTermListOne]
+                      ) [Expr1AddopTerm]
+                    ) [Expression]
+                  ) [CondFactExprOnly]
+                ) [CondTermOne]
+              ) [ConditionOne]
+            ) [IfCond]
+            MatchedStatement(
+              If(
+              ) [If]
+              IfCond(
+                ConditionOne(
+                  CondTermOne(
+                    CondFactExprOnly(
+                      Expression(
+                        Expr1AddopTerm(
+                          OptMinusNo(
+                          ) [OptMinusNo]
+                          AddopTermListOne(
+                            TermFactorMulop(
+                              MulopFactorListOne(
+                                Cnst(
+                                  BoolConstant(
+                                   0
+                                  ) [BoolConstant]
+                                ) [Cnst]
+                              ) [MulopFactorListOne]
+                            ) [TermFactorMulop]
+                          ) [AddopTermListOne]
+                        ) [Expr1AddopTerm]
+                      ) [Expression]
+                    ) [CondFactExprOnly]
+                  ) [CondTermOne]
+                ) [ConditionOne]
+              ) [IfCond]
+              PrintStatement(
+                Print(
+                ) [Print]
+                Expression(
+                  Expr1AddopTerm(
+                    OptMinusNo(
+                    ) [OptMinusNo]
+                    AddopTermListOne(
+                      TermFactorMulop(
+                        MulopFactorListOne(
+                          Cnst(
+                            NumConstant(
+                             0
+                            ) [NumConstant]
+                          ) [Cnst]
+                        ) [MulopFactorListOne]
+                      ) [TermFactorMulop]
+                    ) [AddopTermListOne]
+                  ) [Expr1AddopTerm]
+                ) [Expression]
+                OptNumConstNo(
+                ) [OptNumConstNo]
+              ) [PrintStatement]
+              Else(
+              ) [Else]
+              PrintStatement(
+                Print(
+                ) [Print]
+                Expression(
+                  Expr1AddopTerm(
+                    OptMinusNo(
+                    ) [OptMinusNo]
+                    AddopTermListOne(
+                      TermFactorMulop(
+                        MulopFactorListOne(
+                          Cnst(
+                            NumConstant(
+                             5
+                            ) [NumConstant]
+                          ) [Cnst]
+                        ) [MulopFactorListOne]
+                      ) [TermFactorMulop]
+                    ) [AddopTermListOne]
+                  ) [Expr1AddopTerm]
+                ) [Expression]
+                OptNumConstNo(
+                ) [OptNumConstNo]
+              ) [PrintStatement]
+            ) [MatchedStatement]
+            Else(
+            ) [Else]
+            PrintStatement(
+              Print(
+              ) [Print]
+              Expression(
+                Expr1AddopTerm(
+                  OptMinusNo(
+                  ) [OptMinusNo]
+                  AddopTermListOne(
+                    TermFactorMulop(
+                      MulopFactorListOne(
+                        Cnst(
+                          NumConstant(
+                           2
+                          ) [NumConstant]
+                        ) [Cnst]
+                      ) [MulopFactorListOne]
+                    ) [TermFactorMulop]
+                  ) [AddopTermListOne]
+                ) [Expr1AddopTerm]
+              ) [Expression]
+              OptNumConstNo(
+              ) [OptNumConstNo]
+            ) [PrintStatement]
+          ) [MatchedStatement]
+        ) [MatchedStmt]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  23:19:40,644 - ===================================
+INFO  23:19:40,647 - Obradjuje se funkcija main tip funkcije: VOID
+INFO  23:19:40,649 -  Print count calls = 3
+INFO  23:19:40,649 -  Deklarisanih promenljivih ima = 00
+INFO  23:19:40,649 - ===================================
+INFO  23:19:40,656 - Parsiranje uspesno zavrseno!

@@ -1,0 +1,69 @@
+INFO  14:00:34,418 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  14:00:34,452 - #2 program
+INFO  14:00:34,453 - #28 test301
+INFO  14:00:34,453 - #3 {
+INFO  14:00:34,454 - #14 void
+INFO  14:00:34,454 - #28 main
+INFO  14:00:34,454 - #12 (
+INFO  14:00:34,454 - #13 )
+INFO  14:00:34,455 - #3 {
+INFO  14:00:34,455 - #27 print
+INFO  14:00:34,456 - #12 (
+INFO  14:00:34,456 - #29 2
+INFO  14:00:34,457 - #13 )
+INFO  14:00:34,458 - #6 ;
+INFO  14:00:34,459 - #4 }
+INFO  14:00:34,459 - #4 }
+INFO  14:00:34,464 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      StatementsList(
+        NoStatementsList(
+        ) [NoStatementsList]
+        PrintStatement(
+          Expression(
+            Expr1AddopTerm(
+              OptMinusNo(
+              ) [OptMinusNo]
+              AddopTermListOne(
+                TermFactorMulop(
+                  MulopFactorListOne(
+                    FactorNumConst(
+                     2
+                    ) [FactorNumConst]
+                  ) [MulopFactorListOne]
+                ) [TermFactorMulop]
+              ) [AddopTermListOne]
+            ) [Expr1AddopTerm]
+          ) [Expression]
+          OptNumConstNo(
+          ) [OptNumConstNo]
+        ) [PrintStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  14:00:34,465 - ===================================
+INFO  14:00:34,467 - Obradjuje se funkcija main tip funkcije: VOID
+INFO  14:00:34,468 -  Print count calls = 0
+INFO  14:00:34,468 -  Deklarisanih promenljivih ima = 0
+INFO  14:00:34,468 - ===================================
+INFO  14:00:34,478 - Parsiranje uspesno zavrseno!

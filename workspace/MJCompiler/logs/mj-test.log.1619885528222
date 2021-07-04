@@ -1,0 +1,110 @@
+INFO  17:38:20,980 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  17:38:21,017 - #2 program
+INFO  17:38:21,017 - #28 test301
+INFO  17:38:21,017 - #3 {
+INFO  17:38:21,018 - #14 void
+INFO  17:38:21,019 - #28 main
+INFO  17:38:21,019 - #12 (
+INFO  17:38:21,019 - #13 )
+INFO  17:38:21,020 - #28 int
+INFO  17:38:21,020 - #28 bodovi
+INFO  17:38:21,021 - #6 ;
+INFO  17:38:21,022 - #3 {
+INFO  17:38:21,023 - #28 bodovi
+INFO  17:38:21,024 - #8 =
+INFO  17:38:21,025 - #29 2
+INFO  17:38:21,026 - #6 ;
+INFO  17:38:21,026 - #26 read
+INFO  17:38:21,027 - #12 (
+INFO  17:38:21,027 - #28 bodovi
+INFO  17:38:21,027 - #13 )
+INFO  17:38:21,027 - #6 ;
+INFO  17:38:21,027 - #4 }
+INFO  17:38:21,027 - #4 }
+INFO  17:38:21,036 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        NoVarDeclList(
+        ) [NoVarDeclList]
+        VarDeclLocal(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               bodovi
+                OptBracketsNo(
+                ) [OptBracketsNo]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      StatementsList(
+        StatementsList(
+          NoStatementsList(
+          ) [NoStatementsList]
+          DesignatorStmt(
+            DesignatorAssign(
+              Designator(
+               bodovi
+                OptExprNo(
+                ) [OptExprNo]
+              ) [Designator]
+              Expression(
+                Expr1AddopTerm(
+                  OptMinusNo(
+                  ) [OptMinusNo]
+                  AddopTermListOne(
+                    TermFactorMulop(
+                      MulopFactorListOne(
+                        FactorNumConst(
+                         2
+                        ) [FactorNumConst]
+                      ) [MulopFactorListOne]
+                    ) [TermFactorMulop]
+                  ) [AddopTermListOne]
+                ) [Expr1AddopTerm]
+              ) [Expression]
+            ) [DesignatorAssign]
+          ) [DesignatorStmt]
+        ) [StatementsList]
+        ReadStatement(
+          Designator(
+           bodovi
+            OptExprNo(
+            ) [OptExprNo]
+          ) [Designator]
+        ) [ReadStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  17:38:21,037 - ===================================
+INFO  17:38:21,041 - Obradjuje se funkcija main tip funkcije: VOID
+INFO  17:38:21,041 - TIP JE: int
+INFO  17:38:21,041 - Deklarisana lokalna promenljiva sa imenom: bodovina liniji 8
+INFO  17:38:21,041 - Pristup lokalnoj promenljivoj: bodovi na liniji 10
+INFO  17:38:21,041 - Pristup lokalnoj promenljivoj: bodovi na liniji 12
+INFO  17:38:21,042 -  Print count calls = 0
+INFO  17:38:21,042 -  Deklarisanih promenljivih ima = 0
+INFO  17:38:21,042 - ===================================
+INFO  17:38:21,046 - Parsiranje uspesno zavrseno!

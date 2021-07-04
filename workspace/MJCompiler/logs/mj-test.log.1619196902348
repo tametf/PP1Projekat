@@ -1,0 +1,107 @@
+INFO  16:44:27,954 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  16:44:28,054 - #2 program
+INFO  16:44:28,054 - #28 test301
+INFO  16:44:28,055 - #28 int
+INFO  16:44:28,056 - #28 x
+INFO  16:44:28,057 - #6 ;
+INFO  16:44:28,059 - #3 {
+INFO  16:44:28,061 - #14 void
+INFO  16:44:28,062 - #28 main
+INFO  16:44:28,062 - #12 (
+INFO  16:44:28,063 - #13 )
+INFO  16:44:28,064 - #3 {
+INFO  16:44:28,065 - #28 x
+INFO  16:44:28,066 - #8 =
+INFO  16:44:28,068 - #29 5
+INFO  16:44:28,069 - #6 ;
+INFO  16:44:28,069 - #28 met
+INFO  16:44:28,070 - #12 (
+INFO  16:44:28,070 - #13 )
+INFO  16:44:28,071 - #6 ;
+INFO  16:44:28,071 - #4 }
+INFO  16:44:28,071 - #4 }
+INFO  16:44:28,079 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  VariableDeclList(
+    NoDeclList(
+    ) [NoDeclList]
+    VarDecl(
+      Type(
+       int
+      ) [Type]
+      VarDeclarationListOne(
+        VarDeclListOne(
+          VarIdent(
+           x
+            OptBracketsNo(
+            ) [OptBracketsNo]
+          ) [VarIdent]
+        ) [VarDeclListOne]
+      ) [VarDeclarationListOne]
+    ) [VarDecl]
+  ) [VariableDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      StatementsList(
+        StatementsList(
+          NoStatementsList(
+          ) [NoStatementsList]
+          DesignatorStmt(
+            DesignatorAssign(
+              Designator(
+               x
+                OptExprNo(
+                ) [OptExprNo]
+              ) [Designator]
+              Expression(
+                Expr1Term(
+                  OptMinusNo(
+                  ) [OptMinusNo]
+                  TermFactor(
+                    FactorNumConst(
+                     5
+                    ) [FactorNumConst]
+                  ) [TermFactor]
+                ) [Expr1Term]
+              ) [Expression]
+            ) [DesignatorAssign]
+          ) [DesignatorStmt]
+        ) [StatementsList]
+        DesignatorStmt(
+          FunctionalCall(
+            Designator(
+             met
+              OptExprNo(
+              ) [OptExprNo]
+            ) [Designator]
+            NoActParams(
+            ) [NoActParams]
+          ) [FunctionalCall]
+        ) [DesignatorStmt]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  16:44:28,080 - ===================================
+INFO  16:44:28,083 - TIP JE: int
+INFO  16:44:28,083 - Deklarisana globalna promenljiva sa imenom: x na liniji 3
+INFO  16:44:28,083 - Definisana funkcija programa sa imenom main na liniji 5
+INFO  16:44:28,084 -  Print count calls = 0
+INFO  16:44:28,084 -  Deklarisanih promenljivih ima = 0
+INFO  16:44:28,084 - ===================================
+INFO  16:44:28,088 - Parsiranje uspesno zavrseno!

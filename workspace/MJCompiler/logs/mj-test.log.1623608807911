@@ -1,0 +1,85 @@
+INFO  20:26:30,544 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  20:26:30,544 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  20:26:30,622 - #2 program
+INFO  20:26:30,622 - #31 test301
+INFO  20:26:30,622 - #3 {
+INFO  20:26:30,622 - #14 void
+INFO  20:26:30,622 - #31 main
+INFO  20:26:30,622 - #12 (
+INFO  20:26:30,622 - #13 )
+INFO  20:26:30,622 - #31 int
+INFO  20:26:30,622 - #31 b
+INFO  20:26:30,638 - #6 ;
+INFO  20:26:30,638 - #3 {
+INFO  20:26:30,638 - #31 b
+INFO  20:26:30,638 - #8 =
+INFO  20:26:30,638 - #57 |
+INFO  20:26:30,638 - #32 1
+INFO  20:26:30,638 - #16 :
+ERROR 20:26:30,638 - 
+Sintaksna greska na liniji 27
+INFO  20:26:30,638 - #32 2
+INFO  20:26:30,638 - #57 |
+INFO  20:26:30,638 - #6 ;
+INFO  20:26:30,638 - #4 }
+INFO  20:26:30,638 - #4 }
+ERROR 20:26:30,638 - Greska pri dodeli vrednosti 
+INFO  20:26:30,638 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        NoVarDeclList(
+        ) [NoVarDeclList]
+        VarDeclLocal(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               b
+                OptBracketsNo(
+                ) [OptBracketsNo]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      StatementsList(
+        NoStatementsList(
+        ) [NoStatementsList]
+        DesignatorStmt(
+          ERROR2(
+            null
+          ) [ERROR2]
+        ) [DesignatorStmt]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  20:26:30,638 - ===================================
+INFO  20:26:30,653 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  20:26:30,653 - TIP JE: int
+INFO  20:26:30,653 - Deklarisana lokalna promenljiva bna liniji 10 : Var b: int, 0, 1 
+INFO  20:26:30,653 -  Print count calls = 0
+INFO  20:26:30,653 -  Deklarisanih promenljivih ima = 10
+INFO  20:26:30,653 - ===================================
+ERROR 20:26:30,653 - GRESKA!
+ERROR 20:26:30,653 - Parsiranje NIJE uspesno zavrseno!

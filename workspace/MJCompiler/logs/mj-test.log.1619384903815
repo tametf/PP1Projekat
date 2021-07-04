@@ -1,0 +1,83 @@
+INFO  23:08:08,869 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  23:08:08,903 - #2 program
+INFO  23:08:08,903 - #28 test301
+INFO  23:08:08,903 - #3 {
+INFO  23:08:08,904 - #14 void
+INFO  23:08:08,904 - #28 main
+INFO  23:08:08,905 - #12 (
+INFO  23:08:08,905 - #13 )
+INFO  23:08:08,906 - #28 int
+INFO  23:08:08,906 - #28 bodovi
+INFO  23:08:08,906 - #6 ;
+INFO  23:08:08,907 - #3 {
+INFO  23:08:08,908 - #27 print
+INFO  23:08:08,909 - #12 (
+INFO  23:08:08,909 - #28 bodovi
+INFO  23:08:08,910 - #40 <
+ERROR 23:08:08,910 - 
+Sinnnnnnnntaksna greska na liniji 11
+INFO  23:08:08,910 - #28 bodovi
+INFO  23:08:08,910 - #15 ?
+INFO  23:08:08,911 - #31 '+'
+INFO  23:08:08,911 - #16 :
+INFO  23:08:08,911 - #31 '-'
+INFO  23:08:08,912 - #13 )
+INFO  23:08:08,913 - #6 ;
+INFO  23:08:08,913 - #4 }
+INFO  23:08:08,913 - #4 }
+ERROR 23:08:08,913 - Izvrsen oporavak do ; u liniji11
+INFO  23:08:08,920 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        NoVarDeclList(
+        ) [NoVarDeclList]
+        VarDeclLocal(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               bodovi
+                OptBracketsNo(
+                ) [OptBracketsNo]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      StatementsList(
+        NoStatementsList(
+        ) [NoStatementsList]
+        StatementDerived1(
+        ) [StatementDerived1]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  23:08:08,920 - ===================================
+INFO  23:08:08,922 - Obradjuje se funkcija main tip funkcije: VOID
+INFO  23:08:08,923 - TIP JE: int
+INFO  23:08:08,923 - Deklarisana lokalna promenljiva sa imenom: bodovina liniji 8
+INFO  23:08:08,923 -  Print count calls = 0
+INFO  23:08:08,923 -  Deklarisanih promenljivih ima = 0
+INFO  23:08:08,923 - ===================================
+ERROR 23:08:08,923 - GRESKA!
+ERROR 23:08:08,923 - Parsiranje NIJE uspesno zavrseno!

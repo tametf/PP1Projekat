@@ -1,0 +1,141 @@
+INFO  12:55:26,399 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  12:55:26,429 - #2 program
+INFO  12:55:26,430 - #28 MJProgram
+INFO  12:55:26,430 - #28 int
+INFO  12:55:26,432 - #28 a
+INFO  12:55:26,432 - #7 ,
+INFO  12:55:26,434 - #28 b
+INFO  12:55:26,434 - #6 ;
+INFO  12:55:26,434 - #28 int
+INFO  12:55:26,435 - #28 niz
+INFO  12:55:26,435 - #10 [
+INFO  12:55:26,435 - #11 ]
+INFO  12:55:26,435 - #6 ;
+INFO  12:55:26,436 - #28 int
+INFO  12:55:26,436 - #28 niz2
+INFO  12:55:26,436 - #10 [
+INFO  12:55:26,436 - #11 ]
+INFO  12:55:26,436 - #6 ;
+INFO  12:55:26,436 - #5 const
+INFO  12:55:26,436 - #28 int
+INFO  12:55:26,436 - #28 size
+INFO  12:55:26,437 - #8 =
+INFO  12:55:26,437 - #29 7
+INFO  12:55:26,437 - #6 ;
+INFO  12:55:26,438 - #5 const
+INFO  12:55:26,439 - #28 char
+INFO  12:55:26,439 - #28 karakter
+INFO  12:55:26,439 - #8 =
+INFO  12:55:26,439 - #31 'A'
+INFO  12:55:26,439 - #6 ;
+INFO  12:55:26,439 - #28 char
+INFO  12:55:26,439 - #28 m
+INFO  12:55:26,439 - #6 ;
+INFO  12:55:26,439 - #3 {
+INFO  12:55:26,440 - #4 }
+INFO  12:55:26,441 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  VariableDeclList(
+    ConstDeclaList(
+      ConstDeclaList(
+        VariableDeclList(
+          VariableDeclList(
+            VariableDeclList(
+              NoDeclList(
+              ) [NoDeclList]
+              VarDecl(
+                Type(
+                 int
+                ) [Type]
+                VarDeclarationListMore(
+                  VarDeclarationListOne(
+                    VarDeclListOne(
+                     a
+                      OptBracketsNo(
+                      ) [OptBracketsNo]
+                    ) [VarDeclListOne]
+                  ) [VarDeclarationListOne]
+                  VarDeclListOne(
+                   b
+                    OptBracketsNo(
+                    ) [OptBracketsNo]
+                  ) [VarDeclListOne]
+                ) [VarDeclarationListMore]
+              ) [VarDecl]
+            ) [VariableDeclList]
+            VarDecl(
+              Type(
+               int
+              ) [Type]
+              VarDeclarationListOne(
+                VarDeclListOne(
+                 niz
+                  OptBracketsYes(
+                  ) [OptBracketsYes]
+                ) [VarDeclListOne]
+              ) [VarDeclarationListOne]
+            ) [VarDecl]
+          ) [VariableDeclList]
+          VarDecl(
+            Type(
+             int
+            ) [Type]
+            VarDeclarationListOne(
+              VarDeclListOne(
+               niz2
+                OptBracketsYes(
+                ) [OptBracketsYes]
+              ) [VarDeclListOne]
+            ) [VarDeclarationListOne]
+          ) [VarDecl]
+        ) [VariableDeclList]
+        ConstDecl(
+          Type(
+           int
+          ) [Type]
+          ConstDeclarationListOne(
+            ConstDeclOne(
+             size
+              NumConstant(
+               7
+              ) [NumConstant]
+            ) [ConstDeclOne]
+          ) [ConstDeclarationListOne]
+        ) [ConstDecl]
+      ) [ConstDeclaList]
+      ConstDecl(
+        Type(
+         char
+        ) [Type]
+        ConstDeclarationListOne(
+          ConstDeclOne(
+           karakter
+            CharConstant(
+             'A'
+            ) [CharConstant]
+          ) [ConstDeclOne]
+        ) [ConstDeclarationListOne]
+      ) [ConstDecl]
+    ) [ConstDeclaList]
+    VarDecl(
+      Type(
+       char
+      ) [Type]
+      VarDeclarationListOne(
+        VarDeclListOne(
+         m
+          OptBracketsNo(
+          ) [OptBracketsNo]
+        ) [VarDeclListOne]
+      ) [VarDeclarationListOne]
+    ) [VarDecl]
+  ) [VariableDeclList]
+  NoMethodDeclList(
+  ) [NoMethodDeclList]
+) [Program]
+INFO  12:55:26,442 - ===================================
+INFO  12:55:26,444 -  Print count calls = 0
+INFO  12:55:26,444 -  Deklarisanih promenljivih ima = 7
+INFO  12:55:26,444 - Read count calls = 0

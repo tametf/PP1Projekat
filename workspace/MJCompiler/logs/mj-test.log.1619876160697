@@ -1,0 +1,190 @@
+INFO  15:35:23,539 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  15:35:23,573 - #2 program
+INFO  15:35:23,573 - #28 test301
+INFO  15:35:23,573 - #3 {
+INFO  15:35:23,574 - #14 void
+INFO  15:35:23,574 - #28 main
+INFO  15:35:23,574 - #12 (
+INFO  15:35:23,575 - #13 )
+INFO  15:35:23,575 - #28 int
+INFO  15:35:23,576 - #28 bodovi
+INFO  15:35:23,576 - #6 ;
+INFO  15:35:23,578 - #28 int
+INFO  15:35:23,579 - #28 niz
+INFO  15:35:23,579 - #10 [
+INFO  15:35:23,579 - #11 ]
+INFO  15:35:23,579 - #6 ;
+INFO  15:35:23,580 - #3 {
+INFO  15:35:23,580 - #28 bodovi
+INFO  15:35:23,581 - #8 =
+INFO  15:35:23,581 - #29 2
+INFO  15:35:23,582 - #6 ;
+INFO  15:35:23,583 - #27 print
+INFO  15:35:23,584 - #12 (
+INFO  15:35:23,584 - #29 1
+INFO  15:35:23,585 - #13 )
+INFO  15:35:23,586 - #6 ;
+INFO  15:35:23,586 - #27 print
+INFO  15:35:23,586 - #12 (
+INFO  15:35:23,586 - #28 bodovi
+INFO  15:35:23,587 - #13 )
+INFO  15:35:23,587 - #6 ;
+INFO  15:35:23,587 - #26 read
+INFO  15:35:23,587 - #12 (
+INFO  15:35:23,587 - #28 bodovi
+INFO  15:35:23,587 - #13 )
+INFO  15:35:23,587 - #6 ;
+INFO  15:35:23,587 - #4 }
+INFO  15:35:23,588 - #4 }
+INFO  15:35:23,596 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        VarDeclListMore(
+          NoVarDeclList(
+          ) [NoVarDeclList]
+          VarDeclLocal(
+            Type(
+             int
+            ) [Type]
+            VarDeclarationListLocalOne(
+              VarDeclListLocalOne(
+                VarIdentLocal(
+                 bodovi
+                  OptBracketsNo(
+                  ) [OptBracketsNo]
+                ) [VarIdentLocal]
+              ) [VarDeclListLocalOne]
+            ) [VarDeclarationListLocalOne]
+          ) [VarDeclLocal]
+        ) [VarDeclListMore]
+        VarDeclLocal(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               niz
+                OptBracketsYes(
+                ) [OptBracketsYes]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      StatementsList(
+        StatementsList(
+          StatementsList(
+            StatementsList(
+              NoStatementsList(
+              ) [NoStatementsList]
+              DesignatorStmt(
+                DesignatorAssign(
+                  Designator(
+                   bodovi
+                    OptExprNo(
+                    ) [OptExprNo]
+                  ) [Designator]
+                  Expression(
+                    Expr1AddopTerm(
+                      OptMinusNo(
+                      ) [OptMinusNo]
+                      AddopTermListOne(
+                        TermFactorMulop(
+                          MulopFactorListOne(
+                            FactorNumConst(
+                             2
+                            ) [FactorNumConst]
+                          ) [MulopFactorListOne]
+                        ) [TermFactorMulop]
+                      ) [AddopTermListOne]
+                    ) [Expr1AddopTerm]
+                  ) [Expression]
+                ) [DesignatorAssign]
+              ) [DesignatorStmt]
+            ) [StatementsList]
+            PrintStatement(
+              Expression(
+                Expr1AddopTerm(
+                  OptMinusNo(
+                  ) [OptMinusNo]
+                  AddopTermListOne(
+                    TermFactorMulop(
+                      MulopFactorListOne(
+                        FactorNumConst(
+                         1
+                        ) [FactorNumConst]
+                      ) [MulopFactorListOne]
+                    ) [TermFactorMulop]
+                  ) [AddopTermListOne]
+                ) [Expr1AddopTerm]
+              ) [Expression]
+              OptNumConstNo(
+              ) [OptNumConstNo]
+            ) [PrintStatement]
+          ) [StatementsList]
+          PrintStatement(
+            Expression(
+              Expr1AddopTerm(
+                OptMinusNo(
+                ) [OptMinusNo]
+                AddopTermListOne(
+                  TermFactorMulop(
+                    MulopFactorListOne(
+                      FactorDesignator(
+                        Designator(
+                         bodovi
+                          OptExprNo(
+                          ) [OptExprNo]
+                        ) [Designator]
+                      ) [FactorDesignator]
+                    ) [MulopFactorListOne]
+                  ) [TermFactorMulop]
+                ) [AddopTermListOne]
+              ) [Expr1AddopTerm]
+            ) [Expression]
+            OptNumConstNo(
+            ) [OptNumConstNo]
+          ) [PrintStatement]
+        ) [StatementsList]
+        ReadStatement(
+          Designator(
+           bodovi
+            OptExprNo(
+            ) [OptExprNo]
+          ) [Designator]
+        ) [ReadStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  15:35:23,596 - ===================================
+INFO  15:35:23,601 - Obradjuje se funkcija main tip funkcije: VOID
+INFO  15:35:23,601 - TIP JE: int
+INFO  15:35:23,601 - Deklarisana lokalna promenljiva sa imenom: bodovina liniji 8
+INFO  15:35:23,601 - TIP JE: int
+INFO  15:35:23,601 - Deklarisan lokalni niz sa imenom: nizna liniji 9
+INFO  15:35:23,602 - Pristup lokalnoj promenljivoj: bodovi na liniji 11
+INFO  15:35:23,604 - Pristup lokalnoj promenljivoj: bodovi na liniji 13
+INFO  15:35:23,604 - Pristup lokalnoj promenljivoj: bodovi na liniji 14
+INFO  15:35:23,605 -  Print count calls = 0
+INFO  15:35:23,605 -  Deklarisanih promenljivih ima = 0
+INFO  15:35:23,605 - ===================================
+INFO  15:35:23,610 - Parsiranje uspesno zavrseno!

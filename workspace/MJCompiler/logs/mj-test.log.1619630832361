@@ -1,0 +1,95 @@
+INFO  14:53:29,353 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  14:53:29,396 - #2 program
+INFO  14:53:29,396 - #28 test301
+INFO  14:53:29,396 - #3 {
+INFO  14:53:29,398 - #14 void
+INFO  14:53:29,398 - #28 main
+INFO  14:53:29,398 - #12 (
+INFO  14:53:29,399 - #13 )
+INFO  14:53:29,399 - #3 {
+INFO  14:53:29,400 - #27 print
+INFO  14:53:29,400 - #12 (
+INFO  14:53:29,400 - #29 1
+INFO  14:53:29,401 - #13 )
+INFO  14:53:29,402 - #6 ;
+INFO  14:53:29,402 - #27 print
+INFO  14:53:29,403 - #12 (
+INFO  14:53:29,403 - #29 2
+INFO  14:53:29,403 - #13 )
+INFO  14:53:29,403 - #6 ;
+INFO  14:53:29,403 - #4 }
+INFO  14:53:29,403 - #4 }
+INFO  14:53:29,411 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      StatementsList(
+        StatementsList(
+          NoStatementsList(
+          ) [NoStatementsList]
+          PrintStatement(
+            Expression(
+              Expr1AddopTerm(
+                OptMinusNo(
+                ) [OptMinusNo]
+                AddopTermListOne(
+                  TermFactorMulop(
+                    MulopFactorListOne(
+                      FactorNumConst(
+                       1
+                      ) [FactorNumConst]
+                    ) [MulopFactorListOne]
+                  ) [TermFactorMulop]
+                ) [AddopTermListOne]
+              ) [Expr1AddopTerm]
+            ) [Expression]
+            OptNumConstNo(
+            ) [OptNumConstNo]
+          ) [PrintStatement]
+        ) [StatementsList]
+        PrintStatement(
+          Expression(
+            Expr1AddopTerm(
+              OptMinusNo(
+              ) [OptMinusNo]
+              AddopTermListOne(
+                TermFactorMulop(
+                  MulopFactorListOne(
+                    FactorNumConst(
+                     2
+                    ) [FactorNumConst]
+                  ) [MulopFactorListOne]
+                ) [TermFactorMulop]
+              ) [AddopTermListOne]
+            ) [Expr1AddopTerm]
+          ) [Expression]
+          OptNumConstNo(
+          ) [OptNumConstNo]
+        ) [PrintStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  14:53:29,412 - ===================================
+INFO  14:53:29,415 - Obradjuje se funkcija main tip funkcije: VOID
+INFO  14:53:29,416 -  Print count calls = 0
+INFO  14:53:29,416 -  Deklarisanih promenljivih ima = 0
+INFO  14:53:29,416 - ===================================
+INFO  14:53:29,419 - Parsiranje uspesno zavrseno!

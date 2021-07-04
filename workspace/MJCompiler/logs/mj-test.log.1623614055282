@@ -1,0 +1,136 @@
+INFO  21:53:50,970 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  21:53:50,970 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  21:53:51,019 - #2 program
+INFO  21:53:51,019 - #31 test301
+INFO  21:53:51,019 - #3 {
+INFO  21:53:51,020 - #14 void
+INFO  21:53:51,020 - #31 main
+INFO  21:53:51,020 - #12 (
+INFO  21:53:51,020 - #13 )
+INFO  21:53:51,021 - #31 int
+INFO  21:53:51,021 - #31 b
+INFO  21:53:51,022 - #6 ;
+INFO  21:53:51,023 - #3 {
+INFO  21:53:51,023 - #31 b
+INFO  21:53:51,024 - #8 =
+INFO  21:53:51,024 - #57 |
+INFO  21:53:51,024 - #32 54
+INFO  21:53:51,024 - #16 :
+INFO  21:53:51,025 - #32 54
+INFO  21:53:51,025 - #16 :
+INFO  21:53:51,025 - #32 54
+INFO  21:53:51,054 - #57 |
+INFO  21:53:51,054 - #6 ;
+INFO  21:53:51,054 - #27 print
+INFO  21:53:51,055 - #12 (
+INFO  21:53:51,057 - #31 b
+INFO  21:53:51,061 - #13 )
+INFO  21:53:51,064 - #6 ;
+INFO  21:53:51,064 - #4 }
+INFO  21:53:51,064 - #4 }
+INFO  21:53:51,119 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        NoVarDeclList(
+        ) [NoVarDeclList]
+        VarDeclLocal(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               b
+                OptBracketsNo(
+                ) [OptBracketsNo]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      StatementsList(
+        StatementsList(
+          NoStatementsList(
+          ) [NoStatementsList]
+          DesignatorStmt(
+            DesignatorAssign(
+              Designator(
+               b
+                OptExprNo(
+                ) [OptExprNo]
+              ) [Designator]
+              Expression(
+                IzrazSaCrtom(
+                  NumConstant(
+                   54
+                  ) [NumConstant]
+                  NumConstant(
+                   54
+                  ) [NumConstant]
+                  NumConstant(
+                   54
+                  ) [NumConstant]
+                ) [IzrazSaCrtom]
+              ) [Expression]
+            ) [DesignatorAssign]
+          ) [DesignatorStmt]
+        ) [StatementsList]
+        PrintStatement(
+          Print(
+          ) [Print]
+          Expression(
+            Expr1AddopTerm(
+              OptMinusNo(
+              ) [OptMinusNo]
+              AddopTermListOne(
+                TermFactorMulop(
+                  MulopFactorListOne(
+                    FactorDesignator(
+                      Designator(
+                       b
+                        OptExprNo(
+                        ) [OptExprNo]
+                      ) [Designator]
+                      OptParsNo(
+                      ) [OptParsNo]
+                    ) [FactorDesignator]
+                  ) [MulopFactorListOne]
+                ) [TermFactorMulop]
+              ) [AddopTermListOne]
+            ) [Expr1AddopTerm]
+          ) [Expression]
+          OptNumConstNo(
+          ) [OptNumConstNo]
+        ) [PrintStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  21:53:51,120 - ===================================
+INFO  21:53:51,131 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  21:53:51,131 - TIP JE: int
+INFO  21:53:51,132 - Deklarisana lokalna promenljiva bna liniji 8 : Var b: int, 0, 1 
+INFO  21:53:51,132 - Pristup lokalnoj promenljivoj: b na liniji 11[ Var b: int, 0, 1  ]
+INFO  21:53:51,132 - Pristup lokalnoj promenljivoj: b na liniji 12[ Var b: int, 0, 1  ]
+INFO  21:53:51,134 -  Print count calls = 1
+INFO  21:53:51,134 -  Deklarisanih promenljivih ima = 10
+INFO  21:53:51,134 - ===================================
+INFO  21:53:51,144 - Parsiranje uspesno zavrseno!

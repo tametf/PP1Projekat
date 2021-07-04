@@ -1,0 +1,131 @@
+INFO  22:33:10,107 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  22:33:10,153 - #2 program
+INFO  22:33:10,153 - #31 test302
+INFO  22:33:10,153 - #3 {
+INFO  22:33:10,154 - #14 void
+INFO  22:33:10,155 - #31 main
+INFO  22:33:10,156 - #12 (
+INFO  22:33:10,156 - #13 )
+INFO  22:33:10,156 - #3 {
+INFO  22:33:10,157 - #27 print
+INFO  22:33:10,157 - #12 (
+INFO  22:33:10,159 - #29 ord
+ERROR 22:33:10,159 - 
+Sintaksna greska na liniji 11
+INFO  22:33:10,159 - #12 (
+INFO  22:33:10,159 - #34 'A'
+INFO  22:33:10,159 - #13 )
+INFO  22:33:10,160 - #13 )
+INFO  22:33:10,161 - #6 ;
+INFO  22:33:10,161 - #27 print
+INFO  22:33:10,161 - #12 (
+INFO  22:33:10,161 - #31 eol
+ERROR 22:33:10,161 - Greska2 Izvrsen oporavak do ; u liniji1
+INFO  22:33:10,165 - #13 )
+INFO  22:33:10,167 - #6 ;
+INFO  22:33:10,167 - #27 print
+INFO  22:33:10,168 - #12 (
+INFO  22:33:10,168 - #31 eol
+INFO  22:33:10,168 - #13 )
+INFO  22:33:10,168 - #6 ;
+INFO  22:33:10,168 - #4 }
+INFO  22:33:10,168 - #4 }
+INFO  22:33:10,174 - Program(
+  ProgName(
+   test302
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      StatementsList(
+        StatementsList(
+          StatementsList(
+            NoStatementsList(
+            ) [NoStatementsList]
+            DesignatorStmt(
+              ERROR2(
+              ) [ERROR2]
+            ) [DesignatorStmt]
+          ) [StatementsList]
+          PrintStatement(
+            Print(
+            ) [Print]
+            Expression(
+              Expr1AddopTerm(
+                OptMinusNo(
+                ) [OptMinusNo]
+                AddopTermListOne(
+                  TermFactorMulop(
+                    MulopFactorListOne(
+                      FactorDesignator(
+                        Designator(
+                         eol
+                          OptExprNo(
+                          ) [OptExprNo]
+                        ) [Designator]
+                        OptParsNo(
+                        ) [OptParsNo]
+                      ) [FactorDesignator]
+                    ) [MulopFactorListOne]
+                  ) [TermFactorMulop]
+                ) [AddopTermListOne]
+              ) [Expr1AddopTerm]
+            ) [Expression]
+            OptNumConstNo(
+            ) [OptNumConstNo]
+          ) [PrintStatement]
+        ) [StatementsList]
+        PrintStatement(
+          Print(
+          ) [Print]
+          Expression(
+            Expr1AddopTerm(
+              OptMinusNo(
+              ) [OptMinusNo]
+              AddopTermListOne(
+                TermFactorMulop(
+                  MulopFactorListOne(
+                    FactorDesignator(
+                      Designator(
+                       eol
+                        OptExprNo(
+                        ) [OptExprNo]
+                      ) [Designator]
+                      OptParsNo(
+                      ) [OptParsNo]
+                    ) [FactorDesignator]
+                  ) [MulopFactorListOne]
+                ) [TermFactorMulop]
+              ) [AddopTermListOne]
+            ) [Expr1AddopTerm]
+          ) [Expression]
+          OptNumConstNo(
+          ) [OptNumConstNo]
+        ) [PrintStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  22:33:10,175 - ===================================
+INFO  22:33:10,177 - Obradjuje se funkcija main tip funkcije: VOID
+INFO  22:33:10,177 - Pristup konstanti: eol na liniji 12
+INFO  22:33:10,178 - Pristup konstanti: eol na liniji 13
+INFO  22:33:10,178 -  Print count calls = 2
+INFO  22:33:10,178 -  Deklarisanih promenljivih ima = 00
+INFO  22:33:10,178 - ===================================
+ERROR 22:33:10,179 - GRESKA!
+ERROR 22:33:10,179 - Parsiranje NIJE uspesno zavrseno!

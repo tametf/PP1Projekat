@@ -1,0 +1,46 @@
+INFO  15:53:07,137 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  15:53:07,172 - #2 program
+INFO  15:53:07,173 - #28 test301
+INFO  15:53:07,174 - #3 {
+INFO  15:53:07,174 - #14 void
+INFO  15:53:07,174 - #28 maindd
+INFO  15:53:07,174 - #12 (
+INFO  15:53:07,174 - #13 )
+INFO  15:53:07,175 - #3 {
+INFO  15:53:07,176 - #4 }
+INFO  15:53:07,177 - #4 }
+INFO  15:53:07,184 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       maindd
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      NoStatementsList(
+      ) [NoStatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  15:53:07,185 - ===================================
+INFO  15:53:07,187 - Definisana funkcija programa sa imenom maindd na liniji 5
+ERROR 15:53:07,187 - Greska: program mora da sadrzi main metodu
+ERROR 15:53:07,188 - Program nema MAIN funkciju! Greska na liniji2
+INFO  15:53:07,189 -  Print count calls = 0
+INFO  15:53:07,189 -  Deklarisanih promenljivih ima = 0
+INFO  15:53:07,189 - ===================================
+ERROR 15:53:07,189 - GRESKA!
+ERROR 15:53:07,189 - Parsiranje NIJE uspesno zavrseno!

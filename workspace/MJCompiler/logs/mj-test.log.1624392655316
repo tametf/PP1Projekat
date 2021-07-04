@@ -1,0 +1,81 @@
+INFO  22:10:37,358 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  22:10:37,359 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  22:10:37,401 - #2 program
+INFO  22:10:37,401 - #31 a
+INFO  22:10:37,401 - #3 {
+INFO  22:10:37,402 - #14 void
+INFO  22:10:37,403 - #31 main
+INFO  22:10:37,403 - #12 (
+INFO  22:10:37,403 - #13 )
+INFO  22:10:37,403 - #3 {
+INFO  22:10:37,404 - #31 bool
+INFO  22:10:37,404 - #31 a
+ERROR 22:10:37,404 - 
+Sintaksna greska na liniji 5
+INFO  22:10:37,404 - #6 ;
+INFO  22:10:37,404 - #26 read
+INFO  22:10:37,404 - #12 (
+INFO  22:10:37,405 - #31 a
+ERROR 22:10:37,405 - Greska pri dodeli vrednosti 
+INFO  22:10:37,407 - #13 )
+INFO  22:10:37,407 - #6 ;
+INFO  22:10:37,408 - #4 }
+INFO  22:10:37,408 - #4 }
+INFO  22:10:37,423 - Program(
+  ProgName(
+   a
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  Lbrace(
+  ) [Lbrace]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDeclaration(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      Lbrace(
+      ) [Lbrace]
+      StatementsList(
+        StatementsList(
+          NoStatementsList(
+          ) [NoStatementsList]
+          DesignatorStmt(
+            ERROR2(
+              null
+            ) [ERROR2]
+          ) [DesignatorStmt]
+        ) [StatementsList]
+        ReadStatement(
+          Read(
+          ) [Read]
+          Designator(
+           a
+            OptExprNo(
+            ) [OptExprNo]
+          ) [Designator]
+        ) [ReadStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDeclaration]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  22:10:37,423 - ===================================
+INFO  22:10:37,427 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+ERROR 22:10:37,428 - Problem, neispravna read funkcija na liniji 6
+INFO  22:10:37,431 -  Print count calls = 0
+INFO  22:10:37,431 -  Deklarisanih promenljivih ima = 00
+INFO  22:10:37,431 - ===================================
+ERROR 22:10:37,431 - GRESKA!
+ERROR 22:10:37,431 - GRESKAaaa!
+ERROR 22:10:37,431 - Parsiranje NIJE uspesno zavrseno!

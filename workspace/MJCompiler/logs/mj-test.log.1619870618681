@@ -1,0 +1,92 @@
+INFO  14:02:53,898 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  14:02:53,931 - #2 program
+INFO  14:02:53,931 - #28 test301
+INFO  14:02:53,931 - #3 {
+INFO  14:02:53,932 - #14 void
+INFO  14:02:53,932 - #28 main
+INFO  14:02:53,932 - #12 (
+INFO  14:02:53,932 - #13 )
+INFO  14:02:53,933 - #28 int
+INFO  14:02:53,933 - #28 niz
+INFO  14:02:53,934 - #10 [
+INFO  14:02:53,934 - #11 ]
+INFO  14:02:53,934 - #6 ;
+INFO  14:02:53,935 - #3 {
+INFO  14:02:53,936 - #27 print
+INFO  14:02:53,936 - #12 (
+INFO  14:02:53,936 - #29 2
+INFO  14:02:53,937 - #13 )
+INFO  14:02:53,938 - #6 ;
+INFO  14:02:53,938 - #4 }
+INFO  14:02:53,938 - #4 }
+INFO  14:02:53,945 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        NoVarDeclList(
+        ) [NoVarDeclList]
+        VarDeclLocal(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               niz
+                OptBracketsYes(
+                ) [OptBracketsYes]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      StatementsList(
+        NoStatementsList(
+        ) [NoStatementsList]
+        PrintStatement(
+          Expression(
+            Expr1AddopTerm(
+              OptMinusNo(
+              ) [OptMinusNo]
+              AddopTermListOne(
+                TermFactorMulop(
+                  MulopFactorListOne(
+                    FactorNumConst(
+                     2
+                    ) [FactorNumConst]
+                  ) [MulopFactorListOne]
+                ) [TermFactorMulop]
+              ) [AddopTermListOne]
+            ) [Expr1AddopTerm]
+          ) [Expression]
+          OptNumConstNo(
+          ) [OptNumConstNo]
+        ) [PrintStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  14:02:53,946 - ===================================
+INFO  14:02:53,949 - Obradjuje se funkcija main tip funkcije: VOID
+INFO  14:02:53,949 - TIP JE: int
+INFO  14:02:53,949 - Deklarisan lokalni niz sa imenom: nizna liniji 9
+INFO  14:02:53,950 -  Print count calls = 0
+INFO  14:02:53,950 -  Deklarisanih promenljivih ima = 0
+INFO  14:02:53,950 - ===================================
+INFO  14:02:53,961 - Parsiranje uspesno zavrseno!

@@ -1,0 +1,44 @@
+INFO  15:44:08,288 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  15:44:08,347 - #2 program
+INFO  15:44:08,347 - #28 test301
+INFO  15:44:08,347 - #3 {
+INFO  15:44:08,348 - #14 void
+INFO  15:44:08,349 - #28 main
+INFO  15:44:08,349 - #12 (
+INFO  15:44:08,349 - #13 )
+INFO  15:44:08,350 - #3 {
+INFO  15:44:08,350 - #4 }
+INFO  15:44:08,351 - #4 }
+INFO  15:44:08,356 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      NoStatementsList(
+      ) [NoStatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  15:44:08,356 - ===================================
+ERROR 15:44:08,358 - Program nema MAIN funkciju! Greska na liniji2
+INFO  15:44:08,359 -  Print count calls = 0
+INFO  15:44:08,359 -  Deklarisanih promenljivih ima = 0
+INFO  15:44:08,359 - ===================================
+ERROR 15:44:08,360 - GRESKA!
+ERROR 15:44:08,360 - Parsiranje NIJE uspesno zavrseno!

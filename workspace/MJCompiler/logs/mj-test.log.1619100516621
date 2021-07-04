@@ -1,0 +1,96 @@
+INFO  16:08:02,661 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  16:08:02,698 - #2 program
+INFO  16:08:02,698 - #28 test301
+INFO  16:08:02,698 - #28 int
+INFO  16:08:02,699 - #28 x
+INFO  16:08:02,700 - #6 ;
+INFO  16:08:02,702 - #3 {
+INFO  16:08:02,703 - #14 void
+INFO  16:08:02,704 - #28 main
+INFO  16:08:02,704 - #12 (
+INFO  16:08:02,704 - #13 )
+INFO  16:08:02,705 - #28 int
+INFO  16:08:02,705 - #28 x
+INFO  16:08:02,705 - #6 ;
+INFO  16:08:02,706 - #3 {
+INFO  16:08:02,707 - #28 int
+INFO  16:08:02,708 - #28 x
+ERROR 16:08:02,708 - 
+Sintaksna greska na liniji 8
+INFO  16:08:02,708 - #6 ;
+INFO  16:08:02,708 - #4 }
+INFO  16:08:02,708 - #4 }
+ERROR 16:08:02,709 - Izvrsen oporavak do ; u liniji8
+INFO  16:08:02,718 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  VariableDeclList(
+    NoDeclList(
+    ) [NoDeclList]
+    VarDecl(
+      Type(
+       int
+      ) [Type]
+      VarDeclarationListOne(
+        VarDeclListOne(
+          VarIdent(
+           x
+            OptBracketsNo(
+            ) [OptBracketsNo]
+          ) [VarIdent]
+        ) [VarDeclListOne]
+      ) [VarDeclarationListOne]
+    ) [VarDecl]
+  ) [VariableDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        NoVarDeclList(
+        ) [NoVarDeclList]
+        VarDeclLocal(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               x
+                OptBracketsNo(
+                ) [OptBracketsNo]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      StatementsList(
+        NoStatementsList(
+        ) [NoStatementsList]
+        StatementDerived1(
+        ) [StatementDerived1]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  16:08:02,718 - ===================================
+INFO  16:08:02,721 - TIP JE: int
+INFO  16:08:02,721 - Deklarisana globalna promenljiva sa imenom: x na liniji 3
+INFO  16:08:02,722 - Definisana funkcija programa sa imenom main na liniji 5
+INFO  16:08:02,722 - TIP JE: int
+INFO  16:08:02,722 - Deklarisana lokalna promenljiva sa imenom: xna liniji 6
+INFO  16:08:02,722 -  Print count calls = 0
+INFO  16:08:02,722 -  Deklarisanih promenljivih ima = 0
+INFO  16:08:02,722 - ===================================
+ERROR 16:08:02,723 - GRESKA!
+ERROR 16:08:02,723 - Parsiranje NIJE uspesno zavrseno!

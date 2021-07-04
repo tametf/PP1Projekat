@@ -1,0 +1,89 @@
+INFO  19:33:34,234 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  19:33:34,270 - #2 program
+INFO  19:33:34,270 - #28 test301
+INFO  19:33:34,270 - #28 int
+INFO  19:33:34,272 - #28 niz
+INFO  19:33:34,273 - #10 [
+INFO  19:33:34,274 - #11 ]
+INFO  19:33:34,274 - #6 ;
+INFO  19:33:34,277 - #28 char
+INFO  19:33:34,278 - #28 nizch
+INFO  19:33:34,278 - #10 [
+INFO  19:33:34,278 - #11 ]
+INFO  19:33:34,278 - #6 ;
+INFO  19:33:34,279 - #3 {
+INFO  19:33:34,279 - #14 void
+INFO  19:33:34,280 - #28 main
+INFO  19:33:34,280 - #12 (
+INFO  19:33:34,280 - #13 )
+INFO  19:33:34,281 - #3 {
+INFO  19:33:34,282 - #4 }
+INFO  19:33:34,283 - #4 }
+INFO  19:33:34,293 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  VariableDeclList(
+    VariableDeclList(
+      NoDeclList(
+      ) [NoDeclList]
+      VarDecl(
+        Type(
+         int
+        ) [Type]
+        VarDeclarationListOne(
+          VarDeclListOne(
+            VarIdent(
+             niz
+              OptBracketsYes(
+              ) [OptBracketsYes]
+            ) [VarIdent]
+          ) [VarDeclListOne]
+        ) [VarDeclarationListOne]
+      ) [VarDecl]
+    ) [VariableDeclList]
+    VarDecl(
+      Type(
+       char
+      ) [Type]
+      VarDeclarationListOne(
+        VarDeclListOne(
+          VarIdent(
+           nizch
+            OptBracketsYes(
+            ) [OptBracketsYes]
+          ) [VarIdent]
+        ) [VarDeclListOne]
+      ) [VarDeclarationListOne]
+    ) [VarDecl]
+  ) [VariableDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      NoStatementsList(
+      ) [NoStatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  19:33:34,297 - ===================================
+INFO  19:33:34,300 - Deklarisan globalni niz sa imenom: nizna liniji 4
+INFO  19:33:34,301 - Deklarisan globalni niz sa imenom: nizchna liniji 5
+INFO  19:33:34,301 - Definisana funkcija programa sa imenom main na liniji 8
+ERROR 19:33:34,301 - Program nema MAIN funkciju! Greska na liniji2
+INFO  19:33:34,301 -  Print count calls = 0
+INFO  19:33:34,301 -  Deklarisanih promenljivih ima = 2
+INFO  19:33:34,301 - ===================================
+ERROR 19:33:34,302 - GRESKA!
+ERROR 19:33:34,302 - Parsiranje NIJE uspesno zavrseno!

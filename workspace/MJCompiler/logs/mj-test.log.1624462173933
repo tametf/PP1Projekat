@@ -1,0 +1,127 @@
+INFO  17:28:59,291 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  17:28:59,291 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  17:28:59,334 - #2 program
+INFO  17:28:59,334 - #31 a
+INFO  17:28:59,334 - #3 {
+INFO  17:28:59,335 - #14 void
+INFO  17:28:59,336 - #31 main
+INFO  17:28:59,336 - #12 (
+INFO  17:28:59,336 - #13 )
+INFO  17:28:59,336 - #31 char
+INFO  17:28:59,337 - #31 slovo
+INFO  17:28:59,337 - #6 ;
+INFO  17:28:59,338 - #3 {
+INFO  17:28:59,339 - #31 slovo
+INFO  17:28:59,339 - #8 =
+INFO  17:28:59,340 - #10 [
+INFO  17:28:59,340 - #34 'a'
+INFO  17:28:59,340 - #55 #
+INFO  17:28:59,341 - #32 5
+INFO  17:28:59,341 - #11 ]
+INFO  17:28:59,341 - #6 ;
+INFO  17:28:59,342 - #4 }
+INFO  17:28:59,343 - #4 }
+INFO  17:28:59,356 - Program(
+  ProgName(
+   a
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  Lbrace(
+  ) [Lbrace]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDeclaration(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        NoVarDeclList(
+        ) [NoVarDeclList]
+        VarDeclLocal(
+          Type(
+           char
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               slovo
+                OptBracketsNo(
+                ) [OptBracketsNo]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      Lbrace(
+      ) [Lbrace]
+      StatementsList(
+        NoStatementsList(
+        ) [NoStatementsList]
+        DesignatorStmt(
+          DesignatorAssign(
+            Designator(
+             slovo
+              OptExprNo(
+              ) [OptExprNo]
+            ) [Designator]
+            Expression(
+              ExprHash(
+                Expression(
+                  Expr1AddopTerm(
+                    OptMinusNo(
+                    ) [OptMinusNo]
+                    AddopTermListOne(
+                      TermFactorMulop(
+                        MulopFactorListOne(
+                          Cnst(
+                            CharConstant(
+                             'a'
+                            ) [CharConstant]
+                          ) [Cnst]
+                        ) [MulopFactorListOne]
+                      ) [TermFactorMulop]
+                    ) [AddopTermListOne]
+                  ) [Expr1AddopTerm]
+                ) [Expression]
+                Expression(
+                  Expr1AddopTerm(
+                    OptMinusNo(
+                    ) [OptMinusNo]
+                    AddopTermListOne(
+                      TermFactorMulop(
+                        MulopFactorListOne(
+                          Cnst(
+                            NumConstant(
+                             5
+                            ) [NumConstant]
+                          ) [Cnst]
+                        ) [MulopFactorListOne]
+                      ) [TermFactorMulop]
+                    ) [AddopTermListOne]
+                  ) [Expr1AddopTerm]
+                ) [Expression]
+              ) [ExprHash]
+            ) [Expression]
+          ) [DesignatorAssign]
+        ) [DesignatorStmt]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDeclaration]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  17:28:59,356 - ===================================
+INFO  17:28:59,361 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  17:28:59,361 - Deklarisana lokalna promenljiva slovona liniji 4 : Var slovo: char, 0, 1 
+INFO  17:28:59,361 - Pristup lokalnoj promenljivoj: slovo na liniji 6[ Var slovo: char, 0, 1  ]
+INFO  17:28:59,362 -  Print count calls = 0
+INFO  17:28:59,362 -  Deklarisanih promenljivih ima = 10
+INFO  17:28:59,362 - ===================================
+INFO  17:28:59,366 - Parsiranje uspesno zavrseno!

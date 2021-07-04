@@ -1,0 +1,186 @@
+INFO  17:19:57,586 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  17:19:57,587 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  17:19:57,668 - #2 program
+INFO  17:19:57,668 - #31 a
+INFO  17:19:57,668 - #3 {
+INFO  17:19:57,670 - #14 void
+INFO  17:19:57,672 - #31 main
+INFO  17:19:57,672 - #12 (
+INFO  17:19:57,672 - #13 )
+INFO  17:19:57,673 - #3 {
+INFO  17:19:57,674 - #36 if
+INFO  17:19:57,675 - #12 (
+INFO  17:19:57,676 - #34 'a'
+INFO  17:19:57,679 - #41 ==
+INFO  17:19:57,679 - #32 5
+INFO  17:19:57,680 - #13 )
+INFO  17:19:57,681 - #27 print
+INFO  17:19:57,682 - #12 (
+INFO  17:19:57,683 - #32 5
+INFO  17:19:57,683 - #13 )
+INFO  17:19:57,684 - #6 ;
+INFO  17:19:57,684 - #35 else
+INFO  17:19:57,685 - #27 print
+INFO  17:19:57,686 - #12 (
+INFO  17:19:57,686 - #32 4
+INFO  17:19:57,687 - #13 )
+INFO  17:19:57,687 - #6 ;
+INFO  17:19:57,687 - #4 }
+INFO  17:19:57,687 - #4 }
+INFO  17:19:57,713 - Program(
+  ProgName(
+   a
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  Lbrace(
+  ) [Lbrace]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDeclaration(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      Lbrace(
+      ) [Lbrace]
+      StatementsList(
+        NoStatementsList(
+        ) [NoStatementsList]
+        IfElseStatement(
+          IfCondition(
+            Lparen(
+            ) [Lparen]
+            Cond(
+            ) [Cond]
+            ConditionOne(
+              CondTermOne(
+                CondFactExprRelopExpr(
+                  Expression(
+                    Expr1AddopTerm(
+                      Pom(
+                      ) [Pom]
+                      OptMinusNo(
+                      ) [OptMinusNo]
+                      AddopTermListOne(
+                        TermFactorMulop(
+                          MulopFactorListOne(
+                            Cnst(
+                              CharConstant(
+                               'a'
+                              ) [CharConstant]
+                            ) [Cnst]
+                          ) [MulopFactorListOne]
+                        ) [TermFactorMulop]
+                      ) [AddopTermListOne]
+                      Pom(
+                      ) [Pom]
+                    ) [Expr1AddopTerm]
+                  ) [Expression]
+                  RelopEqual(
+                  ) [RelopEqual]
+                  Expression(
+                    Expr1AddopTerm(
+                      Pom(
+                      ) [Pom]
+                      OptMinusNo(
+                      ) [OptMinusNo]
+                      AddopTermListOne(
+                        TermFactorMulop(
+                          MulopFactorListOne(
+                            Cnst(
+                              NumConstant(
+                               5
+                              ) [NumConstant]
+                            ) [Cnst]
+                          ) [MulopFactorListOne]
+                        ) [TermFactorMulop]
+                      ) [AddopTermListOne]
+                      Pom(
+                      ) [Pom]
+                    ) [Expr1AddopTerm]
+                  ) [Expression]
+                ) [CondFactExprRelopExpr]
+              ) [CondTermOne]
+            ) [ConditionOne]
+            Rparen(
+            ) [Rparen]
+          ) [IfCondition]
+          PrintStatement(
+            Print(
+            ) [Print]
+            Expression(
+              Expr1AddopTerm(
+                Pom(
+                ) [Pom]
+                OptMinusNo(
+                ) [OptMinusNo]
+                AddopTermListOne(
+                  TermFactorMulop(
+                    MulopFactorListOne(
+                      Cnst(
+                        NumConstant(
+                         5
+                        ) [NumConstant]
+                      ) [Cnst]
+                    ) [MulopFactorListOne]
+                  ) [TermFactorMulop]
+                ) [AddopTermListOne]
+                Pom(
+                ) [Pom]
+              ) [Expr1AddopTerm]
+            ) [Expression]
+            OptNumConstNo(
+            ) [OptNumConstNo]
+          ) [PrintStatement]
+          Else(
+          ) [Else]
+          PrintStatement(
+            Print(
+            ) [Print]
+            Expression(
+              Expr1AddopTerm(
+                Pom(
+                ) [Pom]
+                OptMinusNo(
+                ) [OptMinusNo]
+                AddopTermListOne(
+                  TermFactorMulop(
+                    MulopFactorListOne(
+                      Cnst(
+                        NumConstant(
+                         4
+                        ) [NumConstant]
+                      ) [Cnst]
+                    ) [MulopFactorListOne]
+                  ) [TermFactorMulop]
+                ) [AddopTermListOne]
+                Pom(
+                ) [Pom]
+              ) [Expr1AddopTerm]
+            ) [Expression]
+            OptNumConstNo(
+            ) [OptNumConstNo]
+          ) [PrintStatement]
+        ) [IfElseStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDeclaration]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  17:19:57,714 - ===================================
+INFO  17:19:57,721 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+ERROR 17:19:57,722 - Neodgovarajuci tip na liniji 4, mogu se porediti samo izrazi istog tipa!
+INFO  17:19:57,730 -  Print count calls = 2
+INFO  17:19:57,730 -  Deklarisanih promenljivih ima = 00
+INFO  17:19:57,730 - ===================================
+ERROR 17:19:57,730 - GRESKAaaa!
+ERROR 17:19:57,730 - Parsiranje NIJE uspesno zavrseno!

@@ -1,0 +1,77 @@
+INFO  16:10:03,292 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  16:10:03,328 - #2 program
+INFO  16:10:03,329 - #28 test301
+INFO  16:10:03,329 - #28 int
+INFO  16:10:03,329 - #28 x
+INFO  16:10:03,330 - #6 ;
+INFO  16:10:03,332 - #3 {
+INFO  16:10:03,332 - #14 void
+INFO  16:10:03,333 - #28 main
+INFO  16:10:03,333 - #12 (
+INFO  16:10:03,333 - #13 )
+INFO  16:10:03,334 - #3 {
+INFO  16:10:03,335 - #28 int
+INFO  16:10:03,335 - #28 y
+ERROR 16:10:03,335 - 
+Sintaksna greska na liniji 7
+INFO  16:10:03,335 - #8 =
+INFO  16:10:03,336 - #29 5
+INFO  16:10:03,336 - #6 ;
+INFO  16:10:03,336 - #4 }
+INFO  16:10:03,336 - #4 }
+ERROR 16:10:03,337 - Izvrsen oporavak do ; u liniji7
+INFO  16:10:03,343 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  VariableDeclList(
+    NoDeclList(
+    ) [NoDeclList]
+    VarDecl(
+      Type(
+       int
+      ) [Type]
+      VarDeclarationListOne(
+        VarDeclListOne(
+          VarIdent(
+           x
+            OptBracketsNo(
+            ) [OptBracketsNo]
+          ) [VarIdent]
+        ) [VarDeclListOne]
+      ) [VarDeclarationListOne]
+    ) [VarDecl]
+  ) [VariableDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      StatementsList(
+        NoStatementsList(
+        ) [NoStatementsList]
+        StatementDerived1(
+        ) [StatementDerived1]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  16:10:03,344 - ===================================
+INFO  16:10:03,347 - TIP JE: int
+INFO  16:10:03,347 - Deklarisana globalna promenljiva sa imenom: x na liniji 3
+INFO  16:10:03,347 - Definisana funkcija programa sa imenom main na liniji 5
+INFO  16:10:03,348 -  Print count calls = 0
+INFO  16:10:03,348 -  Deklarisanih promenljivih ima = 0
+INFO  16:10:03,348 - ===================================
+ERROR 16:10:03,350 - GRESKA!
+ERROR 16:10:03,350 - Parsiranje NIJE uspesno zavrseno!

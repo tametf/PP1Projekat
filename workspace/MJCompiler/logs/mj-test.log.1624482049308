@@ -1,0 +1,161 @@
+INFO  22:59:51,351 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  22:59:51,352 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  22:59:51,426 - #2 program
+INFO  22:59:51,426 - #31 a
+INFO  22:59:51,426 - #3 {
+INFO  22:59:51,428 - #14 void
+INFO  22:59:51,430 - #31 main
+INFO  22:59:51,430 - #12 (
+INFO  22:59:51,430 - #13 )
+INFO  22:59:51,431 - #31 char
+INFO  22:59:51,433 - #31 slovo
+INFO  22:59:51,434 - #6 ;
+INFO  22:59:51,436 - #31 char
+INFO  22:59:51,437 - #31 t
+INFO  22:59:51,438 - #6 ;
+INFO  22:59:51,438 - #31 bool
+INFO  22:59:51,438 - #31 tacno
+INFO  22:59:51,438 - #6 ;
+INFO  22:59:51,438 - #3 {
+INFO  22:59:51,438 - #26 read
+INFO  22:59:51,439 - #12 (
+INFO  22:59:51,441 - #31 tacno
+INFO  22:59:51,441 - #13 )
+INFO  22:59:51,443 - #6 ;
+INFO  22:59:51,443 - #27 print
+INFO  22:59:51,443 - #12 (
+INFO  22:59:51,444 - #31 tacno
+INFO  22:59:51,445 - #13 )
+INFO  22:59:51,448 - #6 ;
+INFO  22:59:51,448 - #4 }
+INFO  22:59:51,449 - #4 }
+INFO  22:59:51,468 - Program(
+  ProgName(
+   a
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  Lbrace(
+  ) [Lbrace]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDeclaration(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        VarDeclListMore(
+          VarDeclListMore(
+            NoVarDeclList(
+            ) [NoVarDeclList]
+            VarDeclLocal(
+              Type(
+               char
+              ) [Type]
+              VarDeclarationListLocalOne(
+                VarDeclListLocalOne(
+                  VarIdentLocal(
+                   slovo
+                    OptBracketsNo(
+                    ) [OptBracketsNo]
+                  ) [VarIdentLocal]
+                ) [VarDeclListLocalOne]
+              ) [VarDeclarationListLocalOne]
+            ) [VarDeclLocal]
+          ) [VarDeclListMore]
+          VarDeclLocal(
+            Type(
+             char
+            ) [Type]
+            VarDeclarationListLocalOne(
+              VarDeclListLocalOne(
+                VarIdentLocal(
+                 t
+                  OptBracketsNo(
+                  ) [OptBracketsNo]
+                ) [VarIdentLocal]
+              ) [VarDeclListLocalOne]
+            ) [VarDeclarationListLocalOne]
+          ) [VarDeclLocal]
+        ) [VarDeclListMore]
+        VarDeclLocal(
+          Type(
+           bool
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               tacno
+                OptBracketsNo(
+                ) [OptBracketsNo]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      Lbrace(
+      ) [Lbrace]
+      StatementsList(
+        StatementsList(
+          NoStatementsList(
+          ) [NoStatementsList]
+          ReadStatement(
+            Read(
+            ) [Read]
+            Designator(
+             tacno
+              OptExprNo(
+              ) [OptExprNo]
+            ) [Designator]
+          ) [ReadStatement]
+        ) [StatementsList]
+        PrintStatement(
+          Print(
+          ) [Print]
+          Expression(
+            Expr1AddopTerm(
+              OptMinusNo(
+              ) [OptMinusNo]
+              AddopTermListOne(
+                TermFactorMulop(
+                  MulopFactorListOne(
+                    FactorDesignator(
+                      Designator(
+                       tacno
+                        OptExprNo(
+                        ) [OptExprNo]
+                      ) [Designator]
+                      OptParsNo(
+                      ) [OptParsNo]
+                    ) [FactorDesignator]
+                  ) [MulopFactorListOne]
+                ) [TermFactorMulop]
+              ) [AddopTermListOne]
+            ) [Expr1AddopTerm]
+          ) [Expression]
+          OptNumConstNo(
+          ) [OptNumConstNo]
+        ) [PrintStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDeclaration]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  22:59:51,469 - ===================================
+INFO  22:59:51,474 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  22:59:51,475 - Deklarisana lokalna promenljiva slovona liniji 4 : Var slovo: char, 0, 1 
+INFO  22:59:51,475 - Deklarisana lokalna promenljiva tna liniji 5 : Var t: char, 1, 1 
+INFO  22:59:51,475 - Deklarisana lokalna promenljiva tacnona liniji 6 : Var tacno: , 2, 1 
+INFO  22:59:51,475 - Pristup lokalnoj promenljivoj: tacno na liniji 8[ Var tacno: , 2, 1  ]
+INFO  22:59:51,475 - Pristup lokalnoj promenljivoj: tacno na liniji 9[ Var tacno: , 2, 1  ]
+INFO  22:59:51,476 -  Print count calls = 1
+INFO  22:59:51,476 -  Deklarisanih promenljivih ima = 30
+INFO  22:59:51,476 - ===================================
+INFO  22:59:51,483 - Parsiranje uspesno zavrseno!

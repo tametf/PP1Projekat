@@ -1,0 +1,67 @@
+INFO  09:21:55,741 - Compiling source file: C:\Users\pavle\Desktop\New folder (3)\poslednjaVerzija\tamarajevdjevic20150492\workspace\MJCompiler\test\javniTest.mj
+INFO  09:21:55,742 - Compiling source file: C:\Users\pavle\Desktop\New folder (3)\poslednjaVerzija\tamarajevdjevic20150492\workspace\MJCompiler\test\javniTest.mj
+INFO  09:21:55,796 - #2 program
+INFO  09:21:55,796 - #31 test301
+INFO  09:21:55,796 - #31 int
+INFO  09:21:55,797 - #31 niz
+INFO  09:21:55,797 - #10 [
+INFO  09:21:55,797 - #11 ]
+INFO  09:21:55,797 - #6 ;
+INFO  09:21:55,798 - #3 {
+INFO  09:21:55,799 - #14 void
+INFO  09:21:55,800 - #31 main
+INFO  09:21:55,801 - #12 (
+INFO  09:21:55,801 - #13 )
+INFO  09:21:55,801 - #3 {
+INFO  09:21:55,801 - #4 }
+INFO  09:21:55,802 - #4 }
+INFO  09:21:55,808 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  VariableDeclList(
+    NoDeclList(
+    ) [NoDeclList]
+    VarDecl(
+      Type(
+       int
+      ) [Type]
+      VarDeclarationListOne(
+        VarIdentGlobal(
+         niz
+          OptBracketsYes(
+          ) [OptBracketsYes]
+        ) [VarIdentGlobal]
+      ) [VarDeclarationListOne]
+    ) [VarDecl]
+  ) [VariableDeclList]
+  Lbrace(
+  ) [Lbrace]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDeclaration(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      Lbrace(
+      ) [Lbrace]
+      NoStatementsList(
+      ) [NoStatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDeclaration]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  09:21:55,808 - ===================================
+INFO  09:21:55,812 - Deklarisan globalni niz niz na liniji 7:Var niz: Arr of int, 0, 0 
+INFO  09:21:55,812 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  09:21:55,813 - ===================================
+INFO  09:21:55,818 - Parsiranje uspesno zavrseno!

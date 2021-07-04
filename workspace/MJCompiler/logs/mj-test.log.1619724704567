@@ -1,0 +1,69 @@
+INFO  21:30:51,949 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  21:30:52,001 - #2 program
+INFO  21:30:52,002 - #28 test301
+INFO  21:30:52,002 - #3 {
+INFO  21:30:52,003 - #14 void
+INFO  21:30:52,004 - #28 main
+INFO  21:30:52,004 - #12 (
+INFO  21:30:52,005 - #13 )
+INFO  21:30:52,005 - #3 {
+INFO  21:30:52,006 - #27 print
+INFO  21:30:52,007 - #12 (
+INFO  21:30:52,007 - #29 11
+INFO  21:30:52,007 - #13 )
+INFO  21:30:52,010 - #6 ;
+INFO  21:30:52,010 - #4 }
+INFO  21:30:52,010 - #4 }
+INFO  21:30:52,017 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      StatementsList(
+        NoStatementsList(
+        ) [NoStatementsList]
+        PrintStatement(
+          Expression(
+            Expr1AddopTerm(
+              OptMinusNo(
+              ) [OptMinusNo]
+              AddopTermListOne(
+                TermFactorMulop(
+                  MulopFactorListOne(
+                    FactorNumConst(
+                     11
+                    ) [FactorNumConst]
+                  ) [MulopFactorListOne]
+                ) [TermFactorMulop]
+              ) [AddopTermListOne]
+            ) [Expr1AddopTerm]
+          ) [Expression]
+          OptNumConstNo(
+          ) [OptNumConstNo]
+        ) [PrintStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  21:30:52,018 - ===================================
+INFO  21:30:52,020 - Obradjuje se funkcija main tip funkcije: VOID
+INFO  21:30:52,021 -  Print count calls = 0
+INFO  21:30:52,021 -  Deklarisanih promenljivih ima = 0
+INFO  21:30:52,021 - ===================================
+INFO  21:30:52,027 - Parsiranje uspesno zavrseno!

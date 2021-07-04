@@ -1,0 +1,140 @@
+INFO  14:50:34,884 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  14:50:34,885 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  14:50:34,902 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  14:50:34,903 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  14:50:34,998 - #2 program
+INFO  14:50:34,998 - #31 test301
+INFO  14:50:34,999 - #3 {
+INFO  14:50:35,001 - #14 void
+INFO  14:50:35,004 - #31 main
+INFO  14:50:35,005 - #12 (
+INFO  14:50:35,005 - #13 )
+INFO  14:50:35,007 - #31 int
+INFO  14:50:35,008 - #31 a
+INFO  14:50:35,008 - #2 program
+INFO  14:50:35,008 - #31 test301
+INFO  14:50:35,008 - #3 {
+INFO  14:50:35,009 - #10 [
+INFO  14:50:35,009 - #11 ]
+INFO  14:50:35,010 - #6 ;
+INFO  14:50:35,010 - #14 void
+INFO  14:50:35,011 - #31 main
+INFO  14:50:35,012 - #12 (
+INFO  14:50:35,012 - #13 )
+INFO  14:50:35,012 - #3 {
+INFO  14:50:35,013 - #31 int
+INFO  14:50:35,013 - #4 }
+INFO  14:50:35,014 - #31 a
+INFO  14:50:35,014 - #4 }
+INFO  14:50:35,016 - #10 [
+INFO  14:50:35,016 - #11 ]
+INFO  14:50:35,016 - #6 ;
+INFO  14:50:35,020 - #3 {
+INFO  14:50:35,021 - #4 }
+INFO  14:50:35,022 - #4 }
+INFO  14:50:35,030 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  Lbrace(
+  ) [Lbrace]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDeclaration(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        NoVarDeclList(
+        ) [NoVarDeclList]
+        VarDeclLocal(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               a
+                OptBracketsYes(
+                ) [OptBracketsYes]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      Lbrace(
+      ) [Lbrace]
+      NoStatementsList(
+      ) [NoStatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDeclaration]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  14:50:35,031 - ===================================
+INFO  14:50:35,039 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  Lbrace(
+  ) [Lbrace]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDeclaration(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        NoVarDeclList(
+        ) [NoVarDeclList]
+        VarDeclLocal(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               a
+                OptBracketsYes(
+                ) [OptBracketsYes]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      Lbrace(
+      ) [Lbrace]
+      NoStatementsList(
+      ) [NoStatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDeclaration]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  14:50:35,039 - ===================================
+INFO  14:50:35,043 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  14:50:35,044 - Deklarisan lokalni niz sa imenom: ana liniji 10 : Var a: Arr of int, 0, 1 
+ERROR 14:50:35,045 - Greska na liniji 9, metoda main ne sme imati formalne parametre.
+INFO  14:50:35,046 - ===================================
+INFO  14:50:35,047 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+ERROR 14:50:35,048 - Parsiranje NIJE uspesno zavrseno!
+INFO  14:50:35,049 - Deklarisan lokalni niz sa imenom: ana liniji 10 : Var a: Arr of int, 0, 1 
+ERROR 14:50:35,049 - Greska na liniji 9, metoda main ne sme imati formalne parametre.
+INFO  14:50:35,051 - ===================================
+ERROR 14:50:35,055 - Parsiranje NIJE uspesno zavrseno!

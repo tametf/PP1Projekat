@@ -1,0 +1,101 @@
+INFO  21:18:36,584 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  21:18:36,585 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  21:18:36,631 - #2 program
+INFO  21:18:36,631 - #31 test301
+INFO  21:18:36,631 - #3 {
+INFO  21:18:36,634 - #14 void
+INFO  21:18:36,634 - #31 main
+INFO  21:18:36,634 - #12 (
+INFO  21:18:36,634 - #13 )
+INFO  21:18:36,635 - #31 int
+INFO  21:18:36,635 - #31 b
+INFO  21:18:36,636 - #6 ;
+INFO  21:18:36,637 - #3 {
+INFO  21:18:36,637 - #31 b
+INFO  21:18:36,638 - #8 =
+INFO  21:18:36,638 - #57 |
+INFO  21:18:36,639 - #32 1
+INFO  21:18:36,639 - #16 :
+INFO  21:18:36,639 - #32 2
+INFO  21:18:36,639 - #16 :
+INFO  21:18:36,639 - #32 3
+INFO  21:18:36,640 - #57 |
+INFO  21:18:36,640 - #6 ;
+INFO  21:18:36,640 - #4 }
+INFO  21:18:36,642 - #4 }
+INFO  21:18:36,650 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        NoVarDeclList(
+        ) [NoVarDeclList]
+        VarDeclLocal(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               b
+                OptBracketsNo(
+                ) [OptBracketsNo]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      StatementsList(
+        NoStatementsList(
+        ) [NoStatementsList]
+        DesignatorStmt(
+          DesignatorAssign(
+            Designator(
+             b
+              OptExprNo(
+              ) [OptExprNo]
+            ) [Designator]
+            Expression(
+              IzrazSaCrtom(
+                NumConstant(
+                 1
+                ) [NumConstant]
+                NumConstant(
+                 2
+                ) [NumConstant]
+                NumConstant(
+                 3
+                ) [NumConstant]
+              ) [IzrazSaCrtom]
+            ) [Expression]
+          ) [DesignatorAssign]
+        ) [DesignatorStmt]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  21:18:36,650 - ===================================
+INFO  21:18:36,654 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  21:18:36,654 - TIP JE: int
+INFO  21:18:36,654 - Deklarisana lokalna promenljiva bna liniji 8 : Var b: int, 0, 1 
+INFO  21:18:36,656 - Pristup lokalnoj promenljivoj: b na liniji 11[ Var b: int, 0, 1  ]
+INFO  21:18:36,656 -  Print count calls = 0
+INFO  21:18:36,657 -  Deklarisanih promenljivih ima = 10
+INFO  21:18:36,657 - ===================================
+INFO  21:18:36,664 - Parsiranje uspesno zavrseno!

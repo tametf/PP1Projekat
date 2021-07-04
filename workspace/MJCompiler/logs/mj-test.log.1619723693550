@@ -1,0 +1,69 @@
+INFO  21:11:42,651 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  21:11:42,726 - #2 program
+INFO  21:11:42,726 - #28 test301
+INFO  21:11:42,727 - #3 {
+INFO  21:11:42,728 - #14 void
+INFO  21:11:42,728 - #28 main
+INFO  21:11:42,728 - #12 (
+INFO  21:11:42,729 - #13 )
+INFO  21:11:42,729 - #3 {
+INFO  21:11:42,730 - #27 print
+INFO  21:11:42,730 - #12 (
+INFO  21:11:42,731 - #29 11
+INFO  21:11:42,732 - #13 )
+INFO  21:11:42,733 - #6 ;
+INFO  21:11:42,734 - #4 }
+INFO  21:11:42,734 - #4 }
+INFO  21:11:42,742 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      StatementsList(
+        NoStatementsList(
+        ) [NoStatementsList]
+        PrintStatement(
+          Expression(
+            Expr1AddopTerm(
+              OptMinusNo(
+              ) [OptMinusNo]
+              AddopTermListOne(
+                TermFactorMulop(
+                  MulopFactorListOne(
+                    FactorNumConst(
+                     11
+                    ) [FactorNumConst]
+                  ) [MulopFactorListOne]
+                ) [TermFactorMulop]
+              ) [AddopTermListOne]
+            ) [Expr1AddopTerm]
+          ) [Expression]
+          OptNumConstNo(
+          ) [OptNumConstNo]
+        ) [PrintStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  21:11:42,743 - ===================================
+INFO  21:11:42,746 - Obradjuje se funkcija main tip funkcije: VOID
+INFO  21:11:42,747 -  Print count calls = 0
+INFO  21:11:42,748 -  Deklarisanih promenljivih ima = 0
+INFO  21:11:42,748 - ===================================
+INFO  21:11:42,752 - Parsiranje uspesno zavrseno!

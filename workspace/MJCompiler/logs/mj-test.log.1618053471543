@@ -1,0 +1,79 @@
+INFO  13:15:02,848 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  13:15:02,881 - #2 program
+INFO  13:15:02,881 - #28 MJProgram
+INFO  13:15:02,881 - #9 class
+INFO  13:15:02,883 - #28 tamarajevdjevic
+INFO  13:15:02,883 - #24 extends
+INFO  13:15:02,883 - #28 tamara
+INFO  13:15:02,883 - #3 {
+INFO  13:15:02,884 - #28 int
+INFO  13:15:02,885 - #28 pera
+INFO  13:15:02,885 - #7 ,
+INFO  13:15:02,886 - #28 mika
+INFO  13:15:02,886 - #10 [
+INFO  13:15:02,887 - #11 ]
+INFO  13:15:02,887 - #7 ,
+INFO  13:15:02,887 - #28 zika
+INFO  13:15:02,887 - #6 ;
+INFO  13:15:02,887 - #3 {
+INFO  13:15:02,888 - #4 }
+INFO  13:15:02,888 - #4 }
+INFO  13:15:02,889 - #3 {
+INFO  13:15:02,889 - #4 }
+INFO  13:15:02,890 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  ClassDeclList(
+    NoDeclList(
+    ) [NoDeclList]
+    ClassDecl(
+     tamarajevdjevic
+      OptionalExtendsType(
+        Type(
+         tamara
+        ) [Type]
+      ) [OptionalExtendsType]
+      VarDeclListMore(
+        NoVarDeclList(
+        ) [NoVarDeclList]
+        VarDecl(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListMore(
+            VarDeclarationListMore(
+              VarDeclarationListOne(
+                VarDeclListOne(
+                 pera
+                  OptBracketsNo(
+                  ) [OptBracketsNo]
+                ) [VarDeclListOne]
+              ) [VarDeclarationListOne]
+              VarDeclListOne(
+               mika
+                OptBracketsYes(
+                ) [OptBracketsYes]
+              ) [VarDeclListOne]
+            ) [VarDeclarationListMore]
+            VarDeclListOne(
+             zika
+              OptBracketsNo(
+              ) [OptBracketsNo]
+            ) [VarDeclListOne]
+          ) [VarDeclarationListMore]
+        ) [VarDecl]
+      ) [VarDeclListMore]
+      OptionalMethodDeclList(
+        NoMethodDeclList(
+        ) [NoMethodDeclList]
+      ) [OptionalMethodDeclList]
+    ) [ClassDecl]
+  ) [ClassDeclList]
+  NoMethodDeclList(
+  ) [NoMethodDeclList]
+) [Program]
+INFO  13:15:02,891 - ===================================
+INFO  13:15:02,893 -  Print count calls = 0
+INFO  13:15:02,893 -  Deklarisanih promenljivih ima = 4
+INFO  13:15:02,893 - Read count calls = 0

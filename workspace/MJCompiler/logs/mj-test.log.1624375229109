@@ -1,0 +1,252 @@
+INFO  17:20:07,470 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  17:20:07,471 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  17:20:07,552 - #2 program
+INFO  17:20:07,552 - #31 a
+INFO  17:20:07,553 - #3 {
+INFO  17:20:07,555 - #14 void
+INFO  17:20:07,557 - #31 main
+INFO  17:20:07,557 - #12 (
+INFO  17:20:07,557 - #13 )
+INFO  17:20:07,558 - #31 int
+INFO  17:20:07,559 - #31 a
+INFO  17:20:07,559 - #6 ;
+INFO  17:20:07,562 - #3 {
+INFO  17:20:07,563 - #31 a
+INFO  17:20:07,564 - #8 =
+INFO  17:20:07,567 - #32 1
+INFO  17:20:07,568 - #6 ;
+INFO  17:20:07,569 - #36 if
+INFO  17:20:07,570 - #12 (
+INFO  17:20:07,570 - #31 a
+INFO  17:20:07,572 - #8 =
+ERROR 17:20:07,572 - 
+Sintaksna greska na liniji 20
+INFO  17:20:07,573 - #34 'a'
+INFO  17:20:07,573 - #13 )
+INFO  17:20:07,573 - #31 a
+INFO  17:20:07,574 - #8 =
+INFO  17:20:07,574 - #32 2
+ERROR 17:20:07,575 - Greska sa uslovnim operatorom 
+INFO  17:20:07,579 - #6 ;
+INFO  17:20:07,579 - #36 if
+INFO  17:20:07,579 - #12 (
+INFO  17:20:07,579 - #32 5
+INFO  17:20:07,579 - #41 ==
+INFO  17:20:07,579 - #34 'a'
+INFO  17:20:07,581 - #13 )
+INFO  17:20:07,582 - #27 print
+INFO  17:20:07,582 - #12 (
+INFO  17:20:07,585 - #32 5
+INFO  17:20:07,585 - #13 )
+INFO  17:20:07,586 - #6 ;
+INFO  17:20:07,586 - #4 }
+INFO  17:20:07,587 - #4 }
+INFO  17:20:07,609 - Program(
+  ProgName(
+   a
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  Lbrace(
+  ) [Lbrace]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDeclaration(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        NoVarDeclList(
+        ) [NoVarDeclList]
+        VarDeclLocal(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               a
+                OptBracketsNo(
+                ) [OptBracketsNo]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      Lbrace(
+      ) [Lbrace]
+      StatementsList(
+        StatementsList(
+          StatementsList(
+            NoStatementsList(
+            ) [NoStatementsList]
+            DesignatorStmt(
+              DesignatorAssign(
+                Designator(
+                 a
+                  OptExprNo(
+                  ) [OptExprNo]
+                ) [Designator]
+                Expression(
+                  Expr1AddopTerm(
+                    OptMinusNo(
+                    ) [OptMinusNo]
+                    AddopTermListOne(
+                      TermFactorMulop(
+                        MulopFactorListOne(
+                          Cnst(
+                            NumConstant(
+                             1
+                            ) [NumConstant]
+                          ) [Cnst]
+                        ) [MulopFactorListOne]
+                      ) [TermFactorMulop]
+                    ) [AddopTermListOne]
+                  ) [Expr1AddopTerm]
+                ) [Expression]
+              ) [DesignatorAssign]
+            ) [DesignatorStmt]
+          ) [StatementsList]
+          IfStatement(
+            IfCondition(
+              Lparen(
+              ) [Lparen]
+              Cond(
+              ) [Cond]
+              ConditionOne(
+                CondTermOne(
+                  ERROR3(
+                  ) [ERROR3]
+                ) [CondTermOne]
+              ) [ConditionOne]
+              Rparen(
+              ) [Rparen]
+            ) [IfCondition]
+            DesignatorStmt(
+              DesignatorAssign(
+                Designator(
+                 a
+                  OptExprNo(
+                  ) [OptExprNo]
+                ) [Designator]
+                Expression(
+                  Expr1AddopTerm(
+                    OptMinusNo(
+                    ) [OptMinusNo]
+                    AddopTermListOne(
+                      TermFactorMulop(
+                        MulopFactorListOne(
+                          Cnst(
+                            NumConstant(
+                             2
+                            ) [NumConstant]
+                          ) [Cnst]
+                        ) [MulopFactorListOne]
+                      ) [TermFactorMulop]
+                    ) [AddopTermListOne]
+                  ) [Expr1AddopTerm]
+                ) [Expression]
+              ) [DesignatorAssign]
+            ) [DesignatorStmt]
+          ) [IfStatement]
+        ) [StatementsList]
+        IfStatement(
+          IfCondition(
+            Lparen(
+            ) [Lparen]
+            Cond(
+            ) [Cond]
+            ConditionOne(
+              CondTermOne(
+                CondFactExprRelopExpr(
+                  Expression(
+                    Expr1AddopTerm(
+                      OptMinusNo(
+                      ) [OptMinusNo]
+                      AddopTermListOne(
+                        TermFactorMulop(
+                          MulopFactorListOne(
+                            Cnst(
+                              NumConstant(
+                               5
+                              ) [NumConstant]
+                            ) [Cnst]
+                          ) [MulopFactorListOne]
+                        ) [TermFactorMulop]
+                      ) [AddopTermListOne]
+                    ) [Expr1AddopTerm]
+                  ) [Expression]
+                  RelopEqual(
+                  ) [RelopEqual]
+                  Expression(
+                    Expr1AddopTerm(
+                      OptMinusNo(
+                      ) [OptMinusNo]
+                      AddopTermListOne(
+                        TermFactorMulop(
+                          MulopFactorListOne(
+                            Cnst(
+                              CharConstant(
+                               'a'
+                              ) [CharConstant]
+                            ) [Cnst]
+                          ) [MulopFactorListOne]
+                        ) [TermFactorMulop]
+                      ) [AddopTermListOne]
+                    ) [Expr1AddopTerm]
+                  ) [Expression]
+                ) [CondFactExprRelopExpr]
+              ) [CondTermOne]
+            ) [ConditionOne]
+            Rparen(
+            ) [Rparen]
+          ) [IfCondition]
+          PrintStatement(
+            Print(
+            ) [Print]
+            Expression(
+              Expr1AddopTerm(
+                OptMinusNo(
+                ) [OptMinusNo]
+                AddopTermListOne(
+                  TermFactorMulop(
+                    MulopFactorListOne(
+                      Cnst(
+                        NumConstant(
+                         5
+                        ) [NumConstant]
+                      ) [Cnst]
+                    ) [MulopFactorListOne]
+                  ) [TermFactorMulop]
+                ) [AddopTermListOne]
+              ) [Expr1AddopTerm]
+            ) [Expression]
+            OptNumConstNo(
+            ) [OptNumConstNo]
+          ) [PrintStatement]
+        ) [IfStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDeclaration]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  17:20:07,610 - ===================================
+INFO  17:20:07,615 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  17:20:07,616 - Deklarisana lokalna promenljiva ana liniji 16 : Var a: int, 0, 1 
+INFO  17:20:07,616 - Pristup lokalnoj promenljivoj: a na liniji 19[ Var a: int, 0, 1  ]
+ERROR 17:20:07,617 - Problem, neispravan tip u IF naredbi na liniji 20STRnull
+INFO  17:20:07,618 - Pristup lokalnoj promenljivoj: a na liniji 20[ Var a: int, 0, 1  ]
+ERROR 17:20:07,618 - Neodgovarajuci tip na liniji 6, mogu se porediti samo izrazi istog tipa!
+INFO  17:20:07,623 -  Print count calls = 1
+INFO  17:20:07,623 -  Deklarisanih promenljivih ima = 10
+INFO  17:20:07,623 - ===================================
+ERROR 17:20:07,624 - GRESKA!
+ERROR 17:20:07,624 - GRESKAaaa!
+ERROR 17:20:07,624 - Parsiranje NIJE uspesno zavrseno!

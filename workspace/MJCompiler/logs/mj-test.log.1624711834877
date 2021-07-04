@@ -1,0 +1,70 @@
+INFO  14:47:15,666 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  14:47:15,667 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  14:47:15,751 - #2 program
+INFO  14:47:15,751 - #31 test301
+INFO  14:47:15,751 - #3 {
+INFO  14:47:15,753 - #14 void
+INFO  14:47:15,754 - #31 main
+INFO  14:47:15,754 - #12 (
+INFO  14:47:15,755 - #13 )
+INFO  14:47:15,755 - #31 int
+INFO  14:47:15,756 - #31 a
+INFO  14:47:15,757 - #10 [
+INFO  14:47:15,757 - #11 ]
+INFO  14:47:15,757 - #6 ;
+INFO  14:47:15,759 - #3 {
+INFO  14:47:15,760 - #4 }
+INFO  14:47:15,761 - #4 }
+INFO  14:47:15,777 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  Lbrace(
+  ) [Lbrace]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDeclaration(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        NoVarDeclList(
+        ) [NoVarDeclList]
+        VarDeclLocal(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               a
+                OptBracketsYes(
+                ) [OptBracketsYes]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      Lbrace(
+      ) [Lbrace]
+      NoStatementsList(
+      ) [NoStatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDeclaration]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  14:47:15,778 - ===================================
+INFO  14:47:15,783 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  14:47:15,784 - Deklarisan lokalni niz sa imenom: ana liniji 10 : Var a: Arr of int, 0, 1 
+ERROR 14:47:15,784 - Greska na liniji 9, metoda main ne sme imati formalne parametre.
+INFO  14:47:15,785 - ===================================
+ERROR 14:47:15,787 - Parsiranje NIJE uspesno zavrseno!

@@ -1,0 +1,75 @@
+INFO  14:34:48,087 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  14:34:48,087 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  14:34:48,168 - #2 program
+INFO  14:34:48,168 - #31 test301
+INFO  14:34:48,168 - #3 {
+INFO  14:34:48,170 - #14 void
+INFO  14:34:48,172 - #31 main
+INFO  14:34:48,172 - #12 (
+INFO  14:34:48,172 - #31 ss
+INFO  14:34:48,172 - #13 )
+ERROR 14:34:48,173 - 
+Sintaksna greska na liniji 9
+INFO  14:34:48,173 - #31 int
+INFO  14:34:48,173 - #31 a
+INFO  14:34:48,173 - #10 [
+ERROR 14:34:48,174 - ErrorFPL Greska sa uslovnim operatorom 
+INFO  14:34:48,179 - #11 ]
+INFO  14:34:48,179 - #6 ;
+INFO  14:34:48,182 - #3 {
+INFO  14:34:48,183 - #4 }
+INFO  14:34:48,184 - #4 }
+INFO  14:34:48,196 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  Lbrace(
+  ) [Lbrace]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDeclaration(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      FormParams(
+        ErrorFormParsList(
+        ) [ErrorFormParsList]
+      ) [FormParams]
+      VarDeclListMore(
+        NoVarDeclList(
+        ) [NoVarDeclList]
+        VarDeclLocal(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               a
+                OptBracketsYes(
+                ) [OptBracketsYes]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      Lbrace(
+      ) [Lbrace]
+      NoStatementsList(
+      ) [NoStatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDeclaration]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  14:34:48,196 - ===================================
+INFO  14:34:48,202 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+INFO  14:34:48,203 - Deklarisan lokalni niz sa imenom: ana liniji 10 : Var a: Arr of int, 0, 1 
+INFO  14:34:48,203 - ===================================
+ERROR 14:34:48,204 - Parsiranje NIJE uspesno zavrseno!

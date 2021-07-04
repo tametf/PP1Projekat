@@ -1,0 +1,88 @@
+INFO  22:10:55,320 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  22:10:55,321 - Compiling source file: C:\pptam\workspace\MJCompiler\test\test.mj
+INFO  22:10:55,361 - #2 program
+INFO  22:10:55,361 - #31 a
+INFO  22:10:55,361 - #3 {
+INFO  22:10:55,362 - #14 void
+INFO  22:10:55,363 - #31 main
+INFO  22:10:55,363 - #12 (
+INFO  22:10:55,363 - #13 )
+INFO  22:10:55,364 - #3 {
+INFO  22:10:55,364 - #31 bool
+INFO  22:10:55,364 - #31 a
+ERROR 22:10:55,365 - 
+Sintaksna greska na liniji 5
+INFO  22:10:55,365 - #6 ;
+INFO  22:10:55,365 - #31 int
+INFO  22:10:55,365 - #31 b
+INFO  22:10:55,365 - #6 ;
+INFO  22:10:55,365 - #31 char
+INFO  22:10:55,365 - #31 c
+INFO  22:10:55,365 - #6 ;
+INFO  22:10:55,365 - #26 read
+INFO  22:10:55,366 - #12 (
+INFO  22:10:55,366 - #31 b
+ERROR 22:10:55,367 - Greska pri dodeli vrednosti 
+INFO  22:10:55,368 - #13 )
+INFO  22:10:55,369 - #6 ;
+INFO  22:10:55,369 - #4 }
+INFO  22:10:55,369 - #4 }
+INFO  22:10:55,375 - Program(
+  ProgName(
+   a
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  Lbrace(
+  ) [Lbrace]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDeclaration(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      NoVarDeclList(
+      ) [NoVarDeclList]
+      Lbrace(
+      ) [Lbrace]
+      StatementsList(
+        StatementsList(
+          NoStatementsList(
+          ) [NoStatementsList]
+          DesignatorStmt(
+            ERROR2(
+              null
+            ) [ERROR2]
+          ) [DesignatorStmt]
+        ) [StatementsList]
+        ReadStatement(
+          Read(
+          ) [Read]
+          Designator(
+           b
+            OptExprNo(
+            ) [OptExprNo]
+          ) [Designator]
+        ) [ReadStatement]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDeclaration]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  22:10:55,375 - ===================================
+INFO  22:10:55,380 - Obradjuje se funkcija main tip funkcije: VOID :Meth main: notype, 0, 0 
+
+ERROR 22:10:55,381 - Greska na liniji 8, promenljiva b nije pronadjena u tabeli simbola!
+ERROR 22:10:55,381 - Problem, neispravna read funkcija na liniji 8
+INFO  22:10:55,384 -  Print count calls = 0
+INFO  22:10:55,384 -  Deklarisanih promenljivih ima = 00
+INFO  22:10:55,384 - ===================================
+ERROR 22:10:55,384 - GRESKA!
+ERROR 22:10:55,384 - GRESKAaaa!
+ERROR 22:10:55,385 - Parsiranje NIJE uspesno zavrseno!

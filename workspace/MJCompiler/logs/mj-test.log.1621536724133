@@ -1,0 +1,200 @@
+INFO  20:51:46,430 - Compiling source file: C:\pptam\workspace\MJCompiler\test\program.mj
+INFO  20:51:46,493 - #2 program
+INFO  20:51:46,493 - #31 test301
+INFO  20:51:46,493 - #3 {
+INFO  20:51:46,495 - #14 void
+INFO  20:51:46,496 - #31 main
+INFO  20:51:46,496 - #12 (
+INFO  20:51:46,496 - #13 )
+INFO  20:51:46,496 - #31 int
+INFO  20:51:46,497 - #31 bodovi
+INFO  20:51:46,498 - #6 ;
+INFO  20:51:46,499 - #3 {
+INFO  20:51:46,501 - #31 bodovi
+INFO  20:51:46,502 - #8 =
+INFO  20:51:46,504 - #32 0
+INFO  20:51:46,505 - #6 ;
+INFO  20:51:46,506 - #36 if
+INFO  20:51:46,506 - #12 (
+INFO  20:51:46,507 - #33 0
+INFO  20:51:46,507 - #13 )
+INFO  20:51:46,507 - #36 if
+INFO  20:51:46,507 - #12 (
+INFO  20:51:46,507 - #33 0
+INFO  20:51:46,508 - #13 )
+INFO  20:51:46,508 - #27 print
+INFO  20:51:46,508 - #12 (
+INFO  20:51:46,509 - #32 1
+INFO  20:51:46,509 - #13 )
+INFO  20:51:46,510 - #6 ;
+INFO  20:51:46,510 - #35 else
+INFO  20:51:46,511 - #27 print
+ERROR 20:51:46,511 - 
+Sintaksna greska na liniji 13
+INFO  20:51:46,511 - #12 (
+INFO  20:51:46,511 - #32 2
+INFO  20:51:46,511 - #13 )
+INFO  20:51:46,512 - #6 ;
+INFO  20:51:46,512 - #4 }
+INFO  20:51:46,512 - #4 }
+ERROR 20:51:46,512 - Greska2 Izvrsen oporavak do ; u liniji3
+INFO  20:51:46,525 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  MethodDeclListMore(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      ReturnValueTypeVoid(
+       main
+      ) [ReturnValueTypeVoid]
+      NoFormParams(
+      ) [NoFormParams]
+      VarDeclListMore(
+        NoVarDeclList(
+        ) [NoVarDeclList]
+        VarDeclLocal(
+          Type(
+           int
+          ) [Type]
+          VarDeclarationListLocalOne(
+            VarDeclListLocalOne(
+              VarIdentLocal(
+               bodovi
+                OptBracketsNo(
+                ) [OptBracketsNo]
+              ) [VarIdentLocal]
+            ) [VarDeclListLocalOne]
+          ) [VarDeclarationListLocalOne]
+        ) [VarDeclLocal]
+      ) [VarDeclListMore]
+      StatementsList(
+        StatementsList(
+          NoStatementsList(
+          ) [NoStatementsList]
+          MatchedStmt(
+            DesignatorStmt(
+              DesignatorAssign(
+                Designator(
+                 bodovi
+                  OptExprNo(
+                  ) [OptExprNo]
+                ) [Designator]
+                Expression(
+                  Expr1AddopTerm(
+                    OptMinusNo(
+                    ) [OptMinusNo]
+                    AddopTermListOne(
+                      TermFactorMulop(
+                        MulopFactorListOne(
+                          Cnst(
+                            NumConstant(
+                             0
+                            ) [NumConstant]
+                          ) [Cnst]
+                        ) [MulopFactorListOne]
+                      ) [TermFactorMulop]
+                    ) [AddopTermListOne]
+                  ) [Expr1AddopTerm]
+                ) [Expression]
+              ) [DesignatorAssign]
+            ) [DesignatorStmt]
+          ) [MatchedStmt]
+        ) [StatementsList]
+        UnmatchedStmt(
+          UnmatchedIf(
+            Expression(
+              Expr1AddopTerm(
+                OptMinusNo(
+                ) [OptMinusNo]
+                AddopTermListOne(
+                  TermFactorMulop(
+                    MulopFactorListOne(
+                      FactorExpr(
+                        Expression(
+                          Expr1AddopTerm(
+                            OptMinusNo(
+                            ) [OptMinusNo]
+                            AddopTermListOne(
+                              TermFactorMulop(
+                                MulopFactorListOne(
+                                  Cnst(
+                                    BoolConstant(
+                                     0
+                                    ) [BoolConstant]
+                                  ) [Cnst]
+                                ) [MulopFactorListOne]
+                              ) [TermFactorMulop]
+                            ) [AddopTermListOne]
+                          ) [Expr1AddopTerm]
+                        ) [Expression]
+                      ) [FactorExpr]
+                    ) [MulopFactorListOne]
+                  ) [TermFactorMulop]
+                ) [AddopTermListOne]
+              ) [Expr1AddopTerm]
+            ) [Expression]
+            UnmatchedStmt(
+              UnmatchedIf(
+                Expression(
+                  Expr1AddopTerm(
+                    OptMinusNo(
+                    ) [OptMinusNo]
+                    AddopTermListOne(
+                      TermFactorMulop(
+                        MulopFactorListOne(
+                          FactorExpr(
+                            Expression(
+                              Expr1AddopTerm(
+                                OptMinusNo(
+                                ) [OptMinusNo]
+                                AddopTermListOne(
+                                  TermFactorMulop(
+                                    MulopFactorListOne(
+                                      Cnst(
+                                        BoolConstant(
+                                         0
+                                        ) [BoolConstant]
+                                      ) [Cnst]
+                                    ) [MulopFactorListOne]
+                                  ) [TermFactorMulop]
+                                ) [AddopTermListOne]
+                              ) [Expr1AddopTerm]
+                            ) [Expression]
+                          ) [FactorExpr]
+                        ) [MulopFactorListOne]
+                      ) [TermFactorMulop]
+                    ) [AddopTermListOne]
+                  ) [Expr1AddopTerm]
+                ) [Expression]
+                MatchedStmt(
+                  DesignatorStmt(
+                    ERROR2(
+                    ) [ERROR2]
+                  ) [DesignatorStmt]
+                ) [MatchedStmt]
+              ) [UnmatchedIf]
+            ) [UnmatchedStmt]
+          ) [UnmatchedIf]
+        ) [UnmatchedStmt]
+      ) [StatementsList]
+      EndOfMethod(
+      ) [EndOfMethod]
+    ) [MethodDecl]
+  ) [MethodDeclListMore]
+  EndOfProgram(
+  ) [EndOfProgram]
+) [Program]
+INFO  20:51:46,526 - ===================================
+INFO  20:51:46,530 - Obradjuje se funkcija main tip funkcije: VOID
+INFO  20:51:46,530 - TIP JE: int
+INFO  20:51:46,530 - Deklarisana lokalna promenljiva sa imenom: bodovina liniji 8
+INFO  20:51:46,530 - Pristup lokalnoj promenljivoj: bodovi na liniji 10
+INFO  20:51:46,531 -  Print count calls = 0
+INFO  20:51:46,531 -  Deklarisanih promenljivih ima = 10
+INFO  20:51:46,532 - ===================================
+ERROR 20:51:46,532 - GRESKA!
+ERROR 20:51:46,532 - Parsiranje NIJE uspesno zavrseno!
